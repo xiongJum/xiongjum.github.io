@@ -1,273 +1,362 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jum‘ Xiong</title><meta name="description"><meta name="author" content="酒明"><meta name="copyright" content="酒明"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/backPanda.png"><link rel="canonical" href="http://18.178.175.124/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="Jum‘ Xiong"><meta property="og:url" content="http://18.178.175.124/"><meta property="og:site_name" content="Jum‘ Xiong"><meta property="og:description"><meta property="og:image" content="http://18.178.175.124/img/PID_82705027_copy.jpg"><meta property="article:published_time" content="2021-11-01T03:23:48.907Z"><meta property="article:modified_time" content="2021-11-01T03:23:48.907Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
-  document.documentElement.setAttribute('data-theme', 'dark')
-  if (document.querySelector('meta[name="theme-color"]') !== null) {
-    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
-  }
-}
-var activateLightMode = function () {
-  document.documentElement.setAttribute('data-theme', 'light')
-  if (document.querySelector('meta[name="theme-color"]') !== null) {
-    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
-  }
-}
-
-var getCookies = function (name) {
-  const value = `; ${document.cookie}`
-  const parts = value.split(`; ${name}=`)
-  if (parts.length === 2) return parts.pop().split(';').shift()
-}
-
-var autoChangeMode = 'false'
-var t = getCookies('theme')
-if (autoChangeMode === '1') {
-  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
-  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
-  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
-
-  if (t === undefined) {
-    if (isLightMode) activateLightMode()
-    else if (isDarkMode) activateDarkMode()
-    else if (isNotSpecified || hasNoSupport) {
-      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
-      var now = new Date()
-      var hour = now.getHours()
-      var isNight = hour <= 6 || hour >= 18
-      isNight ? activateDarkMode() : activateLightMode()
-    }
-    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
-      if (Cookies.get('theme') === undefined) {
-        e.matches ? activateDarkMode() : activateLightMode()
-      }
-    })
-  } else if (t === 'light') activateLightMode()
-  else activateDarkMode()
-} else if (autoChangeMode === '2') {
-  now = new Date()
-  hour = now.getHours()
-  isNight = hour <= 6 || hour >= 18
-  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
-  else if (t === 'light') activateLightMode()
-  else activateDarkMode()
-} else {
-  if (t === 'dark') activateDarkMode()
-  else if (t === 'light') activateLightMode()
-}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  bookmark: {
-    message_prev: '按',
-    message_next: '键将本页加入书签'
-  },
-  runtime_unit: '天',
-  runtime: false,
-  copyright: undefined,
-  ClickShowText: undefined,
-  medium_zoom: false,
-  fancybox: true,
-  Snackbar: undefined,
-  justifiedGallery: {
-    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
-  },
-  baiduPush: false,
-  highlightCopy: true,
-  highlightLang: true,
-  isPhotoFigcaption: true,
-  islazyload: true,
-  isanchor: false    
-}</script><script>var GLOBAL_CONFIG_SITE = { 
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isSidebar: false
-  }</script><noscript><style>
-#nav {
-  opacity: 1
-}
-.justified-gallery img{
-  opacity: 1
-}
-</style></noscript><meta name="generator" content="Hexo 4.2.1"></head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/PID_82705027_copy.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">13</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">22</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> 视听</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/xiongJum/Picture/img/82937235.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Jum‘ Xiong</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> 视听</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">Jum‘ Xiong</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式">     <img class="post_bg" data-src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/img/78824813_p0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则表达式"></a></div><div class="recent-post-info"><a class="article-title" href="/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式">正则表达式</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021/11/01 03:23:05"><i class="far fa-calendar-alt"></i>2021/11/01</time></div><div class="content">初识正则表达式
-使用python的内置函数
-
-123456# 设置一个常量name = 'XiongJum|酒明|JumXiong|初学者'# 判断是否有字符串XiongJumprint('是否含有XiongJum这个字符串：&#123;&#125;'.format(name.index('XiongJum') &lt; 1))print('是否含有XiongJum这个字符串：&#123;&#125;'.format('XiongJum' in name))
-
-是否含有XiongJum这个字符串：True
-是否含有XiongJum这个字符串：True
-初识正则表达式re
-Python内置函数能简单解决的事情，就没有必要使用正则表达式，如下例
-
-
-
-123456789import refindall = re.findall('Jum', name)print(findall)if len(findall) &gt; 0:    print('name含有Jum这个字符串')else:    print('name不含有Jum这个字符串')
-
-[&apos;Jum&apos;, &apo ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/Hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" title="Ocean 配置">     <img class="post_bg" data-src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/img/78824813_p0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Ocean 配置"></a></div><div class="recent-post-info"><a class="article-title" href="/Hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" title="Ocean 配置">Ocean 配置</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021/10/30 00:00:00"><i class="far fa-calendar-alt"></i>2021/10/30</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/Hexo/">Hexo</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Ocean/">Ocean</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E4%B8%BB%E9%A2%98/">主题</a></span></div><div class="content">Ocean 是基于 Hexo 默认主题 landscape 的功能，设计的一款支持移动设备的主题，并且集成了 Gitalk 与 Valine 评论功能。
-如果你喜欢 Ocean 可以从 GitHub 下载，主题默认使用 Logo 是 Hexo 的 Logo，更换 Logo 路径在 ocean/source/images/hexo.svg ，注意它还有一个反色版 hexo-inverted.svg ，如果你更改了文件名，那么还需要在 ocean/_config.yml 做对应的修改。
-详细文档见 Ocean 文档，以下是个人的需要的配置
-
-
-
-1. 安装下载安装
-1$ git clone https://github.com/zhwangart/hexo-theme-ocean.git themes/ocean
-
-更新
-12$ cd themes&#x2F;ocean$ git pull
-
-2. 配置2.1 添加页面Ocean 默认在主题配置文件中配置相册和关于的链接， 但是主题中实际上并没有此页面，点击会提示 404 。可以按照需要进行删除和安装。
-2.1.1 安装存在格式的页面123 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/linux%E4%B9%8B%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" title="【Linux】文件管理和帮助命令">     <img class="post_bg" data-src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/img/83109676.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【Linux】文件管理和帮助命令"></a></div><div class="recent-post-info"><a class="article-title" href="/linux%E4%B9%8B%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" title="【Linux】文件管理和帮助命令">【Linux】文件管理和帮助命令</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020/07/28 15:00:00"><i class="far fa-calendar-alt"></i>2020/07/28</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/linux%E6%B5%85%E6%9E%90/">linux浅析</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E6%B5%85%E6%9E%90/">浅析</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/linux/">linux</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/">文件管理</a></span></div><div class="content">帮助命令123456# manman find # 查询命令的说明文档man -f find # 显示更多的信息&gt;&gt;&gt; find (1)             - search for files in a directory hierarchyman -k find # 关键词查找
-
-查找程序的安装路径1234# whichwhich mysql&gt;&gt;&gt;/usr/bin/mysql
-
-查看程序的搜索路径
-当系统中安装了同一软件的多个版本时，不确定使用的是哪个版本时，这个命令就能派上用场
-
-1234# whereis$ whereis mysql&gt;&gt;&gt;mysql: /usr/bin/mysql /usr/lib64/mysql /usr/share/mysql /usr/share/man/man1/mysql.1.gz
-
-文件管理创建和删除文件123456789101112# 创建文件mkdir # 创建文件夹文件touch # 创建普通文件# 删除 rmrm #删除普通文件和空目录文件rm -rf file # 删除非空目录文件 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/SQL%E5%9F%BA%E7%A1%80-%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" title="SQL基础-增删改查">     <img class="post_bg" data-src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/img/83109748.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SQL基础-增删改查"></a></div><div class="recent-post-info"><a class="article-title" href="/SQL%E5%9F%BA%E7%A1%80-%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" title="SQL基础-增删改查">SQL基础-增删改查</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020/07/22 15:24:00"><i class="far fa-calendar-alt"></i>2020/07/22</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/SQL/">SQL</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%B5%85%E6%9E%90/">浅析</a></span></div><div class="content">查询基本查询语句12-- select (列名1, 列名2 或 *) from 表名 where 条件select order_no, trip_no from trip_order where order_no &gt; '20191009012100000013';
-
-
-逻辑运算符 如 and、in 等
-
-1234567891011-- select 列名1, 列名2 from 表名 where 条件 (and 或 or 或 in) 条件select order_no, trip_no, trade_amount from trip_order where order_no &gt; '20191009012100000013' and trade_amount = 100;select order_no, trip_no, trade_amount, state from trip_order where state = 2 or trade_amount = 100;select order_no, trip_no, trade_amount, state from trip_ ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%9E%9A%E4%B8%BE%E7%B1%BB/" title="枚举类">     <img class="post_bg" data-src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/img/83109676.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="枚举类"></a></div><div class="recent-post-info"><a class="article-title" href="/Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%9E%9A%E4%B8%BE%E7%B1%BB/" title="枚举类">枚举类</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020/07/15 21:00:00"><i class="far fa-calendar-alt"></i>2020/07/15</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Python%E6%B5%85%E6%9E%90/">Python浅析</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/python/">python</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%9E%9A%E4%B8%BE%E7%B1%BB/">枚举类</a></span></div><div class="content">
-            快速开始 - 文档目录
-          
-
-
-
-
-
-枚举类的使用
-当需要大量定于变量时，可以使用枚举类(Enum)来实现这个功能
-当我们定义一个Class类型时，每个常量都是class里面的唯一实例
-方式： Enum(类名, (tuple参数))
-枚举类通过 __ members __ 方法遍历所有的成员
-而且 Enum 的成员均为单例（Singleton），并且不可实例化，不可更改
-
-
-
-123456789from enum import EnumMonth = Enum('MONTH',('Jan', 'Feb','Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))for name, member in Month.__members__.items():    # member.value 自动赋给成员的 int 类型的常量， 默认从1开始    print(name, '---------', member, '--------', member.value)  ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/Python-for-MagicMethod/" title="【浅析】Magic Method">     <img class="post_bg" data-src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/img/83088427.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【浅析】Magic Method"></a></div><div class="recent-post-info"><a class="article-title" href="/Python-for-MagicMethod/" title="【浅析】Magic Method">【浅析】Magic Method</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020/07/15 11:00:00"><i class="far fa-calendar-alt"></i>2020/07/15</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Python%E6%B5%85%E6%9E%90/">Python浅析</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/python/">python</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Magic-Method/">Magic Method</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%8F%8F%E8%BF%B0%E5%99%A8/">描述器</a></span></div><div class="content">前言本文基本摘自 两点水 的草根学Python,本文仅作记录备份或者本人查阅方便，
-了解Magic Method(魔术方法)
-双下划线包起来的方法，都统称为”魔术方法”，如”init“
-使用魔术方法可以构造出优美的代码，将复杂的逻辑封装成简单的方法
-使用dir()列出类中所有的魔术方法，如下例
-
-1234class User(object):    passif __name__ == '__main__':    print(dir(User()))
-
-[&apos;__class__&apos;, &apos;__delattr__&apos;, &apos;__dict__&apos;, &apos;__dir__&apos;, &apos;__doc__&apos;, &apos;__eq__&apos;, &apos;__format__&apos;, &apos;__ge__&apos;, &apos;__getattribute__&apos;, &apos;__gt__&apos;, &apos;__hash__&apos;, &apos;__init__&apos;, ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E6%80%81/" title="【浅析】python的多态">     <img class="post_bg" data-src="https://cdn.jsdelivr.net/gh/xiongJum/Picture//img/77253241_p0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【浅析】python的多态"></a></div><div class="recent-post-info"><a class="article-title" href="/Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E6%80%81/" title="【浅析】python的多态">【浅析】python的多态</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020/07/10 16:00:00"><i class="far fa-calendar-alt"></i>2020/07/10</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Python%E6%B5%85%E6%9E%90/">Python浅析</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/python/">python</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%A4%9A%E6%80%81/">多态</a></span></div><div class="content">Ⅰ，理解
-指对不同类型的变量进行操作，根据对象（或类）类型的不同而表现出不同的行为
-
-Ⅱ，常用的多态1234&gt;&gt;&gt; print(1+2)3&gt;&gt;&gt; print('1'+'2')'12'
-
-
-不同的对象（或类）调用‘’+”，“+”会做出不同的响应
-
-Ⅲ，对象所属的类之间有继承关系123456789101112131415161718192021222324252627class User(object):    def __init__(self, name):        self.name = name    def printUser(self):        print('你好！' + self.name)        class UserVip(User):    def printUser(self):        print('你好！尊敬的会员用户' + self.name)        class UserGeneral(User):    def printUser(self):        print('你好！尊敬的用户' ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/v2ray(%E5%9F%BA%E7%A1%80%E7%AF%87)/" title="【基础篇】V2ray搭建教程">     <img class="post_bg" data-src="https://cdn.jsdelivr.net/gh/xiongJum/Picture//img/82601928_p0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【基础篇】V2ray搭建教程"></a></div><div class="recent-post-info"><a class="article-title" href="/v2ray(%E5%9F%BA%E7%A1%80%E7%AF%87)/" title="【基础篇】V2ray搭建教程">【基础篇】V2ray搭建教程</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020/07/05 09:00:00"><i class="far fa-calendar-alt"></i>2020/07/05</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/vpn/">vpn</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/V2ray/">V2ray</a></span></div><div class="content">
-1. 服务器
-可以使用linode 或者搬瓦工vps服务器
-
-本次推荐Google Cloud(谷歌云)，搭建v2ray或者其余学习用途
-
-
-（1）.优点
-
-也无需担心和AWS一样会莫名其妙的扣费，在没有升级为付费用户之前是不会扣除信用卡的金额
-新用户会赠送等同于$300 的当地货币使用，有效期为12个月
-有香港等亚太地区的服务器，使用延迟会好上不少
-
-（2）.缺点
-
-搭建过程中需要使用魔法上网
-
-
-本教程暂介绍服务器申请
-
-
-2. 服务端配置
-本次教程选择的面板为sprov065@github用户的v2-ui 
-
-特点：
-可视化操作，查看方便、学习门槛较低
-由于是网页端所以管理会比较方便
-该面板可以配置多用户
-
-
-安装&amp;升级v2ray
-
-
-1bash &lt;(curl -Ls https:&#x2F;&#x2F;blog.sprov.xyz&#x2F;v2-ui.sh)
-
-
-
-
-输入v2-ui，进入面板设置
-
-
-
-
-
-查看或者重新设置面板的端口号
-1234# 查找v2-ui的服务进程ps -ef | grep v2-ui# 根据PID查找端口号netstat -nap | ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/PlantUML(%E6%B5%81%E7%A8%8B%E5%9B%BE)/" title="PlantUML流程图">     <img class="post_bg" data-src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/img/78101956_p0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PlantUML流程图"></a></div><div class="recent-post-info"><a class="article-title" href="/PlantUML(%E6%B5%81%E7%A8%8B%E5%9B%BE)/" title="PlantUML流程图">PlantUML流程图</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020/06/30 09:00:00"><i class="far fa-calendar-alt"></i>2020/06/30</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/vscode/">vscode</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%B5%81%E7%A8%8B%E5%9B%BE/">流程图</a></span></div><div class="content">PlantUML(流程图)
-–基于vscIDE编辑器的PLantUML模块
-Ⅰ、说明
-本流程图是通过使用代码行(伪代码)进行实现
-需要Java、需要IDE：Visual Studio Code
-如果需要画时序图和活动图以外的流程图，需要安装grephviz-dot
-本教程或则记录仅为活动图
-本次不是完整活动图记录，若需要别的条件或关键词，可以通过附录链接，跳转到官方文档
-
-Ⅱ、开始
-@startuml 和 @enduml 为开始和结束流程
-start 和 stop为开始和结束，end表现为另种结束icon
-if、elseif、和else为条件语句。else只能连续出现一次
-endif 设置多个分支
-
-1234567891011121314151617181920212223242526272829303132333435363738@startuml [Test测试]if(线路判断规则) then(按照机具上传方向)     if(上下车方向是否相同) then(Y)        if(上车站点是否大于下车站点) then(N)            :定为一条行程，线路方向和站点序 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/web%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC/" title="【浅析】web端自动测试学习">     <img class="post_bg" data-src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/img/77247188_p0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【浅析】web端自动测试学习"></a></div><div class="recent-post-info"><a class="article-title" href="/web%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC/" title="【浅析】web端自动测试学习">【浅析】web端自动测试学习</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020/06/29 09:00:00"><i class="far fa-calendar-alt"></i>2020/06/29</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/python/">python</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/selenium/">selenium</a></span></div><div class="content">Ⅰ、准备工具
-下载selenium库
-
-12pip3 install selenium# 若下载时间过慢，可以跟换国内pip源进行下载
-
-
-下载浏览器驱动，下面用例以火狐浏览器举例
-
-将chrome驱动放在目录 [python的安装目录]\Python\Python(版本号)下，或者放在执行和执行文件同路径下
-Ⅱ、编写简单的web自动化脚本
-执行脚本文件
-
-1234567891011121314151617181920212223from selenium import webdriverimport unittestclass seleniumTest(unittest.TestCase):    def setUp(self):        # 添加驱动，设置隐形等待时间、最大化浏览器窗口、输入测试地址        self.driver = webdriver.Chrome()	        self.driver.implicitly_wait(10)        self.driver.maximize_window()        self.driver.get( ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/PID_82705027_copy.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">酒明</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">13</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">22</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">3</div></a></div></div><div class="card-info-bookmark is-center"><button class="button--animated" id="bookmark-it" title="加入书签"><i class="fas fa-bookmark"></i><span>加入书签</span></button></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">蔽临寒舍，请多指教ヾ(≧▽≦*)o</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/img/78824813_p0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="正则表达式" alt="正则表达式"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式">正则表达式</div><time class="aside-post_meta post-meta__date" title="发表于 2021/11/01 03:23:05">2021/11/01</time></div></a></div><div class="aside-recent-post"><a href="/Hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/img/78824813_p0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="Ocean 配置" alt="Ocean 配置"/></div><div class="aside-post-title"><div class="aside-post_title" href="/Hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" title="Ocean 配置">Ocean 配置</div><time class="aside-post_meta post-meta__date" title="发表于 2021/10/30 00:00:00">2021/10/30</time></div></a></div><div class="aside-recent-post"><a href="/linux%E4%B9%8B%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/img/83109676.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="【Linux】文件管理和帮助命令" alt="【Linux】文件管理和帮助命令"/></div><div class="aside-post-title"><div class="aside-post_title" href="/linux%E4%B9%8B%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" title="【Linux】文件管理和帮助命令">【Linux】文件管理和帮助命令</div><time class="aside-post_meta post-meta__date" title="发表于 2020/07/28 15:00:00">2020/07/28</time></div></a></div><div class="aside-recent-post"><a href="/SQL%E5%9F%BA%E7%A1%80-%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/img/83109748.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="SQL基础-增删改查" alt="SQL基础-增删改查"/></div><div class="aside-post-title"><div class="aside-post_title" href="/SQL%E5%9F%BA%E7%A1%80-%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" title="SQL基础-增删改查">SQL基础-增删改查</div><time class="aside-post_meta post-meta__date" title="发表于 2020/07/22 15:24:00">2020/07/22</time></div></a></div><div class="aside-recent-post"><a href="/Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%9E%9A%E4%B8%BE%E7%B1%BB/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/img/83109676.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="枚举类" alt="枚举类"/></div><div class="aside-post-title"><div class="aside-post_title" href="/Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%9E%9A%E4%B8%BE%E7%B1%BB/" title="枚举类">枚举类</div><time class="aside-post_meta post-meta__date" title="发表于 2020/07/15 21:00:00">2020/07/15</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Python%E6%B5%85%E6%9E%90/"><span class="card-category-list-name">Python浅析</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/linux%E6%B5%85%E6%9E%90/"><span class="card-category-list-name">linux浅析</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2/"><span class="card-category-list-name">博客</span><span class="card-category-list-count">1</span></a></li>
-                       
-            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Hexo/" style="font-size: 16px; color: #999">Hexo</a> <a href="/tags/Magic-Method/" style="font-size: 16px; color: #999">Magic Method</a> <a href="/tags/Ocean/" style="font-size: 16px; color: #999">Ocean</a> <a href="/tags/SQL/" style="font-size: 16px; color: #999">SQL</a> <a href="/tags/V2ray/" style="font-size: 16px; color: #999">V2ray</a> <a href="/tags/http/" style="font-size: 16px; color: #999">http</a> <a href="/tags/linux/" style="font-size: 19px; color: #99a1ac">linux</a> <a href="/tags/python/" style="font-size: 22px; color: #99a9bf">python</a> <a href="/tags/selenium/" style="font-size: 16px; color: #999">selenium</a> <a href="/tags/shell/" style="font-size: 16px; color: #999">shell</a> <a href="/tags/vpn/" style="font-size: 16px; color: #999">vpn</a> <a href="/tags/vscode/" style="font-size: 16px; color: #999">vscode</a> <a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 16px; color: #999">主题</a> <a href="/tags/%E4%BF%AE%E9%A5%B0%E5%99%A8/" style="font-size: 16px; color: #999">修饰器</a> <a href="/tags/%E5%A4%9A%E6%80%81/" style="font-size: 16px; color: #999">多态</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 16px; color: #999">工具</a> <a href="/tags/%E6%8E%A5%E5%8F%A3%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/" style="font-size: 16px; color: #999">接口性能测试</a> <a href="/tags/%E6%8F%8F%E8%BF%B0%E5%99%A8/" style="font-size: 16px; color: #999">描述器</a> <a href="/tags/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" style="font-size: 16px; color: #999">文件管理</a> <a href="/tags/%E6%9E%9A%E4%B8%BE%E7%B1%BB/" style="font-size: 16px; color: #999">枚举类</a> <a href="/tags/%E6%B5%81%E7%A8%8B%E5%9B%BE/" style="font-size: 16px; color: #999">流程图</a> <a href="/tags/%E6%B5%85%E6%9E%90/" style="font-size: 19px; color: #99a1ac">浅析</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/11/"><span class="card-archive-list-date">十一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">五月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><span class="card-archive-list-count">1</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">13</div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 酒明</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">繁</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script id="ribbon_piao" mobile="true" src="/js/third-party/piao.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
-POWERMODE.shake = true;
-document.body.addEventListener('input', POWERMODE);
-</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleType = function () {
-  loadScript('https://sdk.jinrishici.com/v2/browser/jinrishici.js',function () {
-      var subtitleEffect = true
-      jinrishici.load(function (result) {
-        if (subtitleEffect) {
-          var sub = "今日事，今日做".length == 0 ? new Array() : "今日事，今日做".split(',')
-          var content = result.data.content
-          var both = sub.unshift(content)
-          var typed = new Typed('#subtitle', {
-            strings: sub,
-            startDelay: 300,
-            typeSpeed: 150,
-            loop: true,
-            backSpeed: 50,
-          })
-        } else {
-          document.getElementById('subtitle').innerHTML = result.data.content
-        }
-      })
-    }
-  )
-}
-window.addEventListener('load', subtitleType)
-</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <title>
+    
+    Jum‘ Xiong
+  </title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <main class="content">
+    <section class="jumbotron">
+  <div class="video">
+    
+    <div class="video-frame">
+      <img src="/images/ocean/overlay-hero.png" alt="Decorative image frame">
+    </div>
+    
+    <div class="video-media">
+      <video playsinline="" autoplay="" loop="" muted="" data-autoplay="" poster="/images/ocean/ocean.png"
+        x5-video-player-type="h5">
+        <source src="/images/ocean/ocean.mp4" type="video/mp4">
+        <source src="/images/ocean/ocean.ogv" type="video/ogg">
+        <source src="/images/ocean/ocean.webm" type="video/webm">
+        <p>Your user agent does not support the HTML5 Video element.</p>
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+    <div class="video-inner text-center text-white">
+      <h1><a href="/">Jum‘ Xiong</a></h1>
+      <p></p>
+      <div><img src="/images/hexo-inverted.svg" class="brand" alt="Jum‘ Xiong"></div>
+    </div>
+    <div class="video-learn-more">
+      <a class="anchor" href="#landingpage"><i class="fe fe-mouse"></i></a>
+    </div>
+  </div>
+</section>
+<div id="landingpage">
+  <section class="outer">
+  <article class="articles">
+    
+    <h1 class="page-type-title"></h1>
+    
+    
+    <article id="post-Hexo主题配置" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+
+<h2 itemprop="name">
+  <a class="article-title" href="/Hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/">Ocean 配置</a>
+</h2>
+
+
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/Hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2021-10-30T00:00:00.000Z" itemprop="datePublished">2021/10/30</time>
+</a>
+      
+<div class="article-category">
+  <a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a>
+</div>
+
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        
+      
+      
+        <p>Ocean 是基于 Hexo 默认主题 landscape 的功能，设计的一款支持移动设备的主题，并且集成了 Gitalk 与 Valine 评论功能。</p>
+<p>如果你喜欢 Ocean 可以从 <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">GitHub</a> 下载，主题默认使用 Logo 是 Hexo 的 Logo，更换 Logo 路径在 ocean/source/images/hexo.svg ，注意它还有一个反色版 hexo-inverted.svg ，如果你更改了文件名，那么还需要在 ocean/_config.yml 做对应的修改。</p>
+<p>详细文档见 <a href="https://zhwangart.com/2018/11/30/Ocean/" target="_blank" rel="noopener">Ocean 文档</a>，以下是个人的需要的配置</p>
+        
+          <p>
+            <a class="article-more-link" href="/Hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/">
+              Read More...
+            </a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+<!--
+      <a data-url="http://18.178.175.124/Hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" data-id="ckvg5yj620000acxh8vnpfsi7" class="article-share-link">
+        分享
+      </a>
+-->
+      
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ocean/" rel="tag">Ocean</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%BB%E9%A2%98/" rel="tag">主题</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+</article>
+
+    
+    <article id="post-web端自动化测试脚本" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+
+<h2 itemprop="name">
+  <a class="article-title" href="/web%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC/">【浅析】web端自动测试学习</a>
+</h2>
+
+
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/web%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC/" class="article-date">
+  <time datetime="2020-06-29T09:00:00.000Z" itemprop="datePublished">2020/06/29</time>
+</a>
+      
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        
+      
+      
+      <h5 id="Ⅰ、准备工具"><a href="#Ⅰ、准备工具" class="headerlink" title="Ⅰ、准备工具"></a>Ⅰ、准备工具</h5><ul>
+<li>下载selenium库</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip3 install selenium</span><br><span class="line"><span class="meta">#</span><span class="bash"> 若下载时间过慢，可以跟换国内pip源进行下载</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>下载浏览器驱动，下面用例以火狐浏览器举例</li>
+</ul>
+<p>将<a href="http://chromedriver.chromium.org/downloads" target="_blank" rel="noopener">chrome</a>驱动放在目录 [python的安装目录]\Python\Python(版本号)下，或者放在执行和执行文件同路径下</p>
+<h5 id="Ⅱ、编写简单的web自动化脚本"><a href="#Ⅱ、编写简单的web自动化脚本" class="headerlink" title="Ⅱ、编写简单的web自动化脚本"></a>Ⅱ、编写简单的web自动化脚本</h5><ul>
+<li>执行脚本文件</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> unittest</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">seleniumTest</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setUp</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># 添加驱动，设置隐形等待时间、最大化浏览器窗口、输入测试地址</span></span><br><span class="line">        self.driver = webdriver.Chrome()	</span><br><span class="line">        self.driver.implicitly_wait(<span class="number">10</span>)</span><br><span class="line">        self.driver.maximize_window()</span><br><span class="line">        self.driver.get(<span class="string">"http://118.190.124.69:8080/bts-2.4.3/"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_login</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># 查找账号、密码输入框，并输入内容</span></span><br><span class="line">        self.driver.find_element_by_id(<span class="string">"username"</span>).send_keys(<span class="string">'xiongceshi'</span>)</span><br><span class="line">        self.driver.find_element_by_id(<span class="string">"password"</span>).send_keys(<span class="string">"xiongceshi121"</span>)</span><br><span class="line">        <span class="comment"># 查找并点击登录按钮</span></span><br><span class="line">        self.driver.find_element_by_id(<span class="string">"login_submit"</span>).click()</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">tearDown</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># 关闭浏览器并退出脚本</span></span><br><span class="line">        self.driver.quit()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="comment"># 运行全部以test_开头的方法，vrrbosity为打印等级，默认为2，exit为退出条件，默认为True</span></span><br><span class="line">    unittest.main(verbosity=<span class="number">2</span>, exit = <span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>执行结果</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">test_login (__main__.seleniumTest) ... ok</span><br><span class="line">-----------------------------------------------------------------------------------------</span><br><span class="line">Ran 1 test in 12.749s</span><br><span class="line"></span><br><span class="line">OK</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>增加断言，判断是否符合测试要求</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support.ui <span class="keyword">import</span> WebDriverWait</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support <span class="keyword">import</span> expected_conditions <span class="keyword">as</span> EC</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"><span class="keyword">import</span> unittest</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">seleniumTest</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line"></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setUp</span><span class="params">(cls)</span>:</span></span><br><span class="line">        cls.driver = webdriver.Firefox()	</span><br><span class="line">        cls.driver.implicitly_wait(<span class="number">10</span>)</span><br><span class="line">        cls.driver.maximize_window()</span><br><span class="line">        cls.driver.get(<span class="string">"http://118.190.124.69:8080/bts-2.4.3/"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_a_login</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""正确的账号密码进行登录"""</span></span><br><span class="line">        -------skip  </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_b_login</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""错误的账号密码进行登录，并判断提示文案是否正确"""</span>       </span><br><span class="line">        self.driver.find_element_by_id(<span class="string">"username"</span>).send_keys(<span class="string">'错误账号'</span>)</span><br><span class="line">        self.driver.find_element_by_id(<span class="string">"password"</span>).send_keys(<span class="string">"错误密码"</span>)</span><br><span class="line">        self.driver.find_element_by_id(<span class="string">"login_submit"</span>).click()</span><br><span class="line">        </span><br><span class="line">        <span class="string">"""查找错误提示文案，并判断文案是否错误"""</span></span><br><span class="line">        <span class="comment"># 设置显式等待时间，强制等待2秒查找元素</span></span><br><span class="line">        errorMsg = WebDriverWait(self.driver, <span class="number">2</span>) .until \</span><br><span class="line">        	(EC.visibility_of_element_located((By.ID,<span class="string">"errorMsg"</span>))).text</span><br><span class="line">        errorText = <span class="string">'账户或密码错误，请重新输入呀！'</span></span><br><span class="line">        <span class="comment"># 断言，比较两者的的字符串是否一致，若一致则为True，不一致则为Flase并抛出错误</span></span><br><span class="line">        self.assertEqual(errorMsg, errorText, <span class="string">'提示文案错误'</span>)</span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">tearDown</span><span class="params">(cls)</span>:</span></span><br><span class="line">        cls.driver.quit()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    unittest.main(verbosity=<span class="number">2</span>, exit = <span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>执行测试结果</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">test_a_login (__main__.seleniumTest)</span><br><span class="line">正确的账号密码进行登录 ... ok</span><br><span class="line">test_b_login (__main__.seleniumTest)</span><br><span class="line">错误的账号密码进行登录，并判断提示文案是否正确 ... FAIL</span><br><span class="line"></span><br><span class="line">======================================================================</span><br><span class="line">FAIL: test_b_login (__main__.seleniumTest)</span><br><span class="line">错误的账号密码进行登录，并判断提示文案是否正确</span><br><span class="line">----------------------------------------------------------------------</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File "c:\Users\jum\Desktop\临时文件夹\changzhou\changzhou_run\testEdit.py", line 27, in test_b_login</span><br><span class="line">    self.assertEqual(errorMsg, errorText, '提示文案错误')</span><br><span class="line">AssertionError: '账户或密码错误，请重新输入' != '账户或密码错误，请重新输入呀！'</span><br><span class="line">+ 账户或密码错误，请重新输入！ : 提示文案错误</span><br><span class="line"></span><br><span class="line">----------------------------------------------------------------------</span><br><span class="line">Ran 2 tests in 41.063s</span><br><span class="line"></span><br><span class="line">FAILED (failures=1)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>增加功能，截取产生有bug的界面</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">--------------------skip---------------------------------------</span><br><span class="line">        <span class="comment"># 判断文案是否错误，并截取用例执行错误时的界面</span></span><br><span class="line">        errorText = <span class="string">'账户或密码错误，请重新输入！'</span>     </span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 错误代码块，当try为True时，跳过except，当try为Flase时，执行except</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            self.assertEqual(errorMsg, errorText)</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            <span class="comment"># 截取当前界面，字符串中的内容为保存路径</span></span><br><span class="line">            self.driver.save_screenshot(<span class="string">'./test.png'</span>)</span><br><span class="line">            <span class="comment"># 断言，无条件的创造失败，字符串为错误说明</span></span><br><span class="line">            self.fail(<span class="string">"登录失败时，提示文案错误"</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">tearDown</span><span class="params">(cls)</span>:</span></span><br><span class="line">        cls.driver.quit()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    unittest.main(verbosity=<span class="number">2</span>, exit = <span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+
+<h5 id="Ⅲ、优化代码结构，产生测试报告"><a href="#Ⅲ、优化代码结构，产生测试报告" class="headerlink" title="Ⅲ、优化代码结构，产生测试报告"></a>Ⅲ、优化代码结构，产生测试报告</h5><ul>
+<li>文件1，储存配置以及通用方法</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># seleniumconfig.py</span></span><br><span class="line"><span class="keyword">import</span> unittest</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support.ui <span class="keyword">import</span> WebDriverWait</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support <span class="keyword">import</span> expected_conditions <span class="keyword">as</span> EC</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">seleniumConfig</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">	<span class="string">"""储存重复的方法，以及通用配置"""</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setUp</span><span class="params">(cls)</span>:</span></span><br><span class="line">        cls.driver = webdriver.Firefox()	</span><br><span class="line">        cls.driver.implicitly_wait(<span class="number">10</span>)</span><br><span class="line">        cls.driver.maximize_window()</span><br><span class="line">        cls.driver.get(<span class="string">"http://118.190.124.69:8080/bts-2.4.3/"</span>)</span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">tearDown</span><span class="params">(cls)</span>:</span></span><br><span class="line">        <span class="comment"># 关闭浏览器并退出脚本</span></span><br><span class="line">        cls.driver.quit()  </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">find_element_try</span><span class="params">(self, real, demand, explana)</span>:</span></span><br><span class="line">        <span class="string">"""判断实际内容和需求是否一致，若不一致则截取图片，并返回错误说明"""</span></span><br><span class="line">		<span class="keyword">try</span>:</span><br><span class="line">            self.assertEqual(real, demand)</span><br><span class="line">		<span class="keyword">except</span>:</span><br><span class="line">            self.fail(explana)</span><br><span class="line">            self.driver.save_screenshot(<span class="string">'./test.png'</span>)   </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">find_element_wait</span><span class="params">(self, wait_time, type_element, element)</span>:</span></span><br><span class="line">        <span class="string">"""检查元素是否存在，若不存在则截取图片并返回错误说明"""</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="keyword">return</span> WebDriverWait(self.driver, wait_time).until \</span><br><span class="line">                (EC.visibility_of_element_located((type_element,element)))</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            self.fail(<span class="string">"&#123;&#125;查找失败，请检查元素是否正确或产品出现缺陷"</span>.format(element))</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>设计测试流程、设计测试用例</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># seleniumtest.py</span></span><br><span class="line"><span class="keyword">from</span> seleniumconfig <span class="keyword">import</span> seleniumConfig</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">seleniumTest</span><span class="params">(seleniumConfig)</span>:</span></span><br><span class="line">	<span class="string">"""设计118环境web端登录的测试用例"""</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_a_login</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""正确的账号密码进行登录"""</span></span><br><span class="line">        -------skip  </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_b_login</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""错误的账号密码进行登录，并判断提示文案是否正确"""</span></span><br><span class="line">        self.driver.find_element_by_id(<span class="string">"username"</span>).send_keys(<span class="string">'错误账号'</span>)</span><br><span class="line">        self.driver.find_element_by_id(<span class="string">"password"</span>).send_keys(<span class="string">"错误密码"</span>)</span><br><span class="line">        self.driver.find_element_by_id(<span class="string">"login_submit"</span>).click()</span><br><span class="line">        <span class="comment"># 获取错误提示文案</span></span><br><span class="line">        errorMsg = self.find_element_wait(<span class="number">2</span>,By.ID,<span class="string">"errorMsg"</span>).text</span><br><span class="line">        errorText = <span class="string">'账户或密码错误，请重新输入！'</span></span><br><span class="line">        explana = <span class="string">'登录失败时，提示文案错误'</span>      </span><br><span class="line">       <span class="comment"># 判断错误提示文案和需求是否一致</span></span><br><span class="line">        self.find_element_try(errorMsg, errorText, explana)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>生成测试报告</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># seleniumrun.py</span></span><br><span class="line"><span class="keyword">import</span> unittest</span><br><span class="line"><span class="keyword">import</span> HTMLTestRunner</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> seleniumtest <span class="keyword">import</span> seleniumTest</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取测试用例，创建测试套件(若有多份测试用例，可以创建多份测试套件)</span></span><br><span class="line">web_login = unittest.TestLoader().loadTestsFromTestCase(seleniumTest)</span><br><span class="line">kts_login = unittest.TestSuite([web_login])</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 若有多份测试用例时</span></span><br><span class="line"><span class="string">import seleniumtestone import seleniumTestOne</span></span><br><span class="line"><span class="string">import seleniumtestone import seleniumTestTwo</span></span><br><span class="line"><span class="string">web_logout = unittest.TestLoader().loadTestsFromTestCase(seleniumTestOne)</span></span><br><span class="line"><span class="string">web_log = unittest.TestLoader().loadTestsFromTestCase(seleniumTestTwo)</span></span><br><span class="line"><span class="string">kts_login = unittest.TestSuite([web_login, web_logout, web_log])</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#设置报告的写入路径和名称</span></span><br><span class="line">dir = os.getcwd()</span><br><span class="line">nowTime = time.strftime(<span class="string">'%Y%m%d%H%M%S'</span>,time.localtime(time.time()))</span><br><span class="line">outPath = <span class="string">'./outFile/webTestReport&#123;&#125;.html'</span>.format(nowTime)</span><br><span class="line">outFile = open(dir + outPath, <span class="string">'wb'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建测试内容，执行测试套件</span></span><br><span class="line">runner = HTMLTestRunner.HTMLTestRunner(</span><br><span class="line">    stream= outFile,</span><br><span class="line">    title= <span class="string">'测试报告'</span>,</span><br><span class="line">    description= <span class="string">'WEB支撑平台测试_UI自动化回归测试'</span>,</span><br><span class="line">    verbosity=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">runner.run(kts_login)</span><br><span class="line"><span class="comment"># 不生成测试报告</span></span><br><span class="line"><span class="comment"># unittest.TextTestRunner(verbosity=2).run(kts_login)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>执行测试用例，获取测试报告</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">py seleniumrun.py</span><br><span class="line"><span class="meta">#</span><span class="bash"> ps如果执行失败请检查缩进是否正常，以及文件是否创建</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+<!--
+      <a data-url="http://18.178.175.124/web%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC/" data-id="ckvg5yj620002acxhfxjx8t78" class="article-share-link">
+        分享
+      </a>
+-->
+      
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selenium/" rel="tag">selenium</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+</article>
+
+    
+  </article>
+  
+
+  
+</section>
+</div>
+    <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+  <li><i class="fe fe-bar-chart"></i> <span id="busuanzi_value_site_pv"></span></li>
+  
+  <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>Jum‘ Xiong &copy; 2021</li>
+      
+        <li>ZHWANGART</li>
+      
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>theme  <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+  </main>
+  <aside class="sidebar">
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/favicon.ico" alt="Jum‘ Xiong"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">首頁</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分類</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/favorites">收藏</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">關於</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">時間綫</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/copybtn.js"></script>
+
+
+
+
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+
+</html>
