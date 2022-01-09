@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  <meta name="keywords" content="编程">
+  
+  
+  <meta name="description" content="围城">
+  
+  <title>
+    接口自动化测试 for requests |
+    
+    Jum`Xiong
+  </title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <main class="content">
+    <section class="outer">
+  <article id="post-编程/测试/接口自动化测试" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+
+<h1 class="article-title" itemprop="name">
+  接口自动化测试 for requests
+</h1>
+
+
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2021/12/25/%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" class="article-date">
+  <time datetime="2021-12-25T16:00:00.000Z" itemprop="datePublished">2021-12-26</time>
+</a>
+      
+<div class="article-category">
+  <a class="article-category-link" href="/categories/%E6%B5%8B%E8%AF%95/">测试</a> / <a class="article-category-link" href="/categories/%E6%B5%8B%E8%AF%95/%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/">接口自动化测试</a>
+</div>
+
+    </div>
+    
+
+    
+    
+<div class="tocbot"></div>
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+      <p>基于 requests 库 和 unittest 库，编写的脚本 demo，还存在不成熟的地方。</p>
+<a id="more"></a>
+
+
+<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>准备库 <a href="https://docs.python-requests.org/zh_CN/latest/" target="_blank" rel="noopener">requests</a> 和 <a href="https://docs.python.org/zh-cn/3/library/unittest.html" target="_blank" rel="noopener">unittest</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
+
+<h1 id="编写测试脚本"><a href="#编写测试脚本" class="headerlink" title="编写测试脚本"></a>编写测试脚本</h1><h2 id="封装公共参数"><a href="#封装公共参数" class="headerlink" title="封装公共参数"></a>封装公共参数</h2><p>封装公共参数，重复调取结果，减少代码的编写量，降低理解难度。</p>
+<p>设置接口的必填参数，并使用 <em>args 传入接口的非必填参数；使用 *</em>kwargs 设置一些条件。<br>可以将一些公共参数写入到单独的文件中，使用时引用即可；一些隐私的数据可以写入到<a href="/tags/环境变量">#环境变量中</a>中，如测试 api 或者测试账号。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> unittest</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RequestTest</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">	</span><br><span class="line"> 	<span class="comment"># 封装公共参数</span></span><br><span class="line">	 <span class="function"><span class="keyword">def</span> <span class="title">common</span><span class="params">(self, name, password, *args, **kwargs)</span>:</span></span><br><span class="line">		url = <span class="string">f"<span class="subst">&#123;config.ENVIRONMENT&#125;</span>/auth/login"</span></span><br><span class="line">		param = &#123;<span class="string">"name"</span>:name, <span class="string">"password"</span>:password,&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> args: <span class="comment"># 如果 args 不为空 则将参数传入添加到请求参数中</span></span><br><span class="line">			 <span class="keyword">for</span> arg <span class="keyword">in</span> args:</span><br><span class="line">				 param.update(**arg)</span><br><span class="line">		self.response = requests.post(url, headers=self.headers, json=param, </span><br><span class="line">									  verify=<span class="literal">False</span>,)</span><br><span class="line"></span><br><span class="line">		 <span class="comment"># 如果 kwargs 不为 False 则进行相应的操作</span></span><br><span class="line">		<span class="keyword">if</span> kwargs:</span><br><span class="line">			<span class="keyword">for</span> key, value <span class="keyword">in</span> kwargs.items():</span><br><span class="line">				<span class="keyword">if</span> key == <span class="string">'del_'</span> <span class="keyword">and</span> value : <span class="comment"># 如果 key 为 del_ 则删除本次测试所产生的数据</span></span><br><span class="line">					self.db.commit_data(<span class="string">f"delete from mp_org where phone='<span class="subst">&#123;phone&#125;</span>'"</span>)</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> self.response</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	unittest.main(verbosity=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>调取公共参数，请求项目的外部接口获取请求结果, 并根据结果进行断言</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RequestTest</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">	</span><br><span class="line">	... skip</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">test_login</span><span class="params">(self)</span>:</span></span><br><span class="line">		self.common(name=<span class="string">'admin'</span>, password=<span class="string">'passwd'</span>)</span><br><span class="line">		</span><br><span class="line">		<span class="comment"># 断言</span></span><br><span class="line">		self.assertEqual(self.response.status_code, <span class="number">200</span>)</span><br><span class="line"> 		self.assertEqual(self.response.json()[<span class="string">'code'</span>], <span class="number">0</span>, msg=<span class="string">'返回的状态码不为0'</span>)</span><br><span class="line">		</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	unittest.main(verbosity=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="编写装饰器"><a href="#编写装饰器" class="headerlink" title="编写装饰器"></a>编写装饰器</h2><p>将相同的断言放入 <a href="https://docs.python.org/zh-cn/3/library/typing.html#functions-and-decorators" target="_blank" rel="noopener">#装饰器</a>中，以供重复使用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># decorators.py</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lsgot_success</span><span class="params">(f)</span>:</span></span><br><span class="line"></span><br><span class="line"><span class="meta">	@wraps(f)</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">decorator</span><span class="params">(self, *args, **kwargs)</span>:</span></span><br><span class="line">		f(self, *args, **kwargs)</span><br><span class="line">		responseJSON = self.response.json()</span><br><span class="line">		print(responseJSON)</span><br><span class="line">		self.assertEqual(self.response.status_code, <span class="number">200</span>,)</span><br><span class="line">		self.assertEqual(responseJSON[<span class="string">'code'</span>], <span class="number">0</span>, msg=<span class="string">'返回的状态码不为0'</span>)</span><br><span class="line">		<span class="keyword">return</span> f(self, *args, **kwargs)</span><br><span class="line">	<span class="keyword">return</span> decorator</span><br></pre></td></tr></table></figure>
+
+<p>修改测试方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> decorators <span class="keyword">import</span> lsgot_success</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RequestTest</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">	</span><br><span class="line">	... skip</span><br><span class="line">	</span><br><span class="line"><span class="meta">	@lsgot_success</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">test_login</span><span class="params">(self)</span>:</span></span><br><span class="line">		self.common(name=<span class="string">'admin'</span>, password=<span class="string">'passwd'</span>)</span><br><span class="line">		</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	unittest.main(verbosity=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>若接口需要 cookie 之类的凭证，可以编写单独的方法，在运行测试之前写入到 cookie 或者 headers 中。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">login</span><span class="params">()</span>:</span></span><br><span class="line"></span><br><span class="line">	response = requests.post(url=url, headers=config.CONFING.LOGIN_HEADERS, </span><br><span class="line">							 data=param, verify=<span class="literal">False</span>)</span><br><span class="line">	</span><br><span class="line">	<span class="comment"># 获取登录结果返回的响应， 并将 Authorization 写入到 headers 中。</span></span><br><span class="line">	headers = &#123;</span><br><span class="line">		<span class="string">"Authorization"</span>: <span class="string">f"Bearer <span class="subst">&#123;response.json()[<span class="string">'access_token'</span>]&#125;</span>"</span>,</span><br><span class="line">		<span class="string">"Content-Type"</span>: <span class="string">"application/json;charset=UTF-8"</span></span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> headers</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RequestTest</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">setUp</span><span class="params">(self)</span>:</span></span><br><span class="line">		self.headers = login()</span><br><span class="line"></span><br><span class="line"><span class="meta">... </span>skip</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	</span><br><span class="line">	unittest.main(verbosity=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>如果在测试过程中需要访问数据库，访问这篇文章<a href="">在 Python 中访问 SQL</a></p>
+<p>谢谢</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>[1] 由于链接消失，暂时无法展示，以后找到后补上</p>
+
+      
+    </div>
+    <footer class="article-footer">
+<!--
+      <a data-url="http://example.com/2021/12/25/%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" data-id="cky6wmk8h001rhwxh885z92f3" class="article-share-link">
+        分享
+      </a>
+-->
+      
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8E%A5%E5%8F%A3/" rel="tag">接口</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" rel="tag">自动化测试</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+  
+<nav class="article-nav">
+  
+  
+  <a href="/2021/12/24/PyPi/" class="article-nav-link">
+    <strong class="article-nav-caption">后一篇</strong>
+    <div class="article-nav-title">PyPi</div>
+  </a>
+  
+</nav>
+
+  
+
+  
+  
+  
+  
+
+</article>
+
+</section>
+    <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+  <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>Jum`Xiong &copy; 2022</li>
+      
+        <li>ZHWANGART</li>
+      
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>theme  <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+  </main>
+  <aside class="sidebar">
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/favicon.ico" alt="Jum`Xiong"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">首頁</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分類</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/favorites">收藏</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">關於</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">時間綫</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/copybtn.js"></script>
+
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+
+</html>
