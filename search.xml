@@ -280,17 +280,51 @@
       </tags>
   </entry>
   <entry>
-    <title>PyPi</title>
+    <title>pip</title>
     <url>/2021/12/24/PyPi/</url>
-    <content><![CDATA[<h4 id="国内源"><a href="#国内源" class="headerlink" title="国内源"></a>国内源</h4><ul>
+    <content><![CDATA[<p>由于某些发行版（如 pacman）会去除 pip 包管理器，则需要以下方法进行 pip的安装。<br>国内的下载速度过于缓慢，所以需要将下载源更换为国内源，来提升pip的下载速度，这里首先推荐豆瓣源。</p>
+<p>安装详情请见 <a href="https://pip.pypa.io/en/stable/installation/" target="_blank" rel="noopener">pip 文档</a></p>
+<a id="more"></a>
+
+<h1 id="1-安装pip"><a href="#1-安装pip" class="headerlink" title="1. 安装pip"></a>1. 安装pip</h1><p>从以下途径安装 python，则会自动安装 pip。</p>
+<ul>
+<li>在虚拟环境中工作</li>
+<li>从 (python.org)[<a href="https://www.python.org/]" target="_blank" rel="noopener">https://www.python.org/]</a> 中下载的 Python</li>
+</ul>
+<p>否则使用以下方法进行 pip 的安装</p>
+<h2 id="1-1-ensurepip"><a href="#1-1-ensurepip" class="headerlink" title="1.1 ensurepip"></a>1.1 ensurepip</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Linux</span></span><br><span class="line">python -m ensurepip --upgrade</span><br><span class="line"><span class="comment"># Windows</span></span><br><span class="line">py -m ensurepip --upgrade</span><br></pre></td></tr></table></figure>
+<h2 id="1-2-get-pip-py"><a href="#1-2-get-pip-py" class="headerlink" title="1.2 get-pip.py"></a>1.2 get-pip.py</h2><p>从 <a href="https://bootstrap.pypa.io/get-pip.py" target="_blank" rel="noopener">https://bootstrap.pypa.io/get-pip.py</a> 下载脚本。<br>若从linux 的命令行模式下下载，则需执行以下语句</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://bootstrap.pypa.io/get-pip.py</span><br></pre></td></tr></table></figure>
+<p>请参阅 <a href="https://docs.python.org/3/library/ensurepip.html#module-ensurepip" target="_blank" rel="noopener">ensurepip</a> 获取更详细的信息。</p>
+<h3 id="Linux-下安装"><a href="#Linux-下安装" class="headerlink" title="Linux 下安装"></a>Linux 下安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># (**如果需要全局安装，请执行下一条语句**)安装到当前用户下</span></span><br><span class="line">python get-pip.py</span><br><span class="line"><span class="comment"># 全局安装pip</span></span><br><span class="line">sudo python get-pip.py</span><br></pre></td></tr></table></figure>
+<p>若不是全局安装 pip ，则需要将 pip 添加到环境变量中</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ~&#x2F;.bashrc 或 ~&#x2F;.zshrc</span><br><span class="line">export PATH&#x3D;&quot;$HOME&#x2F;.local&#x2F;:$PATH&quot;</span><br></pre></td></tr></table></figure>
+<p>重新进入环境变量</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line"><span class="comment"># 或</span></span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<h3 id="Windows-下安装"><a href="#Windows-下安装" class="headerlink" title="Windows 下安装"></a>Windows 下安装</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">py get-pip.py</span><br></pre></td></tr></table></figure>
+<p>更多请参考文档 <a href="https://github.com/pypa/get-pip" target="_blank" rel="noopener">pypa/get-pip</a></p>
+<blockquote>
+<p>此链接为 github，若需要良好的访问体验，请魔法上网或者其余方式</p>
+</blockquote>
+<h1 id="2-更新-pip"><a href="#2-更新-pip" class="headerlink" title="2. 更新 pip"></a>2. 更新 pip</h1><p>Linux</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
+
+<p>Windows</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">py -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
+<p>若需要下载速度过慢可参考下文，更换为国内源</p>
+<h1 id="3-更换-pip-的下载源"><a href="#3-更换-pip-的下载源" class="headerlink" title="3. 更换 pip 的下载源"></a>3. 更换 pip 的下载源</h1><h2 id="3-1-国内源"><a href="#3-1-国内源" class="headerlink" title="3.1 国内源"></a>3.1 国内源</h2><ul>
 <li>豆瓣:：<a href="https://pypi.douban.com/simple/" target="_blank" rel="noopener">https://pypi.douban.com/simple/</a></li>
 <li>清华：<a href="https://pypi.tuna.tsinghua.edu.cn/simple" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple</a></li>
 </ul>
-<h5 id="临时使用"><a href="#临时使用" class="headerlink" title="临时使用"></a>临时使用</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple some-package</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>建议使用豆瓣源</p>
+</blockquote>
+<h2 id="3-2-更换-pipy-源"><a href="#3-2-更换-pipy-源" class="headerlink" title="3.2 更换 pipy 源"></a>3.2 更换 pipy 源</h2><h3 id="临时使用"><a href="#临时使用" class="headerlink" title="临时使用"></a>临时使用</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple some-package</span><br></pre></td></tr></table></figure>
 
-<h5 id="设置为默认值"><a href="#设置为默认值" class="headerlink" title="设置为默认值"></a>设置为默认值</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 更新 pip</span><br><span class="line">pip install -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple pip -U</span><br><span class="line"></span><br><span class="line"># 更换 pip 源</span><br><span class="line">pip config set https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple</span><br></pre></td></tr></table></figure>
+<h3 id="设置为默认值"><a href="#设置为默认值" class="headerlink" title="设置为默认值"></a>设置为默认值</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 更换 pip 源</span><br><span class="line">pip config set global.index-url https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple&#x2F;</span><br></pre></td></tr></table></figure>
 
-<h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><p>[1] <a href="https://mirror.tuna.tsinghua.edu.cn/help/pypi/" target="_blank" rel="noopener">清华大学开源软件镜像站</a></p>
+<h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><p>[1] <a href="https://mirror.tuna.tsinghua.edu.cn/help/pypi/" target="_blank" rel="noopener">清华大学开源软件镜像站</a><br>[2] <a href="https://pip.pypa.io/en/stable/installation/" target="_blank" rel="noopener">pip 文档</a></p>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -391,6 +425,46 @@
       </tags>
   </entry>
   <entry>
+    <title>接口自动化测试 for requests</title>
+    <url>/2021/12/25/%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p>基于 requests 库 和 unittest 库，编写的脚本 demo，还存在不成熟的地方。</p>
+<a id="more"></a>
+
+
+<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>准备库 <a href="https://docs.python-requests.org/zh_CN/latest/" target="_blank" rel="noopener">requests</a> 和 <a href="https://docs.python.org/zh-cn/3/library/unittest.html" target="_blank" rel="noopener">unittest</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
+
+<h1 id="编写测试脚本"><a href="#编写测试脚本" class="headerlink" title="编写测试脚本"></a>编写测试脚本</h1><h2 id="封装公共参数"><a href="#封装公共参数" class="headerlink" title="封装公共参数"></a>封装公共参数</h2><p>封装公共参数，重复调取结果，减少代码的编写量，降低理解难度。</p>
+<p>设置接口的必填参数，并使用 <em>args 传入接口的非必填参数；使用 *</em>kwargs 设置一些条件。<br>可以将一些公共参数写入到单独的文件中，使用时引用即可；一些隐私的数据可以写入到<a href="/tags/环境变量">#环境变量中</a>中，如测试 api 或者测试账号。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> unittest</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RequestTest</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">	</span><br><span class="line"> 	<span class="comment"># 封装公共参数</span></span><br><span class="line">	 <span class="function"><span class="keyword">def</span> <span class="title">common</span><span class="params">(self, name, password, *args, **kwargs)</span>:</span></span><br><span class="line">		url = <span class="string">f"<span class="subst">&#123;config.ENVIRONMENT&#125;</span>/auth/login"</span></span><br><span class="line">		param = &#123;<span class="string">"name"</span>:name, <span class="string">"password"</span>:password,&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> args: <span class="comment"># 如果 args 不为空 则将参数传入添加到请求参数中</span></span><br><span class="line">			 <span class="keyword">for</span> arg <span class="keyword">in</span> args:</span><br><span class="line">				 param.update(**arg)</span><br><span class="line">		self.response = requests.post(url, headers=self.headers, json=param, </span><br><span class="line">									  verify=<span class="literal">False</span>,)</span><br><span class="line"></span><br><span class="line">		 <span class="comment"># 如果 kwargs 不为 False 则进行相应的操作</span></span><br><span class="line">		<span class="keyword">if</span> kwargs:</span><br><span class="line">			<span class="keyword">for</span> key, value <span class="keyword">in</span> kwargs.items():</span><br><span class="line">				<span class="keyword">if</span> key == <span class="string">'del_'</span> <span class="keyword">and</span> value : <span class="comment"># 如果 key 为 del_ 则删除本次测试所产生的数据</span></span><br><span class="line">					self.db.commit_data(<span class="string">f"delete from mp_org where phone='<span class="subst">&#123;phone&#125;</span>'"</span>)</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> self.response</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	unittest.main(verbosity=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>调取公共参数，请求项目的外部接口获取请求结果, 并根据结果进行断言</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RequestTest</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">	</span><br><span class="line">	... skip</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">test_login</span><span class="params">(self)</span>:</span></span><br><span class="line">		self.common(name=<span class="string">'admin'</span>, password=<span class="string">'passwd'</span>)</span><br><span class="line">		</span><br><span class="line">		<span class="comment"># 断言</span></span><br><span class="line">		self.assertEqual(self.response.status_code, <span class="number">200</span>)</span><br><span class="line"> 		self.assertEqual(self.response.json()[<span class="string">'code'</span>], <span class="number">0</span>, msg=<span class="string">'返回的状态码不为0'</span>)</span><br><span class="line">		</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	unittest.main(verbosity=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="编写装饰器"><a href="#编写装饰器" class="headerlink" title="编写装饰器"></a>编写装饰器</h2><p>将相同的断言放入 <a href="https://docs.python.org/zh-cn/3/library/typing.html#functions-and-decorators" target="_blank" rel="noopener">#装饰器</a>中，以供重复使用</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># decorators.py</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lsgot_success</span><span class="params">(f)</span>:</span></span><br><span class="line"></span><br><span class="line"><span class="meta">	@wraps(f)</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">decorator</span><span class="params">(self, *args, **kwargs)</span>:</span></span><br><span class="line">		f(self, *args, **kwargs)</span><br><span class="line">		responseJSON = self.response.json()</span><br><span class="line">		print(responseJSON)</span><br><span class="line">		self.assertEqual(self.response.status_code, <span class="number">200</span>,)</span><br><span class="line">		self.assertEqual(responseJSON[<span class="string">'code'</span>], <span class="number">0</span>, msg=<span class="string">'返回的状态码不为0'</span>)</span><br><span class="line">		<span class="keyword">return</span> f(self, *args, **kwargs)</span><br><span class="line">	<span class="keyword">return</span> decorator</span><br></pre></td></tr></table></figure>
+
+<p>修改测试方法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> decorators <span class="keyword">import</span> lsgot_success</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RequestTest</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">	</span><br><span class="line">	... skip</span><br><span class="line">	</span><br><span class="line"><span class="meta">	@lsgot_success</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">test_login</span><span class="params">(self)</span>:</span></span><br><span class="line">		self.common(name=<span class="string">'admin'</span>, password=<span class="string">'passwd'</span>)</span><br><span class="line">		</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	unittest.main(verbosity=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>若接口需要 cookie 之类的凭证，可以编写单独的方法，在运行测试之前写入到 cookie 或者 headers 中。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">login</span><span class="params">()</span>:</span></span><br><span class="line"></span><br><span class="line">	response = requests.post(url=url, headers=config.CONFING.LOGIN_HEADERS, </span><br><span class="line">							 data=param, verify=<span class="literal">False</span>)</span><br><span class="line">	</span><br><span class="line">	<span class="comment"># 获取登录结果返回的响应， 并将 Authorization 写入到 headers 中。</span></span><br><span class="line">	headers = &#123;</span><br><span class="line">		<span class="string">"Authorization"</span>: <span class="string">f"Bearer <span class="subst">&#123;response.json()[<span class="string">'access_token'</span>]&#125;</span>"</span>,</span><br><span class="line">		<span class="string">"Content-Type"</span>: <span class="string">"application/json;charset=UTF-8"</span></span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> headers</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RequestTest</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">setUp</span><span class="params">(self)</span>:</span></span><br><span class="line">		self.headers = login()</span><br><span class="line"></span><br><span class="line"><span class="meta">... </span>skip</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	</span><br><span class="line">	unittest.main(verbosity=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>如果在测试过程中需要访问数据库，访问这篇文章<a href="">在 Python 中访问 SQL</a></p>
+<p>谢谢</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>[1] 由于链接消失，暂时无法展示，以后找到后补上</p>
+]]></content>
+      <categories>
+        <category>测试</category>
+        <category>接口自动化测试</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>自动化测试</tag>
+        <tag>接口</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>自动化测试 for selenium</title>
     <url>/2020/06/29/selenium/</url>
     <content><![CDATA[<p>Selenium 是支持 web 浏览器自动化的一系列工具和库的综合性项目，它提供了扩展来模拟用户与浏览器的交互，用于扩展浏览器分配的分发服务器， 以及用于实现 <a href="https://www.w3.org/TR/webdriver/" target="_blank" rel="noopener">W3C WebDriver</a> 规范的基础结构， 该规范允许您为所有主要 Web 浏览器编写可互换的代码.</p>
@@ -432,49 +506,9 @@
       </categories>
       <tags>
         <tag>Python</tag>
+        <tag>自动化测试</tag>
         <tag>selenium</tag>
         <tag>web</tag>
-        <tag>自动化测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>接口自动化测试 for requests</title>
-    <url>/2021/12/25/%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p>基于 requests 库 和 unittest 库，编写的脚本 demo，还存在不成熟的地方。</p>
-<a id="more"></a>
-
-
-<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>准备库 <a href="https://docs.python-requests.org/zh_CN/latest/" target="_blank" rel="noopener">requests</a> 和 <a href="https://docs.python.org/zh-cn/3/library/unittest.html" target="_blank" rel="noopener">unittest</a></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
-
-<h1 id="编写测试脚本"><a href="#编写测试脚本" class="headerlink" title="编写测试脚本"></a>编写测试脚本</h1><h2 id="封装公共参数"><a href="#封装公共参数" class="headerlink" title="封装公共参数"></a>封装公共参数</h2><p>封装公共参数，重复调取结果，减少代码的编写量，降低理解难度。</p>
-<p>设置接口的必填参数，并使用 <em>args 传入接口的非必填参数；使用 *</em>kwargs 设置一些条件。<br>可以将一些公共参数写入到单独的文件中，使用时引用即可；一些隐私的数据可以写入到<a href="/tags/环境变量">#环境变量中</a>中，如测试 api 或者测试账号。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> unittest</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RequestTest</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">	</span><br><span class="line"> 	<span class="comment"># 封装公共参数</span></span><br><span class="line">	 <span class="function"><span class="keyword">def</span> <span class="title">common</span><span class="params">(self, name, password, *args, **kwargs)</span>:</span></span><br><span class="line">		url = <span class="string">f"<span class="subst">&#123;config.ENVIRONMENT&#125;</span>/auth/login"</span></span><br><span class="line">		param = &#123;<span class="string">"name"</span>:name, <span class="string">"password"</span>:password,&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> args: <span class="comment"># 如果 args 不为空 则将参数传入添加到请求参数中</span></span><br><span class="line">			 <span class="keyword">for</span> arg <span class="keyword">in</span> args:</span><br><span class="line">				 param.update(**arg)</span><br><span class="line">		self.response = requests.post(url, headers=self.headers, json=param, </span><br><span class="line">									  verify=<span class="literal">False</span>,)</span><br><span class="line"></span><br><span class="line">		 <span class="comment"># 如果 kwargs 不为 False 则进行相应的操作</span></span><br><span class="line">		<span class="keyword">if</span> kwargs:</span><br><span class="line">			<span class="keyword">for</span> key, value <span class="keyword">in</span> kwargs.items():</span><br><span class="line">				<span class="keyword">if</span> key == <span class="string">'del_'</span> <span class="keyword">and</span> value : <span class="comment"># 如果 key 为 del_ 则删除本次测试所产生的数据</span></span><br><span class="line">					self.db.commit_data(<span class="string">f"delete from mp_org where phone='<span class="subst">&#123;phone&#125;</span>'"</span>)</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> self.response</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	unittest.main(verbosity=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
-
-<p>调取公共参数，请求项目的外部接口获取请求结果, 并根据结果进行断言</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RequestTest</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">	</span><br><span class="line">	... skip</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">test_login</span><span class="params">(self)</span>:</span></span><br><span class="line">		self.common(name=<span class="string">'admin'</span>, password=<span class="string">'passwd'</span>)</span><br><span class="line">		</span><br><span class="line">		<span class="comment"># 断言</span></span><br><span class="line">		self.assertEqual(self.response.status_code, <span class="number">200</span>)</span><br><span class="line"> 		self.assertEqual(self.response.json()[<span class="string">'code'</span>], <span class="number">0</span>, msg=<span class="string">'返回的状态码不为0'</span>)</span><br><span class="line">		</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	unittest.main(verbosity=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="编写装饰器"><a href="#编写装饰器" class="headerlink" title="编写装饰器"></a>编写装饰器</h2><p>将相同的断言放入 <a href="https://docs.python.org/zh-cn/3/library/typing.html#functions-and-decorators" target="_blank" rel="noopener">#装饰器</a>中，以供重复使用</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># decorators.py</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lsgot_success</span><span class="params">(f)</span>:</span></span><br><span class="line"></span><br><span class="line"><span class="meta">	@wraps(f)</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">decorator</span><span class="params">(self, *args, **kwargs)</span>:</span></span><br><span class="line">		f(self, *args, **kwargs)</span><br><span class="line">		responseJSON = self.response.json()</span><br><span class="line">		print(responseJSON)</span><br><span class="line">		self.assertEqual(self.response.status_code, <span class="number">200</span>,)</span><br><span class="line">		self.assertEqual(responseJSON[<span class="string">'code'</span>], <span class="number">0</span>, msg=<span class="string">'返回的状态码不为0'</span>)</span><br><span class="line">		<span class="keyword">return</span> f(self, *args, **kwargs)</span><br><span class="line">	<span class="keyword">return</span> decorator</span><br></pre></td></tr></table></figure>
-
-<p>修改测试方法</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> decorators <span class="keyword">import</span> lsgot_success</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RequestTest</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">	</span><br><span class="line">	... skip</span><br><span class="line">	</span><br><span class="line"><span class="meta">	@lsgot_success</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">test_login</span><span class="params">(self)</span>:</span></span><br><span class="line">		self.common(name=<span class="string">'admin'</span>, password=<span class="string">'passwd'</span>)</span><br><span class="line">		</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	unittest.main(verbosity=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
-
-<p>若接口需要 cookie 之类的凭证，可以编写单独的方法，在运行测试之前写入到 cookie 或者 headers 中。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">login</span><span class="params">()</span>:</span></span><br><span class="line"></span><br><span class="line">	response = requests.post(url=url, headers=config.CONFING.LOGIN_HEADERS, </span><br><span class="line">							 data=param, verify=<span class="literal">False</span>)</span><br><span class="line">	</span><br><span class="line">	<span class="comment"># 获取登录结果返回的响应， 并将 Authorization 写入到 headers 中。</span></span><br><span class="line">	headers = &#123;</span><br><span class="line">		<span class="string">"Authorization"</span>: <span class="string">f"Bearer <span class="subst">&#123;response.json()[<span class="string">'access_token'</span>]&#125;</span>"</span>,</span><br><span class="line">		<span class="string">"Content-Type"</span>: <span class="string">"application/json;charset=UTF-8"</span></span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> headers</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RequestTest</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">setUp</span><span class="params">(self)</span>:</span></span><br><span class="line">		self.headers = login()</span><br><span class="line"></span><br><span class="line"><span class="meta">... </span>skip</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	</span><br><span class="line">	unittest.main(verbosity=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
-
-<p>如果在测试过程中需要访问数据库，访问这篇文章<a href="">在 Python 中访问 SQL</a></p>
-<p>谢谢</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>[1] 由于链接消失，暂时无法展示，以后找到后补上</p>
-]]></content>
-      <categories>
-        <category>测试</category>
-        <category>接口自动化测试</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>自动化测试</tag>
-        <tag>接口</tag>
       </tags>
   </entry>
 </search>

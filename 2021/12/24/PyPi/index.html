@@ -12,7 +12,7 @@
   <meta name="description" content="围城">
   
   <title>
-    PyPi |
+    pip |
     
     Jum`Xiong
   </title>
@@ -44,7 +44,7 @@
       
 
 <h1 class="article-title" itemprop="name">
-  PyPi
+  pip
 </h1>
 
 
@@ -75,21 +75,55 @@
       
       
       
-      <h4 id="国内源"><a href="#国内源" class="headerlink" title="国内源"></a>国内源</h4><ul>
+      <p>由于某些发行版（如 pacman）会去除 pip 包管理器，则需要以下方法进行 pip的安装。<br>国内的下载速度过于缓慢，所以需要将下载源更换为国内源，来提升pip的下载速度，这里首先推荐豆瓣源。</p>
+<p>安装详情请见 <a href="https://pip.pypa.io/en/stable/installation/" target="_blank" rel="noopener">pip 文档</a></p>
+<a id="more"></a>
+
+<h1 id="1-安装pip"><a href="#1-安装pip" class="headerlink" title="1. 安装pip"></a>1. 安装pip</h1><p>从以下途径安装 python，则会自动安装 pip。</p>
+<ul>
+<li>在虚拟环境中工作</li>
+<li>从 (python.org)[<a href="https://www.python.org/]" target="_blank" rel="noopener">https://www.python.org/]</a> 中下载的 Python</li>
+</ul>
+<p>否则使用以下方法进行 pip 的安装</p>
+<h2 id="1-1-ensurepip"><a href="#1-1-ensurepip" class="headerlink" title="1.1 ensurepip"></a>1.1 ensurepip</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Linux</span></span><br><span class="line">python -m ensurepip --upgrade</span><br><span class="line"><span class="comment"># Windows</span></span><br><span class="line">py -m ensurepip --upgrade</span><br></pre></td></tr></table></figure>
+<h2 id="1-2-get-pip-py"><a href="#1-2-get-pip-py" class="headerlink" title="1.2 get-pip.py"></a>1.2 get-pip.py</h2><p>从 <a href="https://bootstrap.pypa.io/get-pip.py" target="_blank" rel="noopener">https://bootstrap.pypa.io/get-pip.py</a> 下载脚本。<br>若从linux 的命令行模式下下载，则需执行以下语句</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://bootstrap.pypa.io/get-pip.py</span><br></pre></td></tr></table></figure>
+<p>请参阅 <a href="https://docs.python.org/3/library/ensurepip.html#module-ensurepip" target="_blank" rel="noopener">ensurepip</a> 获取更详细的信息。</p>
+<h3 id="Linux-下安装"><a href="#Linux-下安装" class="headerlink" title="Linux 下安装"></a>Linux 下安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># (**如果需要全局安装，请执行下一条语句**)安装到当前用户下</span></span><br><span class="line">python get-pip.py</span><br><span class="line"><span class="comment"># 全局安装pip</span></span><br><span class="line">sudo python get-pip.py</span><br></pre></td></tr></table></figure>
+<p>若不是全局安装 pip ，则需要将 pip 添加到环境变量中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># ~&#x2F;.bashrc 或 ~&#x2F;.zshrc</span><br><span class="line">export PATH&#x3D;&quot;$HOME&#x2F;.local&#x2F;:$PATH&quot;</span><br></pre></td></tr></table></figure>
+<p>重新进入环境变量</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line"><span class="comment"># 或</span></span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<h3 id="Windows-下安装"><a href="#Windows-下安装" class="headerlink" title="Windows 下安装"></a>Windows 下安装</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">py get-pip.py</span><br></pre></td></tr></table></figure>
+<p>更多请参考文档 <a href="https://github.com/pypa/get-pip" target="_blank" rel="noopener">pypa/get-pip</a></p>
+<blockquote>
+<p>此链接为 github，若需要良好的访问体验，请魔法上网或者其余方式</p>
+</blockquote>
+<h1 id="2-更新-pip"><a href="#2-更新-pip" class="headerlink" title="2. 更新 pip"></a>2. 更新 pip</h1><p>Linux</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
+
+<p>Windows</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">py -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
+<p>若需要下载速度过慢可参考下文，更换为国内源</p>
+<h1 id="3-更换-pip-的下载源"><a href="#3-更换-pip-的下载源" class="headerlink" title="3. 更换 pip 的下载源"></a>3. 更换 pip 的下载源</h1><h2 id="3-1-国内源"><a href="#3-1-国内源" class="headerlink" title="3.1 国内源"></a>3.1 国内源</h2><ul>
 <li>豆瓣:：<a href="https://pypi.douban.com/simple/" target="_blank" rel="noopener">https://pypi.douban.com/simple/</a></li>
 <li>清华：<a href="https://pypi.tuna.tsinghua.edu.cn/simple" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple</a></li>
 </ul>
-<h5 id="临时使用"><a href="#临时使用" class="headerlink" title="临时使用"></a>临时使用</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple some-package</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>建议使用豆瓣源</p>
+</blockquote>
+<h2 id="3-2-更换-pipy-源"><a href="#3-2-更换-pipy-源" class="headerlink" title="3.2 更换 pipy 源"></a>3.2 更换 pipy 源</h2><h3 id="临时使用"><a href="#临时使用" class="headerlink" title="临时使用"></a>临时使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple some-package</span><br></pre></td></tr></table></figure>
 
-<h5 id="设置为默认值"><a href="#设置为默认值" class="headerlink" title="设置为默认值"></a>设置为默认值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 更新 pip</span><br><span class="line">pip install -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple pip -U</span><br><span class="line"></span><br><span class="line"># 更换 pip 源</span><br><span class="line">pip config set https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple</span><br></pre></td></tr></table></figure>
+<h3 id="设置为默认值"><a href="#设置为默认值" class="headerlink" title="设置为默认值"></a>设置为默认值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 更换 pip 源</span><br><span class="line">pip config set global.index-url https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple&#x2F;</span><br></pre></td></tr></table></figure>
 
-<h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><p>[1] <a href="https://mirror.tuna.tsinghua.edu.cn/help/pypi/" target="_blank" rel="noopener">清华大学开源软件镜像站</a></p>
+<h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><p>[1] <a href="https://mirror.tuna.tsinghua.edu.cn/help/pypi/" target="_blank" rel="noopener">清华大学开源软件镜像站</a><br>[2] <a href="https://pip.pypa.io/en/stable/installation/" target="_blank" rel="noopener">pip 文档</a></p>
 
       
     </div>
     <footer class="article-footer">
 <!--
-      <a data-url="http://example.com/2021/12/24/PyPi/" data-id="ckyl6so5r0016ikxh0zi7e3ai" class="article-share-link">
+      <a data-url="http://example.com/2021/12/24/PyPi/" data-id="ckyp84vhq0016j4xh9ae57on6" class="article-share-link">
         分享
       </a>
 -->
