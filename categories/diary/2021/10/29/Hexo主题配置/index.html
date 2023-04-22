@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+  <meta name="subtitle" content="正经人谁写日记">
+
+
+
+
+<title>Ocean 主題配置 | Jum`Xiong</title>
+
+
+
+<link rel="icon" href="/categories/diary/favicon.png">
+
+
+
+<link rel="stylesheet" href="/categories/diary/css/main.css">
+
+
+<link rel="stylesheet" href="/categories/diary/lib/nprogress/nprogress.css">
+
+
+
+<script src="/categories/diary/lib/jquery.min.js"></script>
+
+
+<script src="/categories/diary/lib/iconify-icon.min.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+  };
+</script>
+
+
+<script src="/categories/diary/lib/nprogress/nprogress.js"></script>
+
+<script>
+  $(document).ready(() => {
+    NProgress.configure({
+      showSpinner: false,
+    });
+    NProgress.start();
+    $("#nprogress .bar").css({
+      background: "#de7441",
+    });
+    $("#nprogress .peg").css({
+      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
+    });
+    $("#nprogress .spinner-icon").css({
+      "border-top-color": "#de7441",
+      "border-left-color": "#de7441",
+    });
+    setTimeout(function () {
+      NProgress.done();
+      $(".fade").removeClass("out");
+    }, 800);
+  });
+</script>
+
+<script>
+  (function () {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+    if (setting === "dark" || (prefersDark && setting !== "light"))
+      document.documentElement.classList.toggle("dark", true);
+    let isDark = document.documentElement.classList.contains("dark");
+  })();
+
+  $(document).ready(function () {
+    // init icon
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = document.documentElement.classList.contains("dark");
+    $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+
+    function toggleGiscusTheme() {
+      const isDark = document.documentElement.classList.contains("dark");
+      const giscusFrame = document.querySelector("iframe.giscus-frame");
+      if (giscusFrame) {
+        giscusFrame.contentWindow.postMessage(
+          {
+            giscus: {
+              setConfig: {
+                theme: isDark ? "dark" : "light",
+              },
+            },
+          },
+          "https://giscus.app"
+        );
+      }
+    }
+
+
+    // toggle dark mode
+    function toggleDark() {
+      let isDark = document.documentElement.classList.contains("dark");
+      isDark = !isDark;
+      const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+      document.documentElement.classList.toggle("dark", isDark);
+      $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
+      if (prefersDark === isDark) {
+        localStorage.setItem("hexo-color-scheme", "auto");
+      } else {
+        localStorage.setItem("hexo-color-scheme", isDark ? "dark" : "light");
+      }
+      toggleGiscusTheme();
+    }
+    $("#toggle-dark").click(toggleDark);
+    // listen dark mode change
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        const setting = localStorage.getItem("hexo-color-scheme") || "auto";
+        if (setting === "auto") {
+          document.documentElement.classList.toggle("dark", e.matches);
+          $("#theme-icon").attr(
+            "icon",
+            e.matches ? "ri:moon-line" : "ri:sun-line"
+          );
+          toggleGiscusTheme();
+        }
+      });
+  });
+</script>
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200">
+  <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
+  <div class="max-auto">
+    <nav class="flex items-center text-base">
+      <a href="/categories/diary/" class="group">
+        <h2 class="font-medium tracking-tighterp text-l p-2">
+          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" id="logo" src="/images/logo.svg" alt="Jum`Xiong" />
+          Jum`Xiong
+        </h2>
+      </a>
+      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+        Ocean 主題配置
+      </div>
+      <div class="flex-1"></div>
+      <div class="flex items-center gap-3">
+        
+          <a class="hidden sm:flex" href="/categories/diary/../../">Home</a>
+        
+          <a class="hidden sm:flex" href="/categories/diary/category">Categories</a>
+        
+          <a class="hidden sm:flex" href="/categories/diary/tag">Tags</a>
+        
+        
+          
+            <a class="w-5 h-5 hidden sm:flex" title="Github" href="https://github.com/xiongjum" target="_blank" rel="noopener">
+              <iconify-icon width="20" icon="ri:github-line"></iconify-icon>
+            </a>
+          
+        
+        <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
+          <iconify-icon width="20" icon="" id="theme-icon"></iconify-icon>
+        </a>
+      </div>
+      <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
+        <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
+          <iconify-icon width="20" icon="carbon:menu" ></iconify-icon>
+        </span>
+        <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
+          <iconify-icon  width="20" icon="carbon:close" ></iconify-icon>
+        </span>
+      </div>
+    </nav>
+  </div>
+</header>
+<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
+  <div id="menu-content" class="relative z-20 bg-white/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-300">
+    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
+      
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/categories/diary/../../" class="flex h-12 sm:h-auto items-center">Home</a>
+        </li>
+      
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/categories/diary/category" class="flex h-12 sm:h-auto items-center">Categories</a>
+        </li>
+      
+        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
+          <a href="/categories/diary/tag" class="flex h-12 sm:h-auto items-center">Tags</a>
+        </li>
+      
+    </ul>
+  </div>
+  <div class="mask bg-black/20 absolute inset-0"></div>
+</div>
+
+  <main class="p-12">
+    <!-- css -->
+
+<link rel="stylesheet" href="/categories/diary/lib/fancybox/fancybox.min.css">
+
+
+<link rel="stylesheet" href="/categories/diary/lib/tocbot/tocbot.min.css">
+
+<!-- toc -->
+
+  <!-- tocbot -->
+<nav class="post-toc toc text-sm w-48 relative top-32 right-0 opacity-70 hidden lg:block" style="position: fixed !important;"></nav>
+
+
+<section class="px-6 max-w-prose mx-auto md:px-0">
+  <!-- header -->
+  <header class="overflow-hidden pt-6 pb-6 md:pt-12">
+    <div class="pt-4 md:pt-6">
+      <h1 id="article-title" class="text-[2rem] font-bold leading-snug mb-4 md:mb-6 md:text-[2.6rem]">
+        Ocean 主題配置
+      </h1>
+      <p class="mb-6">
+        <p>Ocean 是基于 Hexo 默认主题 landscape 的功能，设计的一款支持移动设备的主题，并且集成了 Gitalk 与 Valine 评论功能。</p>
+<p>如果你喜欢 Ocean 可以从 <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">GitHub</a> 下载，主题默认使用 Logo 是 Hexo 的 Logo，更换 Logo 路径在 ocean/source/images/hexo.svg ，注意它还有一个反色版 hexo-inverted.svg ，如果你更改了文件名，那么还需要在 ocean/_config.yml 做对应的修改。</p>
+<p>详细文档见 <a href="https://zhwangart.com/2018/11/30/Ocean/" target="_blank" rel="noopener">Ocean 文档</a>，以下是个人的需要的配置</p>
+      </p>
+      <div>
+        <section class="flex items-center gap-3 text-sm">
+          <time>2021-11-02 00:00:00</time>
+          <span class="text-gray-400">·</span>
+          <span>4 min</span>
+          <span class="text-gray-400">·</span>
+          <span>1.1k words</span>
+        </section>
+      </div>
+    </div>
+  </header>
+  <!-- content -->
+  <article class="post-content mt-10 prose dark:prose-invert post-content">
+    <p>Ocean 是基于 Hexo 默认主题 landscape 的功能，设计的一款支持移动设备的主题，并且集成了 Gitalk 与 Valine 评论功能。</p>
+<p>如果你喜欢 Ocean 可以从 <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">GitHub</a> 下载，主题默认使用 Logo 是 Hexo 的 Logo，更换 Logo 路径在 ocean/source/images/hexo.svg ，注意它还有一个反色版 hexo-inverted.svg ，如果你更改了文件名，那么还需要在 ocean/_config.yml 做对应的修改。</p>
+<p>详细文档见 <a href="https://zhwangart.com/2018/11/30/Ocean/" target="_blank" rel="noopener">Ocean 文档</a>，以下是个人的需要的配置</p>
+<a id="more"></a>
+
+
+<h1 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h1><p>下载安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/zhwangart/hexo-theme-ocean.git themes/ocean</span></span><br></pre></td></tr></table></figure>
+
+<p>更新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd themes&#x2F;ocean</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-配置"><a href="#2-配置" class="headerlink" title="2. 配置"></a>2. 配置</h1><h2 id="2-1-添加页面"><a href="#2-1-添加页面" class="headerlink" title="2.1 添加页面"></a>2.1 添加页面</h2><p>Ocean 默认在主题配置文件中配置相册和关于的链接， 但是主题中实际上并没有此页面，点击会提示 404 。可以按照需要进行删除和安装。</p>
+<h3 id="2-1-1-安装存在格式的页面"><a href="#2-1-1-安装存在格式的页面" class="headerlink" title="2.1.1 安装存在格式的页面"></a>2.1.1 安装存在格式的页面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo new page gallery    &#x2F;&#x2F; 创建相册页面</span><br><span class="line">hexo new page about      &#x2F;&#x2F; 创建关于页面</span><br><span class="line">hexo new page tags       &#x2F;&#x2F; 创建标签页面</span><br><span class="line">hexo new page categories &#x2F;&#x2F; 创建分类页面</span><br><span class="line">hexo new page favorites  &#x2F;&#x2F; 创建收藏页面</span><br></pre></td></tr></table></figure>
+
+<p>主题会根据不同的页面定义不同的模板(theme/layout/), 需要在 index.md 文件中的 Front-matter 区域标注 layout， 以 Tags 页面为例：</p>
+<p>1，位置处在 source/tag/index.md</p>
+<p>2，Markdown</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2021-10-31</span><br><span class="line">type: tags</span><br><span class="line">layout: "tags"</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>3，配置后需要在 themes/ocean/_config.yml 文件中的 menu 下新增页面， 如 about 。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line"><span class="code">    关于: about/</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-1-1-1-增加收藏页面"><a href="#2-1-1-1-增加收藏页面" class="headerlink" title="2.1.1.1 增加收藏页面"></a>2.1.1.1 增加收藏页面</h4><ol>
+<li><p>新增一个收藏页面</p>
+</li>
+<li><p>修改 navbar.styl 文件中的 favorites 展示图标，注意顺序。</p>
+</li>
+<li><p>编辑 favorites/index.md 文件</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">### 样机 Mockups</span><br><span class="line"></span><br><span class="line">&lt;div class&#x3D;&quot;card-quote&quot;&gt;</span><br><span class="line"></span><br><span class="line">![Graphics](&#x2F;images&#x2F;logos&#x2F;lstoreLogo.svg)</span><br><span class="line">#### Graphics</span><br><span class="line">高质量的样机素材</span><br><span class="line">[https:&#x2F;&#x2F;www.ls.graphics](https:&#x2F;&#x2F;www.ls.graphics)</span><br><span class="line"></span><br><span class="line">![sketchsheets](&#x2F;images&#x2F;logos&#x2F;sketchLogo.svg)</span><br><span class="line">#### Sketchsheets</span><br><span class="line">Sketch 稿件的样机素材</span><br><span class="line">[https:&#x2F;&#x2F;sketchsheets.com](https:&#x2F;&#x2F;sketchsheets.com)</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-2-插件"><a href="#2-2-插件" class="headerlink" title="2.2  插件"></a>2.2  插件</h2><h3 id="2-2-1-开启插件"><a href="#2-2-1-开启插件" class="headerlink" title="2.2.1 开启插件"></a>2.2.1 开启插件</h3><h4 id="2-2-1-1-本地检索-hexo-generator-search"><a href="#2-2-1-1-本地检索-hexo-generator-search" class="headerlink" title="2.2.1.1  本地检索 hexo-generator-search"></a>2.2.1.1  本地检索 <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">hexo-generator-search</a></h4><p>1，安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>2，配置</p>
+<p>2.1，Hexo 的配置文件 _config.yml 添加插件配置</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 本地搜索</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">content:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-1-2-博客文章置顶-hexo-generator-index-pin-top"><a href="#2-2-1-2-博客文章置顶-hexo-generator-index-pin-top" class="headerlink" title="2.2.1.2 博客文章置顶 hexo-generator-index-pin-top"></a>2.2.1.2 博客文章置顶 <a href="https://github.com/netcan/hexo-generator-index-pin-top" target="_blank" rel="noopener">hexo-generator-index-pin-top</a></h4><p>1，安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+
+<p>2，在需要置顶文章的 Front-matter 区域加上 top: ture， 即可开启文章置顶</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title : Ocean 配置</span><br><span class="line">top: ture</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-2-修改配置文件"><a href="#2-2-2-修改配置文件" class="headerlink" title="2.2.2 修改配置文件"></a>2.2.2 修改配置文件</h3><h4 id="2-2-2-1-文章封面图"><a href="#2-2-2-1-文章封面图" class="headerlink" title="2.2.2.1 文章封面图"></a>2.2.2.1 文章封面图</h4><p>1，添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title:  Ocean 配置</span><br><span class="line">photos: [</span><br><span class="line">        [&quot;&#x2F;images&#x2F;相机.jpg&quot;], &#x2F;&#x2F; themes&#x2F;ocean&#x2F;source&#x2F;images 目录下</span><br><span class="line">        [&quot;img_url&quot;] &#x2F;&#x2F; 使用 http 链接</span><br><span class="line">        ]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p><em>设置 Hexo 博客的封面图，而不是博客的配图</em></p>
+<h4 id="2-2-2-2-Toc-文章目录"><a href="#2-2-2-2-Toc-文章目录" class="headerlink" title="2.2.2.2 Toc 文章目录"></a>2.2.2.2 Toc 文章目录</h4><p>1，配置文件路径为 ocean/_config.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Toc 文章目录</span><br><span class="line">toc: true</span><br></pre></td></tr></table></figure>
+
+<p>2，開啓 Toc 后, 在文章 Front-matter 中設置 toc 進行部分關閉。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Toc 文章目录</span><br><span class="line">toc: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p><em>使用 <a href="http://tscanlin.github.io/tocbot/" target="_blank" rel="noopener">Tocbot</a> 解析内容中的标题标签（h1~h6）并插入目录。</em>  </p>
+<h4 id="2-2-2-3-修改導航欄圖標"><a href="#2-2-2-3-修改導航欄圖標" class="headerlink" title="2.2.2.3 修改導航欄圖標"></a>2.2.2.3 修改導航欄圖標</h4><p>1，修改主页、相册等图标，需要修改 css 文件，其所在位置在目录 source/css/_partial/navbar.styl 中， 修改时需要注意对应的顺序<br>2，修改 icon，需要替换 themes/ocean/source/favicon.ico 图片文件</p>
+<h4 id="2-2-2-4-刪除鏈接文字的下劃綫"><a href="#2-2-2-4-刪除鏈接文字的下劃綫" class="headerlink" title="2.2.2.4 刪除鏈接文字的下劃綫"></a>2.2.2.4 刪除鏈接文字的下劃綫</h4><p>1，配置文件的路勁為 ocean/source/css/style.styl。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span></span><br><span class="line">  <span class="selector-tag">color</span> <span class="selector-tag">link-color</span></span><br><span class="line">  &amp;<span class="selector-pseudo">:hover</span></span><br><span class="line">    <span class="selector-tag">color</span> <span class="selector-tag">link-hover-color</span></span><br><span class="line">  &amp;<span class="selector-pseudo">:active</span></span><br><span class="line">    <span class="selector-tag">color</span> <span class="selector-tag">link-active-color</span></span><br><span class="line">  &amp;<span class="selector-class">.disabled</span></span><br><span class="line">    <span class="selector-tag">color</span> <span class="selector-tag">disabled-color</span></span><br><span class="line"></span><br><span class="line">//  为</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">a</span></span><br><span class="line">  <span class="selector-tag">color</span> <span class="selector-tag">link-color</span></span><br><span class="line">  <span class="selector-tag">text-decoration</span> <span class="selector-tag">none</span></span><br><span class="line">  &amp;<span class="selector-pseudo">:hover</span></span><br><span class="line">    <span class="selector-tag">color</span> <span class="selector-tag">link-hover-color</span></span><br><span class="line">    <span class="selector-tag">text-decoration</span> <span class="selector-tag">none</span></span><br><span class="line">  &amp;<span class="selector-pseudo">:active</span></span><br><span class="line">    <span class="selector-tag">color</span> <span class="selector-tag">link-active-color</span></span><br><span class="line">  &amp;<span class="selector-class">.disabled</span></span><br><span class="line">    <span class="selector-tag">color</span> <span class="selector-tag">disabled-color</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-2-5-配置語言"><a href="#2-2-2-5-配置語言" class="headerlink" title="2.2.2.5 配置語言"></a>2.2.2.5 配置語言</h4><p>1，配置文件的目錄為 _config.yml。</p>
+<ul>
+<li>language 的值为空时默认为 en</li>
+<li>language 的配置文件位置为 themes/ocean/languages/</li>
+</ul>
+<p><em>若本主題的導航文字，需要直接修改主题配置文件（_config.yml）中的 menu</em></p>
+<h4 id="2-2-2-6-取消文章的分享鏈接"><a href="#2-2-2-6-取消文章的分享鏈接" class="headerlink" title="2.2.2.6 取消文章的分享鏈接"></a>2.2.2.6 取消文章的分享鏈接</h4><p>1，配置文件的路勁為 themes\ocean\layout_partial\footer.ejs。注釋以下代碼</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 显示分享按钮</span></span><br><span class="line"><span class="comment">      &lt;a data-url="&lt;%- post.permalink %&gt;" data-id="&lt;%= post._id %&gt;" class="article-share-link"&gt;</span></span><br><span class="line"><span class="comment">        &lt;%= __('share') %&gt;</span></span><br><span class="line"><span class="comment">      &lt;/a&gt;</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+  </article>
+  <!-- tag -->
+  <div class="mt-12 pt-6 border-t border-gray-200">
+    
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/categories/diary/tags/Hexo/">Hexo</a>
+        </span>
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/categories/diary/tags/Ocean/">Ocean</a>
+        </span>
+      
+        <span class="bg-gray-100 dark:bg-gray-700 px-2 py-1 m-1 text-sm rounded-md transition-colors hover:bg-gray-200">
+          <a href="/categories/diary/tags/Theme/">Theme</a>
+        </span>
+      
+    
+  </div>
+  <!-- prev and next -->
+  <div class="flex justify-between mt-12 pt-6 border-t border-gray-200">
+    <div>
+      
+        <a href="/categories/diary/2021/11/27/vim01/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          <iconify-icon width="20" icon="ri:arrow-left-s-line" data-inline="false"></iconify-icon>
+          VIM 插件管理器-Vundle
+        </a>
+      
+    </div>
+    <div>
+      
+        <a href="/categories/diary/2020/07/05/V2ray/" class="text-sm text-gray-400 hover:text-gray-500 flex justify-center">
+          V2ray搭建教程
+          <iconify-icon width="20" icon="ri:arrow-right-s-line" data-inline="false"></iconify-icon>
+        </a>
+      
+    </div>
+  </div>
+  <!-- comment -->
+  <div class="article-comments mt-12">
+    
+
+  </div>
+</section>
+<!-- js inspect -->
+
+<script src="/categories/diary/lib/clipboard.min.js"></script>
+
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+  $(document).ready(() => {
+    const maraidConfig = {
+      theme: "neutral",
+      logLevel: 3,
+      flowchart: { curve: "linear" },
+      gantt: { axisFormat: "%m/%d/%Y" },
+      sequence: { actorMargin: 50 },
+    };
+    mermaid.initialize(maraidConfig);
+  });
+</script>
+
+
+
+<script src="/categories/diary/lib/fancybox/fancybox.umd.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    $('.post-content').each(function(i){
+      $(this).find('img').each(function(){
+        if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
+        var alt = this.alt;
+        if (alt) $(this).after('<span class="fancybox-alt">' + alt + '</span>');
+        $(this).wrap('<a class="fancybox-img" href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
+      });
+      $(this).find('.fancybox').each(function(){
+        $(this).attr('rel', 'article' + i);
+      });
+    });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // options
+    })
+  })
+</script>
+
+<!-- tocbot begin -->
+
+<script src="/categories/diary/lib/tocbot/tocbot.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.post-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.post-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+  })
+</script>
+<!-- tocbot end -->
+
+
+  </main>
+  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
+  <!-- busuanzi -->
+  
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- Busuanzi Analytics -->
+<div class="flex items-center gap-2">
+  <span>Visitor Count</span>
+  <span id="busuanzi_value_site_uv"></span>
+  <span>Totalview</span>
+  <span id="busuanzi_value_site_pv"></span>
+</div>
+<!-- End Busuanzi Analytics -->
+
+
+  <!-- copyright -->
+  <div class="flex items-center gap-2">
+    <span>© 2023</span>
+    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
+    <a href="https://github.com/xbmlz" target="_blank" rel="noopener noreferrer">xbmlz</a>
+  </div>
+  <!-- powered by -->
+  <div class="flex items-center gap-2">
+    <span>Powered by</span>
+    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+    <span>&</span>
+    <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="noopener noreferrer">Maple</a>
+  </div>
+
+</footer>
+
+  <iconify-icon class="fixed right-4 bottom-10 z-100 opacity-0" width="24" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
+  
+<script src="/categories/diary/js/main.js"></script>
+
+<script>
+  // load ./logo.svg to canvas
+  // 每次页面加载都执行
+  $(document).ready(function () {
+    const img = $("#logo")[0];
+    // 定义树叶数量
+    const mapleCount = "10";
+    // 定义树叶飘落的速度
+    const speed = "1";
+    // client width
+    const width = document.body.clientWidth;
+    const height = document.body.clientHeight;
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+
+    const bufferCanvas = document.createElement("canvas");
+    const bufferCtx = bufferCanvas.getContext("2d");
+
+    const dpr = window.devicePixelRatio || 1;
+    const bsr =
+      ctx.webkitBackingStorePixelRatio ||
+      ctx.mozBackingStorePixelRatio ||
+      ctx.msBackingStorePixelRatio ||
+      ctx.oBackingStorePixelRatio ||
+      ctx.backingStorePixelRatio ||
+      1;
+    const dpi = dpr / bsr;
+    bufferCanvas.width = canvas.width = dpi * width;
+    bufferCanvas.height = canvas.height = dpi * height;
+    bufferCtx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingEnabled = true;
+    // 绘制树叶飘落
+    const drawMaple = (ctx, x, y, scale) => {
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.scale(scale, scale);
+      ctx.drawImage(bufferCanvas, -img.width / 2, -img.height / 2);
+      ctx.restore();
+    };
+    // 在内存中绘制树叶
+    bufferCtx.drawImage(img, 0, 0, img.width, img.height);
+    // 定义树叶的位置
+    const maples = Array.from({ length: mapleCount }).map(() => {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      const scale = Math.random() * 0.5 + 0.5;
+      const offset = Math.random() * 2 - 1;
+      return {
+        x,
+        y,
+        scale,
+        speed: speed * scale,
+        offset: offset,
+      };
+    });
+    // 定义树叶的动画
+    const play = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      maples.forEach((maple) => {
+        drawMaple(ctx, maple.x, maple.y, maple.scale);
+        maple.y += maple.speed;
+        maple.x += maple.offset;
+        if (maple.y > canvas.height) {
+          maple.y = 0;
+        }
+        if (maple.x > canvas.width) {
+          maple.x = 0;
+        }
+      });
+      requestAnimationFrame(play);
+    };
+    requestAnimationFrame(play);
+    // 添加到页面中
+    $("#maple").append(canvas);
+  });
+</script>
+
+
+  <div class="fixed top-0 bottom-0 left-0 right-0 pointer-events-none -z-1" id="maple"></div>
+</body>
+
+</html>
