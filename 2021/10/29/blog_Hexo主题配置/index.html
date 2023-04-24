@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  <meta name="keywords" content="编程">
+  
+  
+  <meta name="description" content="围城">
+  
+  <title>
+    Ocean 主題配置 |
+    
+    Jum`Xiong
+  </title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <main class="content">
+    <section class="outer">
+  <article id="post-blog_Hexo主题配置" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+
+<h1 class="article-title" itemprop="name">
+  Ocean 主題配置
+</h1>
+
+
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2021/10/29/blog_Hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2021-10-29T16:00:00.000Z" itemprop="datePublished">2021-10-30</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+<div class="tocbot"></div>
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+      <p>Ocean 是基于 Hexo 默认主题 landscape 的功能，设计的一款支持移动设备的主题，并且集成了 Gitalk 与 Valine 评论功能。</p>
+<p>如果你喜欢 Ocean 可以从 <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">GitHub</a> 下载，主题默认使用 Logo 是 Hexo 的 Logo，更换 Logo 路径在 ocean/source/images/hexo.svg ，注意它还有一个反色版 hexo-inverted.svg ，如果你更改了文件名，那么还需要在 ocean/_config.yml 做对应的修改。</p>
+<p>详细文档见 <a href="https://zhwangart.com/2018/11/30/Ocean/" target="_blank" rel="noopener">Ocean 文档</a>，以下是个人的需要的配置</p>
+<a id="more"></a>
+
+
+<h1 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h1><p>下载安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/zhwangart/hexo-theme-ocean.git themes/ocean</span></span><br></pre></td></tr></table></figure>
+
+<p>更新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd themes&#x2F;ocean</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-配置"><a href="#2-配置" class="headerlink" title="2. 配置"></a>2. 配置</h1><h2 id="2-1-添加页面"><a href="#2-1-添加页面" class="headerlink" title="2.1 添加页面"></a>2.1 添加页面</h2><p>Ocean 默认在主题配置文件中配置相册和关于的链接， 但是主题中实际上并没有此页面，点击会提示 404 。可以按照需要进行删除和安装。</p>
+<h3 id="2-1-1-安装存在格式的页面"><a href="#2-1-1-安装存在格式的页面" class="headerlink" title="2.1.1 安装存在格式的页面"></a>2.1.1 安装存在格式的页面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo new page gallery    &#x2F;&#x2F; 创建相册页面</span><br><span class="line">hexo new page about      &#x2F;&#x2F; 创建关于页面</span><br><span class="line">hexo new page tags       &#x2F;&#x2F; 创建标签页面</span><br><span class="line">hexo new page categories &#x2F;&#x2F; 创建分类页面</span><br><span class="line">hexo new page favorites  &#x2F;&#x2F; 创建收藏页面</span><br></pre></td></tr></table></figure>
+
+<p>主题会根据不同的页面定义不同的模板(theme/layout/), 需要在 index.md 文件中的 Front-matter 区域标注 layout， 以 Tags 页面为例：</p>
+<p>1，位置处在 source/tag/index.md</p>
+<p>2，Markdown</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2021-10-31</span><br><span class="line">type: tags</span><br><span class="line">layout: "tags"</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>3，配置后需要在 themes/ocean/_config.yml 文件中的 menu 下新增页面， 如 about 。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line"><span class="code">    关于: about/</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-1-1-1-增加收藏页面"><a href="#2-1-1-1-增加收藏页面" class="headerlink" title="2.1.1.1 增加收藏页面"></a>2.1.1.1 增加收藏页面</h4><ol>
+<li><p>新增一个收藏页面</p>
+</li>
+<li><p>修改 navbar.styl 文件中的 favorites 展示图标，注意顺序。</p>
+</li>
+<li><p>编辑 favorites/index.md 文件</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">### 样机 Mockups</span><br><span class="line"></span><br><span class="line">&lt;div class&#x3D;&quot;card-quote&quot;&gt;</span><br><span class="line"></span><br><span class="line">![Graphics](&#x2F;images&#x2F;logos&#x2F;lstoreLogo.svg)</span><br><span class="line">#### Graphics</span><br><span class="line">高质量的样机素材</span><br><span class="line">[https:&#x2F;&#x2F;www.ls.graphics](https:&#x2F;&#x2F;www.ls.graphics)</span><br><span class="line"></span><br><span class="line">![sketchsheets](&#x2F;images&#x2F;logos&#x2F;sketchLogo.svg)</span><br><span class="line">#### Sketchsheets</span><br><span class="line">Sketch 稿件的样机素材</span><br><span class="line">[https:&#x2F;&#x2F;sketchsheets.com](https:&#x2F;&#x2F;sketchsheets.com)</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-2-插件"><a href="#2-2-插件" class="headerlink" title="2.2  插件"></a>2.2  插件</h2><h3 id="2-2-1-开启插件"><a href="#2-2-1-开启插件" class="headerlink" title="2.2.1 开启插件"></a>2.2.1 开启插件</h3><h4 id="2-2-1-1-本地检索-hexo-generator-search"><a href="#2-2-1-1-本地检索-hexo-generator-search" class="headerlink" title="2.2.1.1  本地检索 hexo-generator-search"></a>2.2.1.1  本地检索 <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener">hexo-generator-search</a></h4><p>1，安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>2，配置</p>
+<p>2.1，Hexo 的配置文件 _config.yml 添加插件配置</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 本地搜索</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">content:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-1-2-博客文章置顶-hexo-generator-index-pin-top"><a href="#2-2-1-2-博客文章置顶-hexo-generator-index-pin-top" class="headerlink" title="2.2.1.2 博客文章置顶 hexo-generator-index-pin-top"></a>2.2.1.2 博客文章置顶 <a href="https://github.com/netcan/hexo-generator-index-pin-top" target="_blank" rel="noopener">hexo-generator-index-pin-top</a></h4><p>1，安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+
+<p>2，在需要置顶文章的 Front-matter 区域加上 top: ture， 即可开启文章置顶</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title : Ocean 配置</span><br><span class="line">top: ture</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-2-修改配置文件"><a href="#2-2-2-修改配置文件" class="headerlink" title="2.2.2 修改配置文件"></a>2.2.2 修改配置文件</h3><h4 id="2-2-2-1-文章封面图"><a href="#2-2-2-1-文章封面图" class="headerlink" title="2.2.2.1 文章封面图"></a>2.2.2.1 文章封面图</h4><p>1，添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title:  Ocean 配置</span><br><span class="line">photos: [</span><br><span class="line">        [&quot;&#x2F;images&#x2F;相机.jpg&quot;], &#x2F;&#x2F; themes&#x2F;ocean&#x2F;source&#x2F;images 目录下</span><br><span class="line">        [&quot;img_url&quot;] &#x2F;&#x2F; 使用 http 链接</span><br><span class="line">        ]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p><em>设置 Hexo 博客的封面图，而不是博客的配图</em></p>
+<h4 id="2-2-2-2-Toc-文章目录"><a href="#2-2-2-2-Toc-文章目录" class="headerlink" title="2.2.2.2 Toc 文章目录"></a>2.2.2.2 Toc 文章目录</h4><p>1，配置文件路径为 ocean/_config.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Toc 文章目录</span><br><span class="line">toc: true</span><br></pre></td></tr></table></figure>
+
+<p>2，開啓 Toc 后, 在文章 Front-matter 中設置 toc 進行部分關閉。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Toc 文章目录</span><br><span class="line">toc: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p><em>使用 <a href="http://tscanlin.github.io/tocbot/" target="_blank" rel="noopener">Tocbot</a> 解析内容中的标题标签（h1~h6）并插入目录。</em>  </p>
+<h4 id="2-2-2-3-修改導航欄圖標"><a href="#2-2-2-3-修改導航欄圖標" class="headerlink" title="2.2.2.3 修改導航欄圖標"></a>2.2.2.3 修改導航欄圖標</h4><p>1，修改主页、相册等图标，需要修改 css 文件，其所在位置在目录 source/css/_partial/navbar.styl 中， 修改时需要注意对应的顺序<br>2，修改 icon，需要替换 themes/ocean/source/favicon.ico 图片文件</p>
+<h4 id="2-2-2-4-刪除鏈接文字的下劃綫"><a href="#2-2-2-4-刪除鏈接文字的下劃綫" class="headerlink" title="2.2.2.4 刪除鏈接文字的下劃綫"></a>2.2.2.4 刪除鏈接文字的下劃綫</h4><p>1，配置文件的路勁為 ocean/source/css/style.styl。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span></span><br><span class="line">  <span class="selector-tag">color</span> <span class="selector-tag">link-color</span></span><br><span class="line">  &amp;<span class="selector-pseudo">:hover</span></span><br><span class="line">    <span class="selector-tag">color</span> <span class="selector-tag">link-hover-color</span></span><br><span class="line">  &amp;<span class="selector-pseudo">:active</span></span><br><span class="line">    <span class="selector-tag">color</span> <span class="selector-tag">link-active-color</span></span><br><span class="line">  &amp;<span class="selector-class">.disabled</span></span><br><span class="line">    <span class="selector-tag">color</span> <span class="selector-tag">disabled-color</span></span><br><span class="line"></span><br><span class="line">//  为</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">a</span></span><br><span class="line">  <span class="selector-tag">color</span> <span class="selector-tag">link-color</span></span><br><span class="line">  <span class="selector-tag">text-decoration</span> <span class="selector-tag">none</span></span><br><span class="line">  &amp;<span class="selector-pseudo">:hover</span></span><br><span class="line">    <span class="selector-tag">color</span> <span class="selector-tag">link-hover-color</span></span><br><span class="line">    <span class="selector-tag">text-decoration</span> <span class="selector-tag">none</span></span><br><span class="line">  &amp;<span class="selector-pseudo">:active</span></span><br><span class="line">    <span class="selector-tag">color</span> <span class="selector-tag">link-active-color</span></span><br><span class="line">  &amp;<span class="selector-class">.disabled</span></span><br><span class="line">    <span class="selector-tag">color</span> <span class="selector-tag">disabled-color</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-2-5-配置語言"><a href="#2-2-2-5-配置語言" class="headerlink" title="2.2.2.5 配置語言"></a>2.2.2.5 配置語言</h4><p>1，配置文件的目錄為 _config.yml。</p>
+<ul>
+<li>language 的值为空时默认为 en</li>
+<li>language 的配置文件位置为 themes/ocean/languages/</li>
+</ul>
+<p><em>若本主題的導航文字，需要直接修改主题配置文件（_config.yml）中的 menu</em></p>
+<h4 id="2-2-2-6-取消文章的分享鏈接"><a href="#2-2-2-6-取消文章的分享鏈接" class="headerlink" title="2.2.2.6 取消文章的分享鏈接"></a>2.2.2.6 取消文章的分享鏈接</h4><p>1，配置文件的路勁為 themes\ocean\layout_partial\footer.ejs。注釋以下代碼</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 显示分享按钮</span></span><br><span class="line"><span class="comment">      &lt;a data-url="&lt;%- post.permalink %&gt;" data-id="&lt;%= post._id %&gt;" class="article-share-link"&gt;</span></span><br><span class="line"><span class="comment">        &lt;%= __('share') %&gt;</span></span><br><span class="line"><span class="comment">      &lt;/a&gt;</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+<!--
+      <a data-url="https://blog.lain.buzz/2021/10/29/blog_Hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" data-id="clgunrfyx0000ckxhe7g6485d" class="article-share-link">
+        分享
+      </a>
+-->
+      
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ocean/" rel="tag">Ocean</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Theme/" rel="tag">Theme</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/" rel="tag">blog</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+  
+<nav class="article-nav">
+  
+  <a href="/2021/11/27/tools_vim01/" class="article-nav-link">
+    <strong class="article-nav-caption">前一篇</strong>
+    <div class="article-nav-title">
+      
+      VIM 插件管理器-Vundle
+      
+    </div>
+  </a>
+  
+  
+  <a href="/2020/07/28/system_linux%E4%B9%8B%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" class="article-nav-link">
+    <strong class="article-nav-caption">后一篇</strong>
+    <div class="article-nav-title">【Linux】文件管理和帮助命令</div>
+  </a>
+  
+</nav>
+
+  
+
+  
+  
+  
+  
+
+</article>
+
+</section>
+    <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+  <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>Jum`Xiong &copy; 2023</li>
+      
+        <li>ZHWANGART</li>
+      
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>theme  <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+  </main>
+  <aside class="sidebar">
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/favicon.ico" alt="Jum`Xiong"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">首页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/favorites">收藏</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">时间线</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="https://web.lain.buzz" target="_blank" rel="noopener">书签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/copybtn.js"></script>
+
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+
+</html>

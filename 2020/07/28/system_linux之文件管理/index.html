@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  <meta name="keywords" content="编程">
+  
+  
+  <meta name="description" content="围城">
+  
+  <title>
+    【Linux】文件管理和帮助命令 |
+    
+    Jum`Xiong
+  </title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <main class="content">
+    <section class="outer">
+  <article id="post-system_linux之文件管理" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+
+<h1 class="article-title" itemprop="name">
+  【Linux】文件管理和帮助命令
+</h1>
+
+
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/07/28/system_linux%E4%B9%8B%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" class="article-date">
+  <time datetime="2020-07-28T07:00:00.000Z" itemprop="datePublished">2020-07-28</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+<div class="tocbot"></div>
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+      <h3 id="帮助命令"><a href="#帮助命令" class="headerlink" title="帮助命令"></a>帮助命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> man</span></span><br><span class="line">man find # 查询命令的说明文档</span><br><span class="line">man -f find # 显示更多的信息</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; </span></span><br><span class="line">find (1)             - search for files in a directory hierarchy</span><br><span class="line">man -k find # 关键词查找</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+
+
+<h5 id="查找程序的安装路径"><a href="#查找程序的安装路径" class="headerlink" title="查找程序的安装路径"></a>查找程序的安装路径</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">which</span></span></span><br><span class="line">which mysql</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;</span></span><br><span class="line">/usr/bin/mysql</span><br></pre></td></tr></table></figure>
+
+<h5 id="查看程序的搜索路径"><a href="#查看程序的搜索路径" class="headerlink" title="查看程序的搜索路径"></a>查看程序的搜索路径</h5><ul>
+<li>当系统中安装了同一软件的多个版本时，不确定使用的是哪个版本时，这个命令就能派上用场</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> whereis</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> whereis mysql</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;</span></span><br><span class="line">mysql: /usr/bin/mysql /usr/lib64/mysql /usr/share/mysql /usr/share/man/man1/mysql.1.gz</span><br></pre></td></tr></table></figure>
+
+<h3 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h3><h5 id="创建和删除文件"><a href="#创建和删除文件" class="headerlink" title="创建和删除文件"></a>创建和删除文件</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 创建文件</span></span><br><span class="line">mkdir # 创建文件夹文件</span><br><span class="line">touch # 创建普通文件</span><br><span class="line"><span class="meta">#</span><span class="bash"> 删除 rm</span></span><br><span class="line">rm #删除普通文件和空目录文件</span><br><span class="line">rm -rf file # 删除非空目录文件</span><br><span class="line"><span class="meta">#</span><span class="bash"> 复制 cp</span></span><br><span class="line">cp file ./path/ # 复制普通文件</span><br><span class="line">cp -r file ./path # 复制目录文件</span><br><span class="line"><span class="meta">#</span><span class="bash"> 删除和移动文件</span></span><br><span class="line">mv file # 删除文件</span><br><span class="line">mv name newname # 文件重命名</span><br></pre></td></tr></table></figure>
+
+<h5 id="查看当前目录文件下的文件个数"><a href="#查看当前目录文件下的文件个数" class="headerlink" title="查看当前目录文件下的文件个数"></a>查看当前目录文件下的文件个数</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ./ | wc -l</span><br></pre></td></tr></table></figure>
+
+<h5 id="目录切换"><a href="#目录切换" class="headerlink" title="目录切换"></a>目录切换</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">cd</span></span></span><br><span class="line">pwd # 显示当前路径</span><br><span class="line">cd # 切换到home目录 或者cd ~</span><br><span class="line">cd - # 切换到上一个工作目录</span><br><span class="line">cd path # 切换到指定目录</span><br></pre></td></tr></table></figure>
+
+<h5 id="列出文件"><a href="#列出文件" class="headerlink" title="列出文件"></a>列出文件</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> ls</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 如果不写路径 则表示查看当前目录</span></span><br><span class="line">ls path # 查看path路径下的文件</span><br><span class="line">ls | cat -n path # 在每项文件前面增加一个编号</span><br><span class="line">ls -a path # 查看隐藏的文件</span><br></pre></td></tr></table></figure>
+
+<h5 id="查找文件"><a href="#查找文件" class="headerlink" title="查找文件"></a>查找文件</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> find 实时查找</span></span><br><span class="line">find / -name '*.o' # 查找所有以".o"结尾的文件</span><br><span class="line">find ./ -name "core*" | xargs file # 查找以"core"开头文件，并标注文件类型</span><br><span class="line">find ./ -name "*.o" -exec rm &#123;&#125; \; # 递归当前目录及子目录并删除所有".o"文件</span><br><span class="line"><span class="meta">#</span><span class="bash"> locate 需要定时更新数据库</span></span><br><span class="line">locate add # 寻找含有add文件的路径</span><br><span class="line"><span class="meta">#</span><span class="bash"> centos安装locate</span></span><br><span class="line">sudo yum -y install mlocate  # 安装mlocate</span><br><span class="line">sudo updatedb # 初始化</span><br></pre></td></tr></table></figure>
+
+<h5 id="查看文件内容"><a href="#查看文件内容" class="headerlink" title="查看文件内容"></a>查看文件内容</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> cat</span></span><br><span class="line">cat file # 显示文件内容，显示每行的行号 cat -n file</span><br><span class="line"><span class="meta">#</span><span class="bash"> head</span></span><br><span class="line">head -2 /path/** # 显示指定路径下所有文件的前两行，若不指定路径则为当前工作路径</span><br><span class="line">head -2 /path/file # 显示指定文件的前两行内容</span><br><span class="line"><span class="meta">#</span><span class="bash"> tail</span></span><br><span class="line">tail -2 /path/file  # 显示文件倒数两行的内容</span><br><span class="line">tail -f file # 动态显示当前文件内容</span><br><span class="line">tail -fn 200 file # 动态显示最近200行的文件内容</span><br></pre></td></tr></table></figure>
+
+<h5 id="查找文件内容"><a href="#查找文件内容" class="headerlink" title="查找文件内容"></a>查找文件内容</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> diff</span></span><br><span class="line">diff file1 file2 # 比较两个文件的差别</span><br><span class="line"><span class="meta">#</span><span class="bash"> egrep</span></span><br><span class="line">egrep 'xion' file # 在file文件中查找"xion"</span><br></pre></td></tr></table></figure>
+
+<h5 id="文件的权限修改"><a href="#文件的权限修改" class="headerlink" title="文件的权限修改"></a>文件的权限修改</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> chown 改变文件的拥有者</span></span><br><span class="line">chown -R mysql@group /path # 将path文件修改为group组下的mysql用户</span><br><span class="line"><span class="meta">#</span><span class="bash"> chmod 改变文件的读、写、执行权限</span></span><br><span class="line">chmod 777 file</span><br><span class="line">chmod a+x file # 增加文件的可执行权限</span><br></pre></td></tr></table></figure>
+
+<h5 id="增加文件别名"><a href="#增加文件别名" class="headerlink" title="增加文件别名"></a>增加文件别名</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 软链接</span></span><br><span class="line">ln -s cc ccTo # 删除源文件，另一个将无法使用。cc为源文件</span><br><span class="line"><span class="meta">#</span><span class="bash"> 硬链接</span></span><br><span class="line">ln cc ccAotu # 删除其中一个，另一个文件不受影响</span><br></pre></td></tr></table></figure>
+
+<h5 id="设置命令别名"><a href="#设置命令别名" class="headerlink" title="设置命令别名"></a>设置命令别名</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">alias</span></span></span><br><span class="line">alias lsl='ls -lrt'</span><br><span class="line">alias lm='ls -al | more'</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+<!--
+      <a data-url="https://blog.lain.buzz/2020/07/28/system_linux%E4%B9%8B%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" data-id="clgunrg0l000qckxh5kr84s4s" class="article-share-link">
+        分享
+      </a>
+-->
+      
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/" rel="tag">system</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" rel="tag">文件管理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%85%E6%9E%90/" rel="tag">浅析</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+  
+<nav class="article-nav">
+  
+  <a href="/2021/10/29/blog_Hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" class="article-nav-link">
+    <strong class="article-nav-caption">前一篇</strong>
+    <div class="article-nav-title">
+      
+      Ocean 主題配置
+      
+    </div>
+  </a>
+  
+  
+  <a href="/2020/07/22/code_SQL%E5%9F%BA%E7%A1%80-%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" class="article-nav-link">
+    <strong class="article-nav-caption">后一篇</strong>
+    <div class="article-nav-title">code_SQL基础-增删改查</div>
+  </a>
+  
+</nav>
+
+  
+
+  
+  
+  
+  
+
+</article>
+
+</section>
+    <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+  <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>Jum`Xiong &copy; 2023</li>
+      
+        <li>ZHWANGART</li>
+      
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>theme  <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+  </main>
+  <aside class="sidebar">
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/favicon.ico" alt="Jum`Xiong"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">首页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/favorites">收藏</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">时间线</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="https://web.lain.buzz" target="_blank" rel="noopener">书签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/copybtn.js"></script>
+
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+
+</html>

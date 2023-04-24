@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  <meta name="keywords" content="编程">
+  
+  
+  <meta name="description" content="围城">
+  
+  <title>
+    【浅析】python的多态 |
+    
+    Jum`Xiong
+  </title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <main class="content">
+    <section class="outer">
+  <article id="post-code_Python学习之多态" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+
+<h1 class="article-title" itemprop="name">
+  【浅析】python的多态
+</h1>
+
+
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/07/10/code_Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E6%80%81/" class="article-date">
+  <time datetime="2020-07-10T08:00:00.000Z" itemprop="datePublished">2020-07-10</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+<div class="tocbot"></div>
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+      <h5 id="Ⅰ，理解"><a href="#Ⅰ，理解" class="headerlink" title="Ⅰ，理解"></a>Ⅰ，理解</h5><ul>
+<li>指对不同类型的变量进行操作，根据对象（或类）类型的不同而表现出不同的行为</li>
+</ul>
+<h5 id="Ⅱ，常用的多态"><a href="#Ⅱ，常用的多态" class="headerlink" title="Ⅱ，常用的多态"></a>Ⅱ，常用的多态</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="number">1</span>+<span class="number">2</span>)</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(<span class="string">'1'</span>+<span class="string">'2'</span>)</span><br><span class="line"><span class="string">'12'</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>不同的对象（或类）调用‘’+”，“+”会做出不同的响应</li>
+</ul>
+<a id="more"></a>
+
+<h5 id="Ⅲ，对象所属的类之间有继承关系"><a href="#Ⅲ，对象所属的类之间有继承关系" class="headerlink" title="Ⅲ，对象所属的类之间有继承关系"></a>Ⅲ，对象所属的类之间有继承关系</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">printUser</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'你好！'</span> + self.name)</span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserVip</span><span class="params">(User)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">printUser</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'你好！尊敬的会员用户'</span> + self.name)</span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserGeneral</span><span class="params">(User)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">printUser</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'你好！尊敬的用户'</span> + self.name)</span><br><span class="line">        </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printUserInfo</span><span class="params">(user)</span>:</span></span><br><span class="line">    user.printUser()</span><br><span class="line">    </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="comment"># 实例化User类</span></span><br><span class="line">    user = User(<span class="string">'121'</span>)</span><br><span class="line">    printUserInfo(user)</span><br><span class="line">    <span class="comment"># 实例化Vip类</span></span><br><span class="line">    userVip = UserVip(<span class="string">'xiongJum'</span>)</span><br><span class="line">    printUserInfo(userVip)</span><br><span class="line">    <span class="comment"># 实例化General类</span></span><br><span class="line">    userGeneral = UserGeneral(<span class="string">'酒明'</span>)</span><br><span class="line">    printUserInfo(userGeneral)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">你好！<span class="number">121</span></span><br><span class="line">你好！尊敬的会员用户xiongJum</span><br><span class="line">你好！尊敬的用户酒明</span><br></pre></td></tr></table></figure>
+
+<h5 id="Ⅳ，对象所属的类之间没有继承关系"><a href="#Ⅳ，对象所属的类之间没有继承关系" class="headerlink" title="Ⅳ，对象所属的类之间没有继承关系"></a>Ⅳ，对象所属的类之间没有继承关系</h5><ul>
+<li>调用同一个函数，传入不同的参数，以达到不同的功能</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Duck</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fly</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'鸭子沿着地面飞起来了'</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Swan</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fly</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'天鹅飞越了喜马拉雅山的最高峰'</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Plane</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fly</span><span class="params">(slef)</span>:</span></span><br><span class="line">        print(<span class="string">'space X 回收成功'</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fly</span><span class="params">(vehicle)</span>:</span></span><br><span class="line">    vehicle.fly()</span><br><span class="line">    </span><br><span class="line">duck = Duck()</span><br><span class="line">fly(duck)</span><br><span class="line">swan = Swan()</span><br><span class="line">fly(swan)</span><br><span class="line">plane = Plane()</span><br><span class="line">fly(plane)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">鸭子沿着地面飞起来了</span><br><span class="line">天鹅飞越了喜马拉雅山的最高峰</span><br><span class="line">space X 回收成功</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+<!--
+      <a data-url="https://blog.lain.buzz/2020/07/10/code_Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E6%80%81/" data-id="clgunrg000009ckxhhxmfcjt6" class="article-share-link">
+        分享
+      </a>
+-->
+      
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/" rel="tag">code</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%9A%E6%80%81/" rel="tag">多态</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+  
+<nav class="article-nav">
+  
+  <a href="/2020/07/15/code_Python-for-MagicMethod/" class="article-nav-link">
+    <strong class="article-nav-caption">前一篇</strong>
+    <div class="article-nav-title">
+      
+      【浅析】Magic Method
+      
+    </div>
+  </a>
+  
+  
+  <a href="/2020/07/05/tools_V2ray/" class="article-nav-link">
+    <strong class="article-nav-caption">后一篇</strong>
+    <div class="article-nav-title">V2ray搭建教程</div>
+  </a>
+  
+</nav>
+
+  
+
+  
+  
+  
+  
+
+</article>
+
+</section>
+    <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+  <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>Jum`Xiong &copy; 2023</li>
+      
+        <li>ZHWANGART</li>
+      
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>theme  <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+  </main>
+  <aside class="sidebar">
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/favicon.ico" alt="Jum`Xiong"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">首页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/favorites">收藏</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">时间线</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="https://web.lain.buzz" target="_blank" rel="noopener">书签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/copybtn.js"></script>
+
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+
+</html>

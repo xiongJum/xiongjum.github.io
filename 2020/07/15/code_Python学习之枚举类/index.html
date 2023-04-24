@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  <meta name="keywords" content="编程">
+  
+  
+  <meta name="description" content="围城">
+  
+  <title>
+    枚举类 |
+    
+    Jum`Xiong
+  </title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+    
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <main class="content">
+    <section class="outer">
+  <article id="post-code_Python学习之枚举类" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+
+<h1 class="article-title" itemprop="name">
+  枚举类
+</h1>
+
+
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/07/15/code_Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%9E%9A%E4%B8%BE%E7%B1%BB/" class="article-date">
+  <time datetime="2020-07-15T13:00:00.000Z" itemprop="datePublished">2020-07-15</time>
+</a>
+      
+    </div>
+    
+
+    
+    
+<div class="tocbot"></div>
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+      <h5 id="枚举类的使用"><a href="#枚举类的使用" class="headerlink" title="枚举类的使用"></a>枚举类的使用</h5><ul>
+<li>当需要大量定于变量时，可以使用枚举类(Enum)来实现这个功能<ul>
+<li>当我们定义一个Class类型时，每个常量都是class里面的唯一实例</li>
+<li>方式： Enum(类名, (tuple参数))</li>
+<li>枚举类通过 __ members __ 方法遍历所有的成员</li>
+<li><font color=red>而且 Enum 的成员均为单例（Singleton），并且不可实例化，不可更改</font><a id="more"></a>
+
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> Enum</span><br><span class="line"></span><br><span class="line">Month = Enum(<span class="string">'MONTH'</span>,(<span class="string">'Jan'</span>, <span class="string">'Feb'</span>,<span class="string">'Mar'</span>, <span class="string">'Apr'</span>, <span class="string">'May'</span>, <span class="string">'Jun'</span>, <span class="string">'Jul'</span>, <span class="string">'Aug'</span>, <span class="string">'Sep'</span>, <span class="string">'Oct'</span>, <span class="string">'Nov'</span>, <span class="string">'Dec'</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> name, member <span class="keyword">in</span> Month.__members__.items():</span><br><span class="line">    <span class="comment"># member.value 自动赋给成员的 int 类型的常量， 默认从1开始</span></span><br><span class="line">    print(name, <span class="string">'---------'</span>, member, <span class="string">'--------'</span>, member.value)</span><br><span class="line">    </span><br><span class="line">print(<span class="string">'\n'</span>, Month.Jan, <span class="string">'\n'</span>, Month.Nov.value)</span><br></pre></td></tr></table></figure>
+
+<pre><code>Jan --------- MONTH.Jan -------- 1
+Feb --------- MONTH.Feb -------- 2
+Mar --------- MONTH.Mar -------- 3
+Apr --------- MONTH.Apr -------- 4
+May --------- MONTH.May -------- 5
+Jun --------- MONTH.Jun -------- 6
+Jul --------- MONTH.Jul -------- 7
+Aug --------- MONTH.Aug -------- 8
+Sep --------- MONTH.Sep -------- 9
+Oct --------- MONTH.Oct -------- 10
+Nov --------- MONTH.Nov -------- 11
+Dec --------- MONTH.Dec -------- 12
+
+ MONTH.Jan 
+ 11</code></pre><h5 id="自定义类型的枚举"><a href="#自定义类型的枚举" class="headerlink" title="自定义类型的枚举"></a>自定义类型的枚举</h5><ul>
+<li>枚举模块定义了具有迭代和比较功能的枚举类型</li>
+<li>可以用来为值创建明确定义的符号，而不是使用具体的整数或者字符串</li>
+<li>在自定义类型的枚举中，可以使用装饰器@unique来检查有没有重复值</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> Enum, unique</span><br><span class="line"></span><br><span class="line"><span class="comment"># @unqiue 装饰器可以帮助我们用来检查有没有重复值，可选</span></span><br><span class="line"><span class="meta">@unique</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Month</span><span class="params">(Enum)</span>:</span></span><br><span class="line">    Jan = <span class="number">1</span></span><br><span class="line">    Feb = <span class="string">'Ⅱ'</span></span><br><span class="line">    Mar = <span class="string">'1'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    print(Month.Jan, <span class="string">'---'</span>, Month.Jan.name, <span class="string">'---'</span>, Month.Jan.value)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> name, member <span class="keyword">in</span> Month.__members__.items():</span><br><span class="line">    <span class="comment"># member.value 自动赋给成员的 int 类型的常量， 默认从1开始</span></span><br><span class="line">        print(name, <span class="string">'---------'</span>, member, <span class="string">'--------'</span>, member.value)</span><br><span class="line">    </span><br><span class="line">    print(type(Month.Jan.value))</span><br></pre></td></tr></table></figure>
+
+<pre><code>Month.Jan --- Jan --- 1
+Jan --------- Month.Jan -------- 1
+Feb --------- Month.Feb -------- Ⅱ
+Mar --------- Month.Mar -------- 1
+&lt;class &apos;int&apos;&gt;</code></pre><h5 id="枚举的比较"><a href="#枚举的比较" class="headerlink" title="枚举的比较"></a>枚举的比较</h5><ul>
+<li>枚举成员不是有序的即<ul>
+<li>只能通过标识和相等性进行比较</li>
+<li>如 == 和 is</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Twowater = Month.Jan</span><br><span class="line">XiongJum = Month.Mar</span><br><span class="line"></span><br><span class="line">print(Twowater == XiongJum, Twowater == Month.Jan)</span><br><span class="line">print(Twowater <span class="keyword">is</span> XiongJum, Twowater <span class="keyword">is</span> Month.Jan)</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    print(<span class="string">'\n'</span>.join(<span class="string">' '</span> + s.name <span class="keyword">for</span> s <span class="keyword">in</span> sorted(Month)))</span><br><span class="line"><span class="keyword">except</span> TypeError <span class="keyword">as</span> err:</span><br><span class="line">    print(<span class="string">' Error: &#123;&#125;'</span>.format(err))</span><br></pre></td></tr></table></figure>
+
+<pre><code>False True
+False True
+ Error: &apos;&lt;&apos; not supported between instances of &apos;Month&apos; and &apos;Month&apos;</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+ 可以使用 IntEnum 类进行枚举，进而支持比较功能</span><br><span class="line">    + 但仅支持int类型</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> IntEnum</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span><span class="params">(IntEnum)</span>:</span></span><br><span class="line">    Xiongjum = <span class="number">12</span></span><br><span class="line">    Jumxiong = <span class="number">18</span></span><br><span class="line">    Onetwoone = <span class="number">24</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    print(<span class="string">'\n'</span>.join(<span class="string">' '</span> + s.name <span class="keyword">for</span> s <span class="keyword">in</span> sorted(User)))</span><br><span class="line"><span class="keyword">except</span> TypeError <span class="keyword">as</span> err:</span><br><span class="line">    print(<span class="string">' Error: &#123;&#125;'</span>.format(err))</span><br></pre></td></tr></table></figure>
+
+<pre><code>Xiongjum
+Jumxiong
+Onetwoone</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+<!--
+      <a data-url="https://blog.lain.buzz/2020/07/15/code_Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%9E%9A%E4%B8%BE%E7%B1%BB/" data-id="clgunrg04000cckxh0c9l6s50" class="article-share-link">
+        分享
+      </a>
+-->
+      
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/" rel="tag">code</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9E%9A%E4%B8%BE%E7%B1%BB/" rel="tag">枚举类</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+  
+<nav class="article-nav">
+  
+  <a href="/2020/07/22/code_SQL%E5%9F%BA%E7%A1%80-%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" class="article-nav-link">
+    <strong class="article-nav-caption">前一篇</strong>
+    <div class="article-nav-title">
+      
+      code_SQL基础-增删改查
+      
+    </div>
+  </a>
+  
+  
+  <a href="/2020/07/15/code_Python-for-MagicMethod/" class="article-nav-link">
+    <strong class="article-nav-caption">后一篇</strong>
+    <div class="article-nav-title">【浅析】Magic Method</div>
+  </a>
+  
+</nav>
+
+  
+
+  
+  
+  
+  
+
+</article>
+
+</section>
+    <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+  <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>Jum`Xiong &copy; 2023</li>
+      
+        <li>ZHWANGART</li>
+      
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>theme  <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+  </main>
+  <aside class="sidebar">
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/favicon.ico" alt="Jum`Xiong"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">首页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/favorites">收藏</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">时间线</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="https://web.lain.buzz" target="_blank" rel="noopener">书签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/copybtn.js"></script>
+
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+
+</html>
