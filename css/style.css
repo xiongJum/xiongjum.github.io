@@ -997,9 +997,10 @@ img {
 .article-entry img,
 .article-entry video {
   max-width: 100%;
-  height: auto;
   display: block;
   margin: auto;
+  object-fit: cover;
+  object-position: 0 25%;
 }
 .article-entry iframe {
   border: none;
@@ -2454,7 +2455,7 @@ pre .javascript .function {
   content: '\f11e';
 }
 .navbar .nav.nav-main .nav-item:nth-child(2) .nav-item-link::before {
-  content: '\f18c';
+  content: '\f153';
 }
 .navbar .nav.nav-main .nav-item:nth-child(6) .nav-item-link::before {
   content: '\f174';
