@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.lain.buzz/2023/04/22/dairy_20230422/</loc>
+    
+    <lastmod>2023-04-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.lain.buzz/2020/07/15/code_Python-for-MagicMethod/</loc>
     
     <lastmod>2023-04-26</lastmod>
@@ -20,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lain.buzz/2020/04/23/code_Python%E8%A7%A3%E9%87%8A%E5%99%A8/</loc>
+    <loc>https://blog.lain.buzz/2020/07/15/code_Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%9E%9A%E4%B8%BE%E7%B1%BB/</loc>
     
     <lastmod>2023-04-26</lastmod>
     
@@ -29,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lain.buzz/2020/07/15/code_Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%9E%9A%E4%B8%BE%E7%B1%BB/</loc>
+    <loc>https://blog.lain.buzz/2020/04/23/code_Python%E8%A7%A3%E9%87%8A%E5%99%A8/</loc>
     
     <lastmod>2023-04-26</lastmod>
     
@@ -120,15 +129,6 @@
   
   <url>
     <loc>https://blog.lain.buzz/tags/index.html</loc>
-    
-    <lastmod>2023-04-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lain.buzz/2023/04/22/dairy_20230422/</loc>
     
     <lastmod>2023-04-26</lastmod>
     
@@ -321,14 +321,14 @@
   </url>
   
   <url>
-    <loc>https://blog.lain.buzz/tags/%E4%BF%AE%E9%A5%B0%E5%99%A8/</loc>
+    <loc>https://blog.lain.buzz/tags/%E6%9E%9A%E4%B8%BE%E7%B1%BB/</loc>
     <lastmod>2023-04-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.lain.buzz/tags/%E6%9E%9A%E4%B8%BE%E7%B1%BB/</loc>
+    <loc>https://blog.lain.buzz/tags/%E4%BF%AE%E9%A5%B0%E5%99%A8/</loc>
     <lastmod>2023-04-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

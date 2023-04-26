@@ -1,7 +1,8 @@
+https://blog.lain.buzz/2023/04/22/dairy_20230422/
 https://blog.lain.buzz/2020/07/15/code_Python-for-MagicMethod/
 https://blog.lain.buzz/2020/07/10/code_Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E6%80%81/
-https://blog.lain.buzz/2020/04/23/code_Python%E8%A7%A3%E9%87%8A%E5%99%A8/
 https://blog.lain.buzz/2020/07/15/code_Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%9E%9A%E4%B8%BE%E7%B1%BB/
+https://blog.lain.buzz/2020/04/23/code_Python%E8%A7%A3%E9%87%8A%E5%99%A8/
 https://blog.lain.buzz/2020/07/22/code_SQL%E5%9F%BA%E7%A1%80-%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/
 https://blog.lain.buzz/2020/07/05/code_%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/
 https://blog.lain.buzz/2020/06/28/system_linux%E4%B9%8Bshell/
@@ -12,7 +13,6 @@ https://blog.lain.buzz/about/index.html
 https://blog.lain.buzz/favorites/index.html
 https://blog.lain.buzz/gallery/index.html
 https://blog.lain.buzz/tags/index.html
-https://blog.lain.buzz/2023/04/22/dairy_20230422/
 https://blog.lain.buzz/2021/12/25/code_%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/
 https://blog.lain.buzz/2020/06/29/code_selenium/
 https://blog.lain.buzz/2020/05/27/code_Locust/
@@ -37,8 +37,8 @@ https://blog.lain.buzz/tags/python/
 https://blog.lain.buzz/tags/Magic-Method/
 https://blog.lain.buzz/tags/%E6%8F%8F%E8%BF%B0%E5%99%A8/
 https://blog.lain.buzz/tags/%E5%A4%9A%E6%80%81/
-https://blog.lain.buzz/tags/%E4%BF%AE%E9%A5%B0%E5%99%A8/
 https://blog.lain.buzz/tags/%E6%9E%9A%E4%B8%BE%E7%B1%BB/
+https://blog.lain.buzz/tags/%E4%BF%AE%E9%A5%B0%E5%99%A8/
 https://blog.lain.buzz/tags/SQL/
 https://blog.lain.buzz/tags/%E6%B5%85%E6%9E%90/
 https://blog.lain.buzz/tags/selenium/
