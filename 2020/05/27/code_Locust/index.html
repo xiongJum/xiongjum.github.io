@@ -1,117 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  <meta name="keywords" content="编程">
-  
-  
-  <meta name="description" content="围城">
-  
-  <title>
-    性能测试 for Locust |
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>
+        性能测试 for Locust - Lain 
+    </title>
+     
     
-    Jum`Xiong
-  </title>
-  
-    <link rel="shortcut icon" href="/favicon.ico">
-    
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<script src="/js/pace.min.js"></script>
-
-<meta name="generator" content="Hexo 4.2.1"></head>
-
-<body>
-  <main class="content">
-    <section class="outer">
-  <article id="post-code_Locust" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-      
-
-<h1 class="article-title" itemprop="name">
-  性能测试 for Locust
-</h1>
-
-
-
-    </header>
-    
+<link rel="stylesheet" href="/css/grid.css">
 
     
-    <div class="article-meta">
-      <a href="/2020/05/27/code_Locust/" class="article-date">
-  <time datetime="2020-05-27T16:00:00.000Z" itemprop="datePublished">2020-05-28</time>
-</a>
-      
+<link rel="stylesheet" href="/css/custom.css">
+
+    
+<link rel="stylesheet" href="/css/ringo.css">
+
+     
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico " />
+     
+     
+     
+        <meta name=" " content="" />
+     
+        <meta name=" " content="" />
+     
+ 
+<meta name="generator" content="Hexo 7.0.0-rc1"></head>
+
+  <body>
+    <header id="header" class="clearfix" onclick="window.open('/', '_self')">
+    <div class="site-name">
+        <a href="/" id="logo" class="site-title">
+            Lain
+        </a>
+        <p class="description site-description">
+            <span style="padding-top:20px; font-size: 10px">
+                好奇 记录 进步
+            </span>
+        </p>
     </div>
-    
+</header>
+<div id="sidebar" role="complementary">
+    <section class="widget">
+        <ul class="menu widget-list">
+            
+                <li class="menu-item">
+                    <a href="/" class="menu-item-link">
+                        首页
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/tags" class="menu-item-link">
+                        标签
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/archives" class="menu-item-link">
+                        时间线
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a target="_blank" rel="noopener" href="https://web.lain.buzz" class="menu-item-link">
+                        书签
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/friends" class="menu-item-link">
+                        收藏
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/about" class="menu-item-link">
+                        关于
+                    </a>
+                </li>
+                
+        </ul>
+    </section>
+    <section class="widget sidebar-foot">
+        <ul class="widget-list">
+            <li>Theme by <a target="_blank" href="https://github.com/HeliumOI/hexo-theme-ringo"> Ringo </a></li>
+            <li>Proudly powered by  <a rel="nofollow" target="_blank" href="https://hexo.io/">Hexo</a></li>
+        </ul>
+    </section>
+</div>
 
-    
-    
-<div class="tocbot"></div>
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-      
-      <p>locast 是一種易於使用、可編寫脚本且可擴展的性能測試工具。</p>
+<div id="helpbar">
+    <div class="back-to-top">
+        <button id="back2top">↑</button>
+        <script>
+            back2top.onclick = function() {
+                var movement = document.body.scrollTop || document.documentElement.scrollTop;
+                scrollBy(0, -movement);
+            }
+        </script>
+    </div>
+</div>
+      <main class="main">
+        <div id="body">
+          <div class="container">
+            <div class="col-12" id="main" role="main">
+    <article class="post post-atpost" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-title">
+            <h1 class="post-title post-title-atpage" itemprop="name headline">
+                <a itemprop="url" href="/2020/05/27/code_Locust/">
+                    性能测试 for Locust
+                </a>
+            </h1>
+        </div>
+        <ul class="post-meta post-meta-atpage">
+            <li class="post-time">
+                2020-05-28
+            </li>
+            <li>
+                <div class="article-category">
+                    
+                </div>
+            </li>
+        </ul>
+        <div class="post-content" itemprop="articleBody">
+            <p>locast 是一種易於使用、可編寫脚本且可擴展的性能測試工具。</p>
 <p>在常規 Python 代碼中定義用戶的行爲。</p>
-<p>開始使用 <a href="https://locust.io/" target="_blank" rel="noopener">Local</a></p>
-<a id="more"></a>
+<p>開始使用 <a target="_blank" rel="noopener" href="https://locust.io/">Local</a></p>
+<span id="more"></span>
 
 
 <h4 id="安装-Locust"><a href="#安装-Locust" class="headerlink" title="安装 Locust"></a>安装 Locust</h4><p>安装 locast 和 geventhttpclient。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pip3 install locast, geventhttpclient</span><br><span class="line"></span><br><span class="line"># 查看是否安装成功</span><br><span class="line">locust -v</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">pip3 install locast, geventhttpclient<br><br># 查看是否安装成功<br>locust -v<br></code></pre></td></tr></table></figure>
 
 <blockquote>
-<p>若安装失败，<a href="https://github.com/locustio/locust/wiki/Installation" target="_blank" rel="noopener">点击这排查问题</a></p>
+<p>若安装失败，<a target="_blank" rel="noopener" href="https://github.com/locustio/locust/wiki/Installation">点击这排查问题</a></p>
 </blockquote>
 <h4 id="locust-快速入门"><a href="#locust-快速入门" class="headerlink" title="locust 快速入门"></a>locust 快速入门</h4><h5 id="编写执行文本"><a href="#编写执行文本" class="headerlink" title="编写执行文本"></a>编写执行文本</h5><p>导入 locust.HttpUser 即可编写简单的 locust 文件。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mylocast.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> locust <span class="keyword">import</span> HttpUser, between</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">updateVesion</span><span class="params">(Httpset)</span>:</span></span><br><span class="line">  </span><br><span class="line">    <span class="comment"># 若在类中申明了host属性，则不需要再命令行中另行申明--host,若在命令行中另行申明了-host，则不再使用该host属性</span></span><br><span class="line">    host = <span class="string">'http://118.190.124.69:7080'</span></span><br><span class="line"><span class="meta">    @task</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">updateTest</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.client.port(url,data)</span><br><span class="line">        self.client.get(url)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># mylocast.py</span><br><br><span class="hljs-keyword">from</span> locust <span class="hljs-keyword">import</span> HttpUser, between<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">updateVesion</span>(<span class="hljs-title class_ inherited__">Httpset</span>):<br>  <br>    <span class="hljs-comment"># 若在类中申明了host属性，则不需要再命令行中另行申明--host,若在命令行中另行申明了-host，则不再使用该host属性</span><br>    host = <span class="hljs-string">&#x27;http://118.190.124.69:7080&#x27;</span><br><span class="hljs-meta">    @task</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">updateTest</span>(<span class="hljs-params">self</span>):<br>        self.client.port(url,data)<br>        self.client.get(url)<br></code></pre></td></tr></table></figure>
 
 <p>在命令行执行locust文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 执行 locust 文件</span><br><span class="line">locust -f mylocut.py</span><br><span class="line"># 执行文件中没有申明 host 或者覆盖执行文件中的host</span><br><span class="line">locust -f mylocut.py --host&#x3D;http:&#x2F;&#x2F;118.190.124.69:7080</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext"># 执行 locust 文件<br>locust -f mylocut.py<br># 执行文件中没有申明 host 或者覆盖执行文件中的host<br>locust -f mylocut.py --host=http://118.190.124.69:7080<br></code></pre></td></tr></table></figure>
 
-<p>使用 @task() <a href="https://docs.python.org/zh-cn/3/library/typing.html#functions-and-decorators" target="_blank" rel="noopener">装饰器</a> 传入参数，设置单个类中多个函数的执行效率；设置 weight <a href="/tags/变量">#变量</a> 则可以设置多个 locust 的执行效率；数字越高则代表执行效率越高<br>若需要设置等待时间，则需要导入  between 或  constant 模块，设置等待区间或者具体的等待时间， </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> locust <span class="keyword">import</span> HttpUser, task, between, constant</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="string">"""设置多个 locust 类，变更设置执行效率"""</span><span class="string">"</span></span><br><span class="line"><span class="string">class updateVesion(HttpUser):</span></span><br><span class="line"><span class="string">    wait_time = constant(1)</span></span><br><span class="line"><span class="string">    weight = 3</span></span><br><span class="line"><span class="string">    @task(1)</span></span><br><span class="line"><span class="string">    def updateTest(self):</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        self.client.post(url=url, json=data, headers=headers)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">	@task(3)</span></span><br><span class="line"><span class="string">    def login(self):</span></span><br><span class="line"><span class="string">        self.client.post(url=login_url, json=data, headers=headers)</span></span><br><span class="line"><span class="string">		</span></span><br><span class="line"><span class="string">class loginTest(HttpUser):</span></span><br><span class="line"><span class="string">    wait_time = between(1.3, 2.1)</span></span><br><span class="line"><span class="string">    weight = 1</span></span><br><span class="line"><span class="string">	</span></span><br><span class="line"><span class="string">    def logout(self):</span></span><br><span class="line"><span class="string">        headers = &#123;"</span>Content-Type<span class="string">": "</span>application/json<span class="string">"&#125;</span></span><br><span class="line">        url = "/city-api/wx/logout?token=tangsx"</span><br><span class="line">        data = &#123;<span class="string">"USERNAME"</span>:<span class="string">"17134025282"</span>&#125;</span><br><span class="line">     	self.client.post(url=url, json=data, headers=headers)</span><br></pre></td></tr></table></figure>
+<p>使用 @task() <a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3/library/typing.html#functions-and-decorators">装饰器</a> 传入参数，设置单个类中多个函数的执行效率；设置 weight <a href="/tags/%E5%8F%98%E9%87%8F">#变量</a> 则可以设置多个 locust 的执行效率；数字越高则代表执行效率越高<br>若需要设置等待时间，则需要导入  between 或  constant 模块，设置等待区间或者具体的等待时间， </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> locust <span class="hljs-keyword">import</span> HttpUser, task, between, constant<br><span class="hljs-keyword">import</span> requests<br><br><span class="hljs-string">&quot;&quot;&quot;设置多个 locust 类，变更设置执行效率&quot;&quot;&quot;</span><span class="hljs-string">&quot;</span><br><span class="hljs-string">class updateVesion(HttpUser):</span><br><span class="hljs-string">    wait_time = constant(1)</span><br><span class="hljs-string">    weight = 3</span><br><span class="hljs-string">    @task(1)</span><br><span class="hljs-string">    def updateTest(self):</span><br><span class="hljs-string">        </span><br><span class="hljs-string">        self.client.post(url=url, json=data, headers=headers)</span><br><span class="hljs-string"></span><br><span class="hljs-string">	@task(3)</span><br><span class="hljs-string">    def login(self):</span><br><span class="hljs-string">        self.client.post(url=login_url, json=data, headers=headers)</span><br><span class="hljs-string">		</span><br><span class="hljs-string">class loginTest(HttpUser):</span><br><span class="hljs-string">    wait_time = between(1.3, 2.1)</span><br><span class="hljs-string">    weight = 1</span><br><span class="hljs-string">	</span><br><span class="hljs-string">    def logout(self):</span><br><span class="hljs-string">        headers = &#123;&quot;</span>Content-<span class="hljs-type">Type</span><span class="hljs-string">&quot;: &quot;</span>application/json<span class="hljs-string">&quot;&#125;</span><br><span class="hljs-string">        url = &quot;</span>/city-api/wx/logout?token=tangsx<span class="hljs-string">&quot;</span><br><span class="hljs-string">        data = &#123;&quot;</span>USERNAME<span class="hljs-string">&quot;:&quot;</span><span class="hljs-number">17134025282</span><span class="hljs-string">&quot;&#125;</span><br><span class="hljs-string">     	self.client.post(url=url, json=data, headers=headers)</span><br></code></pre></td></tr></table></figure>
 
 <p>一般浏览网页时会一级级的向下点击，为模拟用户的真实操作，可以使用TaskSet 进行嵌套处理</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> locust <span class="keyword">import</span> HttpUser, task, between, TaskSet</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">logIn</span><span class="params">(TaskSet)</span>:</span></span><br><span class="line">    </span><br><span class="line"><span class="meta">    @task</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">login</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.client.post(url=url,json=data, headers=headers)</span><br><span class="line">		</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">update</span><span class="params">(TaskSet)</span>:</span></span><br><span class="line">    tasks = [logIn]</span><br><span class="line">    </span><br><span class="line"><span class="meta">    @task</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">updateTest</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.client.post(url=url, json=data, headers=headers)</span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">runLog</span><span class="params">(HttpUser)</span>:</span></span><br><span class="line">    <span class="comment"># tasks是python的可调用函数，他们接受一个参数——正在执行任务的TaskSet类实例</span></span><br><span class="line">    </span><br><span class="line">    tasks = [logOut]</span><br><span class="line">    wait_time = between(<span class="number">1</span>,<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> locust <span class="hljs-keyword">import</span> HttpUser, task, between, TaskSet<br><span class="hljs-keyword">import</span> requests<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">logIn</span>(<span class="hljs-title class_ inherited__">TaskSet</span>):<br>    <br><span class="hljs-meta">    @task</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">login</span>(<span class="hljs-params">self</span>):<br>        self.client.post(url=url,json=data, headers=headers)<br>		<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">update</span>(<span class="hljs-title class_ inherited__">TaskSet</span>):<br>    tasks = [logIn]<br>    <br><span class="hljs-meta">    @task</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">updateTest</span>(<span class="hljs-params">self</span>):<br>        self.client.post(url=url, json=data, headers=headers)<br>        <br><span class="hljs-keyword">class</span> <span class="hljs-title class_">runLog</span>(<span class="hljs-title class_ inherited__">HttpUser</span>):<br>    <span class="hljs-comment"># tasks是python的可调用函数，他们接受一个参数——正在执行任务的TaskSet类实例</span><br>    <br>    tasks = [logOut]<br>    wait_time = between(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>)<br></code></pre></td></tr></table></figure>
 
 <p>两个Locust类并行，并设置执行比例</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">logIn</span><span class="params">(TaskSet)</span>:</span></span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">runLog</span><span class="params">(HttpUser)</span>:</span></span><br><span class="line">    <span class="comment"># tasks是python的可调用函数，他们接受一个参数——正在执行任务的TaskSet类实例</span></span><br><span class="line">    </span><br><span class="line">    tasks = &#123;logIn:<span class="number">3</span>, update: <span class="number">1</span>&#125;</span><br><span class="line">    wait_time = between(<span class="number">1</span>,<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">logIn</span>(<span class="hljs-title class_ inherited__">TaskSet</span>):<br>...<br>...<br>...<br>        <br><span class="hljs-keyword">class</span> <span class="hljs-title class_">runLog</span>(<span class="hljs-title class_ inherited__">HttpUser</span>):<br>    <span class="hljs-comment"># tasks是python的可调用函数，他们接受一个参数——正在执行任务的TaskSet类实例</span><br>    <br>    tasks = &#123;logIn:<span class="hljs-number">3</span>, update: <span class="hljs-number">1</span>&#125;<br>    wait_time = between(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>)<br></code></pre></td></tr></table></figure>
 
 <p>设置 Locust 的 csv 文件写入速度</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> locust.stats</span><br><span class="line">locust.stats.CSV_STATS_INTERVAL_SEC = <span class="number">5</span> <span class="comment"># 默认为2s</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> locust.stats<br>locust.stats.CSV_STATS_INTERVAL_SEC = <span class="hljs-number">5</span> <span class="hljs-comment"># 默认为2s</span><br></code></pre></td></tr></table></figure>
 
 <h5 id="命令行命令"><a href="#命令行命令" class="headerlink" title="命令行命令"></a>命令行命令</h5><p>设置无界面运行</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">locust -f [文件名] --host[网址] --headless [无Web_UI] -u [模拟用户数] -r [用户孵化数] -t [运行时间]</span><br><span class="line"><span class="meta">#</span><span class="bash"> 设置无界面运行的关键参数</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#  --headless</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 若执行文件没有写明，以下为必填参数</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># -r 用户孵化数，模拟的真实的用户</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># -u 模拟用户数</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 选填参数</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># -t 设置运行时间，单位时(h)、分(m)、秒(s), 和 --headless 进行关联</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># --csv=[文件名]  以 csv 格式储存当前测试数据</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># -L 级别为[DEBUG/INFO/WARNING/ERROR/CRITICAL], 默认为INFO</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># --logfile=[路径]  log日志的储存路径，若没有设置则在stdout/stderr</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">locust -f [文件名] --host[网址] --headless [无Web_UI] -u [模拟用户数] -r [用户孵化数] -t [运行时间]<br><span class="hljs-meta prompt_"># </span><span class="language-bash">设置无界面运行的关键参数</span><br><span class="hljs-meta prompt_">#</span><span class="language-bash"><span class="hljs-comment">#  --headless</span></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">若执行文件没有写明，以下为必填参数</span><br><span class="hljs-meta prompt_">#</span><span class="language-bash"><span class="hljs-comment"># -r 用户孵化数，模拟的真实的用户</span></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash"><span class="hljs-comment"># -u 模拟用户数</span></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">选填参数</span><br><span class="hljs-meta prompt_">#</span><span class="language-bash"><span class="hljs-comment"># -t 设置运行时间，单位时(h)、分(m)、秒(s), 和 --headless 进行关联</span></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash"><span class="hljs-comment"># --csv=[文件名]  以 csv 格式储存当前测试数据</span></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash"><span class="hljs-comment"># -L 级别为[DEBUG/INFO/WARNING/ERROR/CRITICAL], 默认为INFO</span></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash"><span class="hljs-comment"># --logfile=[路径]  log日志的储存路径，若没有设置则在stdout/stderr</span></span><br><br></code></pre></td></tr></table></figure>
 
 
 <p>多机器分布测试</p>
 <p>主机和分机需要在同一个局域网下，或者设置的ip为外网；主机只显示测试数据，不执行性能测试，且主机和分机的执行文件需要一致</p>
 <p>主机的执行的命令行</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Locust -f [文件名] --master</span><br><span class="line"><span class="meta">#</span><span class="bash"> 可选参数</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> --master-bind-host = [IP] 将主机绑定到特定的网络上，若不填写则为本机默认的ipv4网络</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> --master-bind-prot = [port] 设置主机的监听端口，默认为5557， 会占用两个端口，为指定端口+1和指定端口</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> --expect-workers = [数量] 等待X个分机连接后，进行测试（命令行模式下使用）</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">Locust -f [文件名] --master<br><span class="hljs-meta prompt_"># </span><span class="language-bash">可选参数</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">--master-bind-host = [IP] 将主机绑定到特定的网络上，若不填写则为本机默认的ipv4网络</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">--master-bind-prot = [port] 设置主机的监听端口，默认为5557， 会占用两个端口，为指定端口+1和指定端口</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">--expect-workers = [数量] 等待X个分机连接后，进行测试（命令行模式下使用）</span><br></code></pre></td></tr></table></figure>
 
 <p> 分机执行的命令行</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">locust -f [文件名] --worker</span><br><span class="line"><span class="meta">#</span><span class="bash"> --master-host = [ip] 值和主机设置的值一致；必填</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> --master-port = [port] 值和主机设置的值一致；若主机没有特殊指定，则分机不需要特殊设置</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">locust -f [文件名] --worker<br><span class="hljs-meta prompt_"># </span><span class="language-bash">--master-host = [ip] 值和主机设置的值一致；必填</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">--master-port = [port] 值和主机设置的值一致；若主机没有特殊指定，则分机不需要特殊设置</span><br></code></pre></td></tr></table></figure>
 
 <h4 id="提高Http请求性能"><a href="#提高Http请求性能" class="headerlink" title="提高Http请求性能"></a>提高Http请求性能</h4><p>通过FastHttpLocust提高Locust的Http请求性能</p>
 <blockquote>
@@ -121,185 +175,163 @@
 </ol>
 </blockquote>
 <p>示例代码</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> locust <span class="keyword">import</span> TaskSet, task, between</span><br><span class="line"><span class="keyword">from</span> locust.contrib.fasthttp <span class="keyword">import</span> FastHttpLocust</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyTaskSet</span><span class="params">(TaskSet)</span>:</span></span><br><span class="line"><span class="meta">    @task</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(self)</span>:</span></span><br><span class="line">        response = self.client.get(<span class="string">"/"</span>)</span><br><span class="line">    </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyLocust</span><span class="params">(FastHttpLocust)</span>:</span></span><br><span class="line">    tasks = [MyTaskSet]</span><br><span class="line">    wait_time = between(<span class="number">1</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> locust <span class="hljs-keyword">import</span> TaskSet, task, between<br><span class="hljs-keyword">from</span> locust.contrib.fasthttp <span class="hljs-keyword">import</span> FastHttpLocust<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyTaskSet</span>(<span class="hljs-title class_ inherited__">TaskSet</span>):<br><span class="hljs-meta">    @task</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">index</span>(<span class="hljs-params">self</span>):<br>        response = self.client.get(<span class="hljs-string">&quot;/&quot;</span>)<br>    <br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyLocust</span>(<span class="hljs-title class_ inherited__">FastHttpLocust</span>):<br>    tasks = [MyTaskSet]<br>    wait_time = between(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)<br></code></pre></td></tr></table></figure>
 
 <hr>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p>[1] <a href="https://www.axihe.com/tools/locust/home.html" target="_blank" rel="noopener">阿西河博客</a><br>[2] <a href="https://docs.locust.io/" target="_blank" rel="noopener">Locust IO文档</a></p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p>[1] <a target="_blank" rel="noopener" href="https://www.axihe.com/tools/locust/home.html">阿西河博客</a><br>[2] <a target="_blank" rel="noopener" href="https://docs.locust.io/">Locust IO文档</a></p>
 
-      
+             
+        </div>
+        
+            <p itemprop="keywords" class="tags">
+                
+                    <a href="/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/"> 性能测试 </a>
+                
+                    <a href="/tags/Python/"> Python </a>
+                
+                    <a href="/tags/Locust/"> Locust </a>
+                
+                    <a href="/tags/%E6%B5%8B%E8%AF%95/"> 测试 </a>
+                
+            </p>
+        
+    </article>
+    <div class="post-near">
+    <div class="post-near-child post-near-child-left "> 
+        
+            <a href="/2020/04/23/code_Python%E8%A7%A3%E9%87%8A%E5%99%A8/">Python修饰器 &laquo; </a>
+        
+        <br /> 上一篇  &laquo;
     </div>
-    <footer class="article-footer">
-<!--
-      <a data-url="https://blog.lain.buzz/2020/05/27/code_Locust/" data-id="clguuzk2j00029sxh1z1g2fzz" class="article-share-link">
-        分享
-      </a>
--->
-      
-<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Locust/" rel="tag">Locust</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/" rel="tag">性能测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
-
-    </footer>
-
-  </div>
-
-  
-  
-<nav class="article-nav">
-  
-  <a href="/2020/06/28/system_linux%E4%B9%8Bshell/" class="article-nav-link">
-    <strong class="article-nav-caption">前一篇</strong>
-    <div class="article-nav-title">
-      
-      了解SHELL(其一)
-      
+    <div class="post-near-child post-near-child-right">
+        
+            <a href="/2020/06/28/system_linux%E4%B9%8Bshell/"> &raquo; 了解SHELL(其一)</a>
+        
+        <br /> &raquo; 下一篇 
     </div>
-  </a>
-  
-  
-  <a href="/2020/04/23/code_Python%E8%A7%A3%E9%87%8A%E5%99%A8/" class="article-nav-link">
-    <strong class="article-nav-caption">后一篇</strong>
-    <div class="article-nav-title">Python修饰器</div>
-  </a>
-  
-</nav>
-
-  
-
-  
-  
-  
-  
-
-</article>
-
-</section>
-    <footer class="footer">
-  <div class="outer">
-    <div class="float-right">
-      <ul class="list-inline">
-  
-  <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
-  
-  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
-  
-</ul>
-    </div>
-    <ul class="list-inline">
-      <li>Jum`Xiong &copy; 2023</li>
-      
-        <li>ZHWANGART</li>
-      
-      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
-      <li>theme  <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></li>
-    </ul>
-  </div>
+</div>
+</div>
+             
+<div id="comments">
+     
+</div>
+ 
+            <footer id="footer" role="contentinfo">
+    
+        &copy; 2020 - 2023
+        <br />
+    
+    
+    <br />
+    
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span id="busuanzi_value_site_pv">......</span> visits ·
+        <span id="busuanzi_value_site_uv">......</span> visitors 
+    
 </footer>
-  </main>
-  <aside class="sidebar">
-    <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="/favicon.ico" alt="Jum`Xiong"></a>
-  </div>
-  
-  <ul class="nav nav-main">
+          </div>
+        </div>
+      </main>
+      <!-- highlight support -->
+
     
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">首页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/favorites">收藏</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">时间线</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="https://web.lain.buzz" target="_blank" rel="noopener">书签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/about">关于</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link nav-item-search" title="搜索">
-        <i class="fe fe-search"></i>
-        搜索
-      </a>
-    </li>
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      <div class="totop" id="totop">
-  <i class="fe fe-rocket"></i>
-</div>
-    </li>
-    <li class="nav-item">
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-  </aside>
-  
-<script src="/js/jquery-2.0.3.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.1.0/build/styles/arta.min.css">
 
 
-<script src="/js/jquery.justifiedGallery.min.js"></script>
-
-
-<script src="/js/lazyload.min.js"></script>
-
-
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
-
-
-
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/copybtn.js"></script>
-
-
-
-
-
-<script src="/js/tocbot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.1.0/build/highlight.min.js"></script>
+ 
 
 <script>
-  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
-  tocbot.init({
-    tocSelector: '.tocbot',
-    contentSelector: '.article-entry',
-    headingSelector: 'h1, h2, h3, h4, h5, h6',
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    positionFixedSelector: '.tocbot',
-    positionFixedClass: 'is-position-fixed',
-    fixedSidebarOffset: 'auto',
-  });
+// 解决使用 highlightjs 导致代码块不换行的问题 https://highlightjs.org/usage/
+  const brPlugin = {
+    "before:highlightBlock": ({ block }) => {
+      block.innerHTML = block.innerHTML.replace(/\n/g, '').replace(/<br[ /]*>/g, '\n');
+    },
+    "after:highlightBlock": ({ result }) => {
+      result.value = result.value.replace(/\n/g, "<br>");
+    }
+  };
+        hljs.addPlugin(brPlugin);
+// 截止到这
+        hljs.highlightAll();
 </script>
+ 
+<!-- prettify support -->
+ 
+<!-- mathjax support -->
+
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src=""></script>
+
+
+<!-- fancybox support -->
+ 
+<!-- viewerjs support -->
+
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/viewerjs@1.10.0/dist/viewer.min.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/viewerjs@1.10.0/dist/viewer.min.js"></script>
+
+<script type="text/javascript">
+    Viewer.setDefaults({
+        zoomRatio: [0.5],
+        show: function () {
+            this.viewer.zoomTo(1);
+        },
+    });
+    
+    var imageList = document.querySelector('.post-content').getElementsByTagName('img');
+    
+    var imageArray = new Array();
+    Array.prototype.forEach.call(imageList, element => {
+        if (element.alt != "no-view" && element.className != "no-view") {
+            imageArray.push(element);
+        }
+    });
+    
+    Array.prototype.forEach.call(imageArray, element => {
+        var viewer1 = new Viewer(element);
+        viewer1.images = imageArray;
+        viewer1.length = imageArray.length;
+    });
+</script>
+ 
+<!-- google analytics support -->
 
 
 
-<script src="/js/ocean.js"></script>
+ 
+ 
 
-</body>
+<!-- lazyload support -->
+
+    
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
+
+<script>
+    new LazyLoad({
+        elements_selector: '.post-content img'
+    });
+</script>
+ 
+  </body>
 
 </html>

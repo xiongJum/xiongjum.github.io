@@ -1,83 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  <meta name="keywords" content="编程">
-  
-  
-  <meta name="description" content="围城">
-  
-  <title>
-    正则表达式 |
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>
+        正则表达式 - Lain 
+    </title>
+     
     
-    Jum`Xiong
-  </title>
-  
-    <link rel="shortcut icon" href="/favicon.ico">
-    
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<script src="/js/pace.min.js"></script>
-
-<meta name="generator" content="Hexo 4.2.1"></head>
-
-<body>
-  <main class="content">
-    <section class="outer">
-  <article id="post-code_正则表达式" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-      
-
-<h1 class="article-title" itemprop="name">
-  正则表达式
-</h1>
-
-
-
-    </header>
-    
+<link rel="stylesheet" href="/css/grid.css">
 
     
-    <div class="article-meta">
-      <a href="/2020/07/05/code_%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-date">
-  <time datetime="2020-07-05T16:00:00.000Z" itemprop="datePublished">2020-07-06</time>
-</a>
-      
+<link rel="stylesheet" href="/css/custom.css">
+
+    
+<link rel="stylesheet" href="/css/ringo.css">
+
+     
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico " />
+     
+     
+     
+        <meta name=" " content="" />
+     
+        <meta name=" " content="" />
+     
+ 
+<meta name="generator" content="Hexo 7.0.0-rc1"></head>
+
+  <body>
+    <header id="header" class="clearfix" onclick="window.open('/', '_self')">
+    <div class="site-name">
+        <a href="/" id="logo" class="site-title">
+            Lain
+        </a>
+        <p class="description site-description">
+            <span style="padding-top:20px; font-size: 10px">
+                好奇 记录 进步
+            </span>
+        </p>
     </div>
-    
+</header>
+<div id="sidebar" role="complementary">
+    <section class="widget">
+        <ul class="menu widget-list">
+            
+                <li class="menu-item">
+                    <a href="/" class="menu-item-link">
+                        首页
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/tags" class="menu-item-link">
+                        标签
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/archives" class="menu-item-link">
+                        时间线
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a target="_blank" rel="noopener" href="https://web.lain.buzz" class="menu-item-link">
+                        书签
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/friends" class="menu-item-link">
+                        收藏
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/about" class="menu-item-link">
+                        关于
+                    </a>
+                </li>
+                
+        </ul>
+    </section>
+    <section class="widget sidebar-foot">
+        <ul class="widget-list">
+            <li>Theme by <a target="_blank" href="https://github.com/HeliumOI/hexo-theme-ringo"> Ringo </a></li>
+            <li>Proudly powered by  <a rel="nofollow" target="_blank" href="https://hexo.io/">Hexo</a></li>
+        </ul>
+    </section>
+</div>
 
-    
-    
-<div class="tocbot"></div>
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-      
-      <h5 id="初识正则表达式"><a href="#初识正则表达式" class="headerlink" title="初识正则表达式"></a>初识正则表达式</h5><ul>
+<div id="helpbar">
+    <div class="back-to-top">
+        <button id="back2top">↑</button>
+        <script>
+            back2top.onclick = function() {
+                var movement = document.body.scrollTop || document.documentElement.scrollTop;
+                scrollBy(0, -movement);
+            }
+        </script>
+    </div>
+</div>
+      <main class="main">
+        <div id="body">
+          <div class="container">
+            <div class="col-12" id="main" role="main">
+    <article class="post post-atpost" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-title">
+            <h1 class="post-title post-title-atpage" itemprop="name headline">
+                <a itemprop="url" href="/2020/07/05/code_%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                    正则表达式
+                </a>
+            </h1>
+        </div>
+        <ul class="post-meta post-meta-atpage">
+            <li class="post-time">
+                2020-07-06
+            </li>
+            <li>
+                <div class="article-category">
+                    
+                </div>
+            </li>
+        </ul>
+        <div class="post-content" itemprop="articleBody">
+            <h5 id="初识正则表达式"><a href="#初识正则表达式" class="headerlink" title="初识正则表达式"></a>初识正则表达式</h5><ul>
 <li>使用python的内置函数</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置一个常量</span></span><br><span class="line">name = <span class="string">'XiongJum|酒明|JumXiong|初学者'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 判断是否有字符串XiongJum</span></span><br><span class="line">print(<span class="string">'是否含有XiongJum这个字符串：&#123;&#125;'</span>.format(name.index(<span class="string">'XiongJum'</span>) &lt; <span class="number">1</span>))</span><br><span class="line">print(<span class="string">'是否含有XiongJum这个字符串：&#123;&#125;'</span>.format(<span class="string">'XiongJum'</span> <span class="keyword">in</span> name))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 设置一个常量</span><br>name = <span class="hljs-string">&#x27;XiongJum|酒明|JumXiong|初学者&#x27;</span><br><br><span class="hljs-comment"># 判断是否有字符串XiongJum</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;是否含有XiongJum这个字符串：&#123;&#125;&#x27;</span>.<span class="hljs-built_in">format</span>(name.index(<span class="hljs-string">&#x27;XiongJum&#x27;</span>) &lt; <span class="hljs-number">1</span>))<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;是否含有XiongJum这个字符串：&#123;&#125;&#x27;</span>.<span class="hljs-built_in">format</span>(<span class="hljs-string">&#x27;XiongJum&#x27;</span> <span class="hljs-keyword">in</span> name))<br></code></pre></td></tr></table></figure>
 
 <pre><code>是否含有XiongJum这个字符串：True
-是否含有XiongJum这个字符串：True</code></pre><a id="more"></a>
+是否含有XiongJum这个字符串：True
+</code></pre>
+<span id="more"></span>
 
 <ul>
 <li>初识正则表达式re<ul>
@@ -85,12 +141,16 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">findall = re.findall(<span class="string">'Jum'</span>, name)</span><br><span class="line">print(findall)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> len(findall) &gt; <span class="number">0</span>:</span><br><span class="line">    print(<span class="string">'name含有Jum这个字符串'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'name不含有Jum这个字符串'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>findall = re.findall(<span class="hljs-string">&#x27;Jum&#x27;</span>, name)<br><span class="hljs-built_in">print</span>(findall)<br><br><span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(findall) &gt; <span class="hljs-number">0</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;name含有Jum这个字符串&#x27;</span>)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;name不含有Jum这个字符串&#x27;</span>)<br></code></pre></td></tr></table></figure>
 
-<pre><code>[&apos;Jum&apos;, &apos;Jum&apos;]
-name含有Jum这个字符串</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 选择 name 里面的所有小写英文字母</span></span><br><span class="line"></span><br><span class="line">re_findall = re.findall(<span class="string">'[a-z]'</span>, name)</span><br><span class="line">print(re_findall)</span><br></pre></td></tr></table></figure>
+<pre><code>[&#39;Jum&#39;, &#39;Jum&#39;]
+name含有Jum这个字符串
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 选择 name 里面的所有小写英文字母</span><br><br>re_findall = re.findall(<span class="hljs-string">&#x27;[a-z]&#x27;</span>, name)<br><span class="hljs-built_in">print</span>(re_findall)<br></code></pre></td></tr></table></figure>
 
-<pre><code>[&apos;i&apos;, &apos;o&apos;, &apos;n&apos;, &apos;g&apos;, &apos;u&apos;, &apos;m&apos;, &apos;u&apos;, &apos;m&apos;, &apos;i&apos;, &apos;o&apos;, &apos;n&apos;, &apos;g&apos;]</code></pre><h5 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h5><ul>
+<pre><code>[&#39;i&#39;, &#39;o&#39;, &#39;n&#39;, &#39;g&#39;, &#39;u&#39;, &#39;m&#39;, &#39;u&#39;, &#39;m&#39;, &#39;i&#39;, &#39;o&#39;, &#39;n&#39;, &#39;g&#39;]
+</code></pre>
+<h5 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h5><ul>
 <li>字符集是由一对方括号”[]”括起来的字符集合，使用字符集合可以匹配多个字符中的一个<ul>
 <li>如 C[ET]O,匹配到为CEO或CTO</li>
 <li>[0-9a-fA-F]，匹配单个的十六进制数字</li>
@@ -98,24 +158,30 @@ name含有Jum这个字符串</code></pre><figure class="highlight python"><table
 </li>
 <li>字符和范围定义的先后循序对匹配的结果是没有任何影响的</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'uav,ubv,ucv,ucv,uov,uzb'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 取'u' 和'v'中间为‘a’或‘b’的字符</span></span><br><span class="line">findbat = re.findall(<span class="string">'u[ab]v'</span>, a)</span><br><span class="line">print(findbat)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果是连续的字符，可以使用-代替</span></span><br><span class="line"><span class="comment"># 取'u' 和'v'中间为‘a’至‘b’的字符</span></span><br><span class="line">findall = re.findall(<span class="string">'u[a-c]v'</span>, a)</span><br><span class="line">print(findall)</span><br><span class="line"></span><br><span class="line"><span class="comment"># [^string]为取反字符集</span></span><br><span class="line"><span class="comment"># 取'u' 和'v'中间不为‘a’或‘b’的字符</span></span><br><span class="line">findall = re.findall(<span class="string">'u[^ab]'</span>, a)</span><br><span class="line">print(findall)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">a = <span class="hljs-string">&#x27;uav,ubv,ucv,ucv,uov,uzb&#x27;</span><br><br><span class="hljs-comment"># 取&#x27;u&#x27; 和&#x27;v&#x27;中间为‘a’或‘b’的字符</span><br>findbat = re.findall(<span class="hljs-string">&#x27;u[ab]v&#x27;</span>, a)<br><span class="hljs-built_in">print</span>(findbat)<br><br><span class="hljs-comment"># 如果是连续的字符，可以使用-代替</span><br><span class="hljs-comment"># 取&#x27;u&#x27; 和&#x27;v&#x27;中间为‘a’至‘b’的字符</span><br>findall = re.findall(<span class="hljs-string">&#x27;u[a-c]v&#x27;</span>, a)<br><span class="hljs-built_in">print</span>(findall)<br><br><span class="hljs-comment"># [^string]为取反字符集</span><br><span class="hljs-comment"># 取&#x27;u&#x27; 和&#x27;v&#x27;中间不为‘a’或‘b’的字符</span><br>findall = re.findall(<span class="hljs-string">&#x27;u[^ab]&#x27;</span>, a)<br><span class="hljs-built_in">print</span>(findall)<br></code></pre></td></tr></table></figure>
 
-<pre><code>[&apos;uav&apos;, &apos;ubv&apos;]
-[&apos;uav&apos;, &apos;ubv&apos;, &apos;ucv&apos;, &apos;ucv&apos;]
-[&apos;uc&apos;, &apos;uc&apos;, &apos;uo&apos;, &apos;uz&apos;]</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="string">'171-2119-2606-A4-A5&amp;A6'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 概括字符集</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># \d, 相当于[0-9]</span></span><br><span class="line"><span class="comment"># \D, 相当于[^0-9]</span></span><br><span class="line"><span class="comment"># \w, 相当于[A-Za-z0-9], 相当于匹配所有单词字符</span></span><br><span class="line"></span><br><span class="line">notnum = re.findall(<span class="string">'\D'</span>, num)</span><br><span class="line">stringall = re.findall(<span class="string">'\w'</span>, num)</span><br><span class="line">num = re.findall(<span class="string">'\d'</span>, num)</span><br><span class="line"></span><br><span class="line">print(notnum, <span class="string">'\n'</span>, num, <span class="string">'\n'</span>, stringall)</span><br></pre></td></tr></table></figure>
+<pre><code>[&#39;uav&#39;, &#39;ubv&#39;]
+[&#39;uav&#39;, &#39;ubv&#39;, &#39;ucv&#39;, &#39;ucv&#39;]
+[&#39;uc&#39;, &#39;uc&#39;, &#39;uo&#39;, &#39;uz&#39;]
+</code></pre>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">num = <span class="hljs-string">&#x27;171-2119-2606-A4-A5&amp;A6&#x27;</span><br><br><span class="hljs-comment"># 概括字符集</span><br><br><span class="hljs-comment"># \d, 相当于[0-9]</span><br><span class="hljs-comment"># \D, 相当于[^0-9]</span><br><span class="hljs-comment"># \w, 相当于[A-Za-z0-9], 相当于匹配所有单词字符</span><br><br>notnum = re.findall(<span class="hljs-string">&#x27;\D&#x27;</span>, num)<br>stringall = re.findall(<span class="hljs-string">&#x27;\w&#x27;</span>, num)<br>num = re.findall(<span class="hljs-string">&#x27;\d&#x27;</span>, num)<br><br><span class="hljs-built_in">print</span>(notnum, <span class="hljs-string">&#x27;\n&#x27;</span>, num, <span class="hljs-string">&#x27;\n&#x27;</span>, stringall)<br></code></pre></td></tr></table></figure>
 
-<pre><code>[&apos;-&apos;, &apos;-&apos;, &apos;-&apos;, &apos;A&apos;, &apos;-&apos;, &apos;A&apos;, &apos;&amp;&apos;, &apos;A&apos;] 
- [&apos;1&apos;, &apos;7&apos;, &apos;1&apos;, &apos;2&apos;, &apos;1&apos;, &apos;1&apos;, &apos;9&apos;, &apos;2&apos;, &apos;6&apos;, &apos;0&apos;, &apos;6&apos;, &apos;4&apos;, &apos;5&apos;, &apos;6&apos;] 
- [&apos;1&apos;, &apos;7&apos;, &apos;1&apos;, &apos;2&apos;, &apos;1&apos;, &apos;1&apos;, &apos;9&apos;, &apos;2&apos;, &apos;6&apos;, &apos;0&apos;, &apos;6&apos;, &apos;A&apos;, &apos;4&apos;, &apos;A&apos;, &apos;5&apos;, &apos;A&apos;, &apos;6&apos;]</code></pre><h5 id="数量词"><a href="#数量词" class="headerlink" title="数量词"></a>数量词</h5><ul>
+<pre><code>[&#39;-&#39;, &#39;-&#39;, &#39;-&#39;, &#39;A&#39;, &#39;-&#39;, &#39;A&#39;, &#39;&amp;&#39;, &#39;A&#39;] 
+ [&#39;1&#39;, &#39;7&#39;, &#39;1&#39;, &#39;2&#39;, &#39;1&#39;, &#39;1&#39;, &#39;9&#39;, &#39;2&#39;, &#39;6&#39;, &#39;0&#39;, &#39;6&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;] 
+ [&#39;1&#39;, &#39;7&#39;, &#39;1&#39;, &#39;2&#39;, &#39;1&#39;, &#39;1&#39;, &#39;9&#39;, &#39;2&#39;, &#39;6&#39;, &#39;0&#39;, &#39;6&#39;, &#39;A&#39;, &#39;4&#39;, &#39;A&#39;, &#39;5&#39;, &#39;A&#39;, &#39;6&#39;]
+</code></pre>
+<h5 id="数量词"><a href="#数量词" class="headerlink" title="数量词"></a>数量词</h5><ul>
 <li>词法：{min, max}, min和max 都是非负整数</li>
 <li>\b[1-9][0-8]{2,3}\b, 表示为 100-9888之间的数字, \b 表示的是边界</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">stringnum = <span class="string">'python@java@C#123@C++XiongJumm'</span></span><br><span class="line"><span class="comment"># 匹配4-7位的连续字母</span></span><br><span class="line">findall =re.findall(<span class="string">'[a-zA-Z]&#123;4,7&#125;'</span>, stringnum)</span><br><span class="line">print(findall)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 匹配 0-7位的连续字母</span></span><br><span class="line">findall = findall =re.findall(<span class="string">'[a-zA-Z]&#123;,7&#125;'</span>, stringnum)</span><br><span class="line">print(findall)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 匹配 2-正无穷的连续字母</span></span><br><span class="line">findall = findall =re.findall(<span class="string">'[a-zA-Z]&#123;2,&#125;'</span>, stringnum)</span><br><span class="line">print(findall)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 匹配连续两位的连续字母</span></span><br><span class="line">findall = findall =re.findall(<span class="string">'[a-zA-Z]&#123;2&#125;'</span>, stringnum)</span><br><span class="line">print(findall)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">stringnum = <span class="hljs-string">&#x27;python@java@C#123@C++XiongJumm&#x27;</span><br><span class="hljs-comment"># 匹配4-7位的连续字母</span><br>findall =re.findall(<span class="hljs-string">&#x27;[a-zA-Z]&#123;4,7&#125;&#x27;</span>, stringnum)<br><span class="hljs-built_in">print</span>(findall)<br><br><span class="hljs-comment"># 匹配 0-7位的连续字母</span><br>findall = findall =re.findall(<span class="hljs-string">&#x27;[a-zA-Z]&#123;,7&#125;&#x27;</span>, stringnum)<br><span class="hljs-built_in">print</span>(findall)<br><br><span class="hljs-comment"># 匹配 2-正无穷的连续字母</span><br>findall = findall =re.findall(<span class="hljs-string">&#x27;[a-zA-Z]&#123;2,&#125;&#x27;</span>, stringnum)<br><span class="hljs-built_in">print</span>(findall)<br><br><span class="hljs-comment"># 匹配连续两位的连续字母</span><br>findall = findall =re.findall(<span class="hljs-string">&#x27;[a-zA-Z]&#123;2&#125;&#x27;</span>, stringnum)<br><span class="hljs-built_in">print</span>(findall)<br></code></pre></td></tr></table></figure>
 
-<pre><code>[&apos;python&apos;, &apos;java&apos;, &apos;XiongJu&apos;]
-[&apos;python&apos;, &apos;&apos;, &apos;java&apos;, &apos;&apos;, &apos;C&apos;, &apos;&apos;, &apos;&apos;, &apos;&apos;, &apos;&apos;, &apos;&apos;, &apos;C&apos;, &apos;&apos;, &apos;&apos;, &apos;XiongJu&apos;, &apos;mm&apos;, &apos;&apos;]
-[&apos;python&apos;, &apos;java&apos;, &apos;XiongJumm&apos;]
-[&apos;py&apos;, &apos;th&apos;, &apos;on&apos;, &apos;ja&apos;, &apos;va&apos;, &apos;Xi&apos;, &apos;on&apos;, &apos;gJ&apos;, &apos;um&apos;]</code></pre><ul>
+<pre><code>[&#39;python&#39;, &#39;java&#39;, &#39;XiongJu&#39;]
+[&#39;python&#39;, &#39;&#39;, &#39;java&#39;, &#39;&#39;, &#39;C&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;C&#39;, &#39;&#39;, &#39;&#39;, &#39;XiongJu&#39;, &#39;mm&#39;, &#39;&#39;]
+[&#39;python&#39;, &#39;java&#39;, &#39;XiongJumm&#39;]
+[&#39;py&#39;, &#39;th&#39;, &#39;on&#39;, &#39;ja&#39;, &#39;va&#39;, &#39;Xi&#39;, &#39;on&#39;, &#39;gJ&#39;, &#39;um&#39;]
+</code></pre>
+<ul>
 <li>贪婪模式<ul>
 <li>一次性的读入整个字符串，如果不匹配就丢弃最右边的一个字符，如此循环，直到字符串的长度为0，如上例</li>
 </ul>
@@ -125,9 +191,11 @@ name含有Jum这个字符串</code></pre><figure class="highlight python"><table
 </ul>
 </li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 须在后方加入一个“？”，相当于&#123;4&#125;</span></span><br><span class="line">findall = re.findall(<span class="string">'[a-zA-Z]&#123;4,7&#125;?'</span>, stringnum)</span><br><span class="line">print(findall)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 须在后方加入一个“？”，相当于&#123;4&#125;</span><br>findall = re.findall(<span class="hljs-string">&#x27;[a-zA-Z]&#123;4,7&#125;?&#x27;</span>, stringnum)<br><span class="hljs-built_in">print</span>(findall)<br></code></pre></td></tr></table></figure>
 
-<pre><code>[&apos;pyth&apos;, &apos;java&apos;, &apos;Xion&apos;, &apos;gJum&apos;]</code></pre><h5 id="边界匹配符和组"><a href="#边界匹配符和组" class="headerlink" title="边界匹配符和组"></a>边界匹配符和组</h5><ul>
+<pre><code>[&#39;pyth&#39;, &#39;java&#39;, &#39;Xion&#39;, &#39;gJum&#39;]
+</code></pre>
+<h5 id="边界匹配符和组"><a href="#边界匹配符和组" class="headerlink" title="边界匹配符和组"></a>边界匹配符和组</h5><ul>
 <li>一般边界匹配符有一下几种</li>
 </ul>
 <table>
@@ -205,18 +273,20 @@ name含有Jum这个字符串</code></pre><figure class="highlight python"><table
 <td align="left">可选，正则表达式修饰符</td>
 </tr>
 </tbody></table>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'Python$Android*Java-121'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将"*"或"$"替换为"&amp;"</span></span><br><span class="line">sub1 = re.sub(<span class="string">'[\*$]'</span>,<span class="string">'&amp;'</span>,a)</span><br><span class="line">print(sub1)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将字符串中第一个"&amp;"替换成 "*"</span></span><br><span class="line">sub2 = re.sub(<span class="string">'\&amp;'</span>, <span class="string">'*'</span>, sub1, <span class="number">1</span>)</span><br><span class="line">print(sub2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将字符串中 "*" 替换为"!", ""&amp; 替换为"-"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个函数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">convert</span><span class="params">(value)</span>:</span></span><br><span class="line">    group = value.group()</span><br><span class="line">    <span class="keyword">if</span> (group == <span class="string">'*'</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'!'</span></span><br><span class="line">    <span class="keyword">elif</span> (group == <span class="string">'&amp;'</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'-'</span></span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">sub3 = re.sub(<span class="string">'[\*&amp;]'</span>, convert, sub2)</span><br><span class="line">print(sub3)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">a = <span class="hljs-string">&#x27;Python$Android*Java-121&#x27;</span><br><br><span class="hljs-comment"># 将&quot;*&quot;或&quot;$&quot;替换为&quot;&amp;&quot;</span><br>sub1 = re.sub(<span class="hljs-string">&#x27;[\*$]&#x27;</span>,<span class="hljs-string">&#x27;&amp;&#x27;</span>,a)<br><span class="hljs-built_in">print</span>(sub1)<br><br><span class="hljs-comment"># 将字符串中第一个&quot;&amp;&quot;替换成 &quot;*&quot;</span><br>sub2 = re.sub(<span class="hljs-string">&#x27;\&amp;&#x27;</span>, <span class="hljs-string">&#x27;*&#x27;</span>, sub1, <span class="hljs-number">1</span>)<br><span class="hljs-built_in">print</span>(sub2)<br><br><span class="hljs-comment"># 将字符串中 &quot;*&quot; 替换为&quot;!&quot;, &quot;&quot;&amp; 替换为&quot;-&quot;</span><br><br><span class="hljs-comment"># 定义一个函数</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">convert</span>(<span class="hljs-params">value</span>):<br>    group = value.group()<br>    <span class="hljs-keyword">if</span> (group == <span class="hljs-string">&#x27;*&#x27;</span>):<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;!&#x27;</span><br>    <span class="hljs-keyword">elif</span> (group == <span class="hljs-string">&#x27;&amp;&#x27;</span>):<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;-&#x27;</span><br><br>    <br>    <br>sub3 = re.sub(<span class="hljs-string">&#x27;[\*&amp;]&#x27;</span>, convert, sub2)<br><span class="hljs-built_in">print</span>(sub3)<br></code></pre></td></tr></table></figure>
 
 <pre><code>Python&amp;Android&amp;Java-121
 Python*Android&amp;Java-121
-Python!Android-Java-121</code></pre><h5 id="re-match-和-re-search"><a href="#re-match-和-re-search" class="headerlink" title="re.match 和 re.search"></a>re.match 和 re.search</h5><ul>
+Python!Android-Java-121
+</code></pre>
+<h5 id="re-match-和-re-search"><a href="#re-match-和-re-search" class="headerlink" title="re.match 和 re.search"></a>re.match 和 re.search</h5><ul>
 <li>re.match函数<ul>
-<li>语法：re.match(pattern, string, flag=0)</li>
+<li>语法：re.match(pattern, string, flag&#x3D;0)</li>
 <li>re.match 尝试从字符串的起始位置匹配一个模式，如果不是其实位置匹配成功的话， match() 就返回None</li>
 </ul>
 </li>
 <li>re.search()函数<ul>
-<li>re.search(pattern, string, flag=0)</li>
+<li>re.search(pattern, string, flag&#x3D;0)</li>
 <li>扫描整个字符串并返回第一个成功的匹配</li>
 </ul>
 </li>
@@ -258,189 +328,165 @@ Python!Android-Java-121</code></pre><h5 id="re-match-和-re-search"><a href="#re
 <td align="left">匹配整个字符串，直到找到一个匹配</td>
 </tr>
 </tbody></table>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">img = <span class="string">'&lt;img src="http://static.xiaobu.hk/cityact/application/images/20200612/2QCXwH6pej.JPG"&gt;'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用re.search()</span></span><br><span class="line">search = re.search(<span class="string">'&lt;img src="(.*)"&gt;'</span>, img)</span><br><span class="line"><span class="comment"># group(0)是一个完整的分组</span></span><br><span class="line">print(search.group(<span class="number">0</span>))</span><br><span class="line">print(search.group(<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用re.findall()</span></span><br><span class="line">search = re.findall(<span class="string">'&lt;img src="(.*)"&gt;'</span>, img)</span><br><span class="line"><span class="comment"># group(0)是一个完整的分组</span></span><br><span class="line">print(search)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 多个分组的使用</span></span><br><span class="line">search = re.search(<span class="string">'&lt;(.*) src="(.*)"&gt;'</span>, img)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"打印字符串 img:"</span>, search.group(<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">print(<span class="string">"打印图片地址"</span>, search.group(<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">print(<span class="string">"以元组的形式打印 img和图片地址:"</span>, search.group(<span class="number">1</span>,<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">print(<span class="string">"使用 groups:"</span>,search.groups())</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">img = <span class="hljs-string">&#x27;&lt;img src=&quot;http://static.xiaobu.hk/cityact/application/images/20200612/2QCXwH6pej.JPG&quot;&gt;&#x27;</span><br><br><span class="hljs-comment"># 使用re.search()</span><br>search = re.search(<span class="hljs-string">&#x27;&lt;img src=&quot;(.*)&quot;&gt;&#x27;</span>, img)<br><span class="hljs-comment"># group(0)是一个完整的分组</span><br><span class="hljs-built_in">print</span>(search.group(<span class="hljs-number">0</span>))<br><span class="hljs-built_in">print</span>(search.group(<span class="hljs-number">1</span>))<br><br><span class="hljs-comment"># 使用re.findall()</span><br>search = re.findall(<span class="hljs-string">&#x27;&lt;img src=&quot;(.*)&quot;&gt;&#x27;</span>, img)<br><span class="hljs-comment"># group(0)是一个完整的分组</span><br><span class="hljs-built_in">print</span>(search)<br><br><span class="hljs-comment"># 多个分组的使用</span><br>search = re.search(<span class="hljs-string">&#x27;&lt;(.*) src=&quot;(.*)&quot;&gt;&#x27;</span>, img)<br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;打印字符串 img:&quot;</span>, search.group(<span class="hljs-number">1</span>))<br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;打印图片地址&quot;</span>, search.group(<span class="hljs-number">2</span>))<br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;以元组的形式打印 img和图片地址:&quot;</span>, search.group(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>))<br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;使用 groups:&quot;</span>,search.groups())<br></code></pre></td></tr></table></figure>
 
 <pre><code>&lt;img src=&quot;http://static.xiaobu.hk/cityact/application/images/20200612/2QCXwH6pej.JPG&quot;&gt;
 http://static.xiaobu.hk/cityact/application/images/20200612/2QCXwH6pej.JPG
-[&apos;http://static.xiaobu.hk/cityact/application/images/20200612/2QCXwH6pej.JPG&apos;]
+[&#39;http://static.xiaobu.hk/cityact/application/images/20200612/2QCXwH6pej.JPG&#39;]
 打印字符串 img: img
 打印图片地址 http://static.xiaobu.hk/cityact/application/images/20200612/2QCXwH6pej.JPG
-以元组的形式打印 img和图片地址: (&apos;img&apos;, &apos;http://static.xiaobu.hk/cityact/application/images/20200612/2QCXwH6pej.JPG&apos;)
-使用 groups: (&apos;img&apos;, &apos;http://static.xiaobu.hk/cityact/application/images/20200612/2QCXwH6pej.JPG&apos;)</code></pre>
-      
+以元组的形式打印 img和图片地址: (&#39;img&#39;, &#39;http://static.xiaobu.hk/cityact/application/images/20200612/2QCXwH6pej.JPG&#39;)
+使用 groups: (&#39;img&#39;, &#39;http://static.xiaobu.hk/cityact/application/images/20200612/2QCXwH6pej.JPG&#39;)
+</code></pre>
+
+             
+        </div>
+        
+            <p itemprop="keywords" class="tags">
+                
+                    <a href="/tags/code/"> code </a>
+                
+                    <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"> 正则表达式 </a>
+                
+            </p>
+        
+    </article>
+    <div class="post-near">
+    <div class="post-near-child post-near-child-left "> 
+        
+            <a href="/2020/07/05/tools_V2ray/">V2ray搭建教程 &laquo; </a>
+        
+        <br /> 上一篇  &laquo;
     </div>
-    <footer class="article-footer">
-<!--
-      <a data-url="https://blog.lain.buzz/2020/07/05/code_%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" data-id="clguuzk35000j9sxh4dnj52pn" class="article-share-link">
-        分享
-      </a>
--->
-      
-<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/" rel="tag">code</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="tag">正则表达式</a></li></ul>
-
-    </footer>
-
-  </div>
-
-  
-  
-<nav class="article-nav">
-  
-  <a href="/2020/07/10/code_Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E6%80%81/" class="article-nav-link">
-    <strong class="article-nav-caption">前一篇</strong>
-    <div class="article-nav-title">
-      
-      【浅析】python的多态
-      
+    <div class="post-near-child post-near-child-right">
+        
+            <a href="/2020/07/10/code_Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E6%80%81/"> &raquo; 【浅析】python的多态</a>
+        
+        <br /> &raquo; 下一篇 
     </div>
-  </a>
-  
-  
-  <a href="/2020/07/05/tools_V2ray/" class="article-nav-link">
-    <strong class="article-nav-caption">后一篇</strong>
-    <div class="article-nav-title">V2ray搭建教程</div>
-  </a>
-  
-</nav>
-
-  
-
-  
-  
-  
-  
-
-</article>
-
-</section>
-    <footer class="footer">
-  <div class="outer">
-    <div class="float-right">
-      <ul class="list-inline">
-  
-  <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
-  
-  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
-  
-</ul>
-    </div>
-    <ul class="list-inline">
-      <li>Jum`Xiong &copy; 2023</li>
-      
-        <li>ZHWANGART</li>
-      
-      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
-      <li>theme  <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></li>
-    </ul>
-  </div>
+</div>
+</div>
+             
+<div id="comments">
+     
+</div>
+ 
+            <footer id="footer" role="contentinfo">
+    
+        &copy; 2020 - 2023
+        <br />
+    
+    
+    <br />
+    
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span id="busuanzi_value_site_pv">......</span> visits ·
+        <span id="busuanzi_value_site_uv">......</span> visitors 
+    
 </footer>
-  </main>
-  <aside class="sidebar">
-    <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="/favicon.ico" alt="Jum`Xiong"></a>
-  </div>
-  
-  <ul class="nav nav-main">
+          </div>
+        </div>
+      </main>
+      <!-- highlight support -->
+
     
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">首页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/favorites">收藏</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">时间线</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="https://web.lain.buzz" target="_blank" rel="noopener">书签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/about">关于</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link nav-item-search" title="搜索">
-        <i class="fe fe-search"></i>
-        搜索
-      </a>
-    </li>
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      <div class="totop" id="totop">
-  <i class="fe fe-rocket"></i>
-</div>
-    </li>
-    <li class="nav-item">
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-  </aside>
-  
-<script src="/js/jquery-2.0.3.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.1.0/build/styles/arta.min.css">
 
 
-<script src="/js/jquery.justifiedGallery.min.js"></script>
-
-
-<script src="/js/lazyload.min.js"></script>
-
-
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
-
-
-
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/copybtn.js"></script>
-
-
-
-
-
-<script src="/js/tocbot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.1.0/build/highlight.min.js"></script>
+ 
 
 <script>
-  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
-  tocbot.init({
-    tocSelector: '.tocbot',
-    contentSelector: '.article-entry',
-    headingSelector: 'h1, h2, h3, h4, h5, h6',
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    positionFixedSelector: '.tocbot',
-    positionFixedClass: 'is-position-fixed',
-    fixedSidebarOffset: 'auto',
-  });
+// 解决使用 highlightjs 导致代码块不换行的问题 https://highlightjs.org/usage/
+  const brPlugin = {
+    "before:highlightBlock": ({ block }) => {
+      block.innerHTML = block.innerHTML.replace(/\n/g, '').replace(/<br[ /]*>/g, '\n');
+    },
+    "after:highlightBlock": ({ result }) => {
+      result.value = result.value.replace(/\n/g, "<br>");
+    }
+  };
+        hljs.addPlugin(brPlugin);
+// 截止到这
+        hljs.highlightAll();
 </script>
+ 
+<!-- prettify support -->
+ 
+<!-- mathjax support -->
+
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src=""></script>
+
+
+<!-- fancybox support -->
+ 
+<!-- viewerjs support -->
+
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/viewerjs@1.10.0/dist/viewer.min.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/viewerjs@1.10.0/dist/viewer.min.js"></script>
+
+<script type="text/javascript">
+    Viewer.setDefaults({
+        zoomRatio: [0.5],
+        show: function () {
+            this.viewer.zoomTo(1);
+        },
+    });
+    
+    var imageList = document.querySelector('.post-content').getElementsByTagName('img');
+    
+    var imageArray = new Array();
+    Array.prototype.forEach.call(imageList, element => {
+        if (element.alt != "no-view" && element.className != "no-view") {
+            imageArray.push(element);
+        }
+    });
+    
+    Array.prototype.forEach.call(imageArray, element => {
+        var viewer1 = new Viewer(element);
+        viewer1.images = imageArray;
+        viewer1.length = imageArray.length;
+    });
+</script>
+ 
+<!-- google analytics support -->
 
 
 
-<script src="/js/ocean.js"></script>
+ 
+ 
 
-</body>
+<!-- lazyload support -->
+
+    
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
+
+<script>
+    new LazyLoad({
+        elements_selector: '.post-content img'
+    });
+</script>
+ 
+  </body>
 
 </html>

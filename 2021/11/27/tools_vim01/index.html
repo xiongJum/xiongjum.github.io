@@ -1,101 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  <meta name="keywords" content="编程">
-  
-  
-  <meta name="description" content="围城">
-  
-  <title>
-    VIM 插件管理器-Vundle |
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>
+        VIM 插件管理器-Vundle - Lain 
+    </title>
+     
     
-    Jum`Xiong
-  </title>
-  
-    <link rel="shortcut icon" href="/favicon.ico">
-    
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<script src="/js/pace.min.js"></script>
-
-<meta name="generator" content="Hexo 4.2.1"></head>
-
-<body>
-  <main class="content">
-    <section class="outer">
-  <article id="post-tools_vim01" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-      
-
-<h1 class="article-title" itemprop="name">
-  VIM 插件管理器-Vundle
-</h1>
-
-
-
-    </header>
-    
+<link rel="stylesheet" href="/css/grid.css">
 
     
-    <div class="article-meta">
-      <a href="/2021/11/27/tools_vim01/" class="article-date">
-  <time datetime="2021-11-27T05:03:33.000Z" itemprop="datePublished">2021-11-27</time>
-</a>
-      
+<link rel="stylesheet" href="/css/custom.css">
+
+    
+<link rel="stylesheet" href="/css/ringo.css">
+
+     
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico " />
+     
+     
+     
+        <meta name=" " content="" />
+     
+        <meta name=" " content="" />
+     
+ 
+<meta name="generator" content="Hexo 7.0.0-rc1"></head>
+
+  <body>
+    <header id="header" class="clearfix" onclick="window.open('/', '_self')">
+    <div class="site-name">
+        <a href="/" id="logo" class="site-title">
+            Lain
+        </a>
+        <p class="description site-description">
+            <span style="padding-top:20px; font-size: 10px">
+                好奇 记录 进步
+            </span>
+        </p>
     </div>
-    
+</header>
+<div id="sidebar" role="complementary">
+    <section class="widget">
+        <ul class="menu widget-list">
+            
+                <li class="menu-item">
+                    <a href="/" class="menu-item-link">
+                        首页
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/tags" class="menu-item-link">
+                        标签
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/archives" class="menu-item-link">
+                        时间线
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a target="_blank" rel="noopener" href="https://web.lain.buzz" class="menu-item-link">
+                        书签
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/friends" class="menu-item-link">
+                        收藏
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/about" class="menu-item-link">
+                        关于
+                    </a>
+                </li>
+                
+        </ul>
+    </section>
+    <section class="widget sidebar-foot">
+        <ul class="widget-list">
+            <li>Theme by <a target="_blank" href="https://github.com/HeliumOI/hexo-theme-ringo"> Ringo </a></li>
+            <li>Proudly powered by  <a rel="nofollow" target="_blank" href="https://hexo.io/">Hexo</a></li>
+        </ul>
+    </section>
+</div>
 
-    
-    
-<div class="tocbot"></div>
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-      
-      <p>Vim 是一个高度可配置的文本编辑器，旨在高效地创建和更改任何类型的文本。它作为“vi”和“vim”包含在大多数 类UNIX 和Linux 中。</p>
-<a id="more"></a>
+<div id="helpbar">
+    <div class="back-to-top">
+        <button id="back2top">↑</button>
+        <script>
+            back2top.onclick = function() {
+                var movement = document.body.scrollTop || document.documentElement.scrollTop;
+                scrollBy(0, -movement);
+            }
+        </script>
+    </div>
+</div>
+      <main class="main">
+        <div id="body">
+          <div class="container">
+            <div class="col-12" id="main" role="main">
+    <article class="post post-atpost" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-title">
+            <h1 class="post-title post-title-atpage" itemprop="name headline">
+                <a itemprop="url" href="/2021/11/27/tools_vim01/">
+                    VIM 插件管理器-Vundle
+                </a>
+            </h1>
+        </div>
+        <ul class="post-meta post-meta-atpage">
+            <li class="post-time">
+                2021-11-27
+            </li>
+            <li>
+                <div class="article-category">
+                    
+                </div>
+            </li>
+        </ul>
+        <div class="post-content" itemprop="articleBody">
+            <p>Vim 是一个高度可配置的文本编辑器，旨在高效地创建和更改任何类型的文本。它作为“vi”和“vim”包含在大多数 类UNIX 和Linux 中。</p>
+<span id="more"></span>
 <h1 id="1-安装插件管理器"><a href="#1-安装插件管理器" class="headerlink" title="1. 安装插件管理器"></a>1. 安装插件管理器</h1><h2 id="1-1-下载-Vundle"><a href="#1-1-下载-Vundle" class="headerlink" title="1.1 下载 Vundle"></a>1.1 下载 Vundle</h2><ol>
-<li>Vundle插件也是提供一个Vundle.vim文件，其下载地址为 <a href="https://github.com/VundleVim/Vundle.vim.git" target="_blank" rel="noopener">Vim bundle</a> 然后将下载后的文件存放到 ~/.vim/bundle </li>
-<li>或者可以直接从 Github 上拉取文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;VundleVim&#x2F;Vundle.vim.git ~&#x2F;.vim&#x2F;bundle&#x2F;Vundle.vim</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>Vundle插件也是提供一个Vundle.vim文件，其下载地址为 <a target="_blank" rel="noopener" href="https://github.com/VundleVim/Vundle.vim.git">Vim bundle</a> 然后将下载后的文件存放到 ~&#x2F;.vim&#x2F;bundle </li>
+<li>或者可以直接从 Github 上拉取文件<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim<br></code></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="1-2-配置-Vundle"><a href="#1-2-配置-Vundle" class="headerlink" title="1.2 配置 Vundle"></a>1.2 配置 Vundle</h2><ol>
-<li>修改 Vim 的配置文件 ~/.vimrc, 若没有此文件可以直接进行创建， 以下是配置文件。</li>
+<li>修改 Vim 的配置文件 ~&#x2F;.vimrc, 若没有此文件可以直接进行创建， 以下是配置文件。</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">set nocompatible               &quot;去除VIM一致性，必须</span><br><span class="line">filetype off                   </span><br><span class="line"></span><br><span class="line">set rtp+&#x3D;~&#x2F;.vim&#x2F;bundle&#x2F;Vundle.vim &quot;设置包括vundle和初始化相关的运行时路径</span><br><span class="line"></span><br><span class="line">call vundle#begin()</span><br><span class="line">&quot;在此增加其他插件，安装的插件需要放在vundle#begin和vundle#end之间&quot;</span><br><span class="line">&quot;安装github上的插件格式为 Plugin &#39;用户名&#x2F;插件仓库名&#39;&quot;</span><br><span class="line"></span><br><span class="line">Plugin &#39;VundleVim&#x2F;Vundle.vim&#39;  &quot;启用vundle管理插件，必须&quot;</span><br><span class="line"></span><br><span class="line">call vundle#end()           </span><br><span class="line"></span><br><span class="line">filetype plugin indent on     &quot;加载vim自带和插件相应的语法和文件类型相关脚本，必须</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">set nocompatible               &quot;去除VIM一致性，必须<br>filetype off                   <br><br>set rtp+=~/.vim/bundle/Vundle.vim &quot;设置包括vundle和初始化相关的运行时路径<br><br>call vundle#begin()<br>&quot;在此增加其他插件，安装的插件需要放在vundle#begin和vundle#end之间&quot;<br>&quot;安装github上的插件格式为 Plugin &#x27;用户名/插件仓库名&#x27;&quot;<br><br>Plugin &#x27;VundleVim/Vundle.vim&#x27;  &quot;启用vundle管理插件，必须&quot;<br><br>call vundle#end()           <br><br>filetype plugin indent on     &quot;加载vim自带和插件相应的语法和文件类型相关脚本，必须<br></code></pre></td></tr></table></figure>
 
 <h2 id="1-3-安装-Vundle"><a href="#1-3-安装-Vundle" class="headerlink" title="1.3 安装 Vundle"></a>1.3 安装 Vundle</h2><ol>
-<li>需要打开配置文件 ~/.vimrc， 在命令模式下输入 <strong>:PluginInstall</strong></li>
-<li>或者在终端命令行下通过命令 <strong>vim + PluginInstall + qall(用户名/插件仓库名)</strong> 直接安装</li>
+<li>需要打开配置文件 ~&#x2F;.vimrc， 在命令模式下输入 <strong>:PluginInstall</strong></li>
+<li>或者在终端命令行下通过命令 <strong>vim + PluginInstall + qall(用户名&#x2F;插件仓库名)</strong> 直接安装</li>
 </ol>
 <h2 id="1-4-使用-Vundle-修改插件"><a href="#1-4-使用-Vundle-修改插件" class="headerlink" title="1.4 使用 Vundle 修改插件"></a>1.4 使用 Vundle 修改插件</h2><ol>
 <li>安装插件， 同1.3</li>
 <li>删除插件，编辑 Vim 配置文件 .vimrc, 删除想要移除插件所对应的 Plugin 一行， 然后打开 vim 在 vim命令行模式中执行命令 <strong>:BundleClean</strong></li>
-<li>其余操作方法可以见<a href="https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L319-L360" target="_blank" rel="noopener">原文档</a></li>
+<li>其余操作方法可以见<a target="_blank" rel="noopener" href="https://github.com/VundleVim/Vundle.vim/blob/v0.10.2/doc/vundle.txt#L319-L360">原文档</a></li>
 </ol>
-<h1 id="2-Markdown-扩展插件"><a href="#2-Markdown-扩展插件" class="headerlink" title="2. Markdown 扩展插件"></a>2. Markdown 扩展插件</h1><h2 id="2-1-vim-markdown"><a href="#2-1-vim-markdown" class="headerlink" title="2.1 vim-markdown"></a>2.1 vim-markdown</h2><p>原始 Markdown 的语法高亮、匹配规则和映射, 项目地址<a href="https://github.com/plasticboy/vim-markdown" target="_blank" rel="noopener">vim-markdown</a></p>
+<h1 id="2-Markdown-扩展插件"><a href="#2-Markdown-扩展插件" class="headerlink" title="2. Markdown 扩展插件"></a>2. Markdown 扩展插件</h1><h2 id="2-1-vim-markdown"><a href="#2-1-vim-markdown" class="headerlink" title="2.1 vim-markdown"></a>2.1 vim-markdown</h2><p>原始 Markdown 的语法高亮、匹配规则和映射, 项目地址<a target="_blank" rel="noopener" href="https://github.com/plasticboy/vim-markdown">vim-markdown</a></p>
 <h3 id="2-1-1-安装"><a href="#2-1-1-安装" class="headerlink" title="2.1.1 安装"></a>2.1.1 安装</h3><ol>
-<li>使用 Vundle 安装，将以下两行添加至您的 .vimrc 文件中<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#39; 安装 vim-markdown</span><br><span class="line">Plugin &#39;godlygeek&#x2F;tabular&#39;         &#39;依赖</span><br><span class="line">Plugin &#39;plasticboy&#x2F;vim-markdown&#39;   &#39;本体</span><br></pre></td></tr></table></figure>
+<li>使用 Vundle 安装，将以下两行添加至您的 .vimrc 文件中<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">&#x27; 安装 vim-markdown<br>Plugin &#x27;godlygeek/tabular&#x27;         &#x27;依赖<br>Plugin &#x27;plasticboy/vim-markdown&#x27;   &#x27;本体<br></code></pre></td></tr></table></figure>
 保存后，直接在 .vimrc 文件的命令行模式键入命令 :PluginInstall</li>
 </ol>
 <h3 id="2-1-2-基本用法"><a href="#2-1-2-基本用法" class="headerlink" title="2.1.2 基本用法"></a>2.1.2 基本用法</h3><ol>
@@ -114,185 +166,164 @@
 </ul>
 <h2 id="2-2-markdown-preview"><a href="#2-2-markdown-preview" class="headerlink" title="2.2 markdown-preview"></a>2.2 markdown-preview</h2><p>通过浏览器实时预览 Markdown 文件</p>
 <h3 id="2-2-1-安装"><a href="#2-2-1-安装" class="headerlink" title="2.2.1 安装"></a>2.2.1 安装</h3><ol>
-<li>打开 .vimrc 添加以下几行文本<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Plugin &#39;iamcco&#x2F;markdown-preview.nvim&#39;</span><br></pre></td></tr></table></figure></li>
-<li>然后在命令行模式中运行<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:source %</span><br><span class="line">:PluginInstall</span><br><span class="line">:call mkdp#util#install()</span><br></pre></td></tr></table></figure>
-</li>
+<li>打开 .vimrc 添加以下几行文本<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">Plugin &#x27;iamcco/markdown-preview.nvim&#x27;<br></code></pre></td></tr></table></figure></li>
+<li>然后在命令行模式中运行<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">:source %<br>:PluginInstall<br>:call mkdp#util#install()<br></code></pre></td></tr></table></figure></li>
 </ol>
 
-      
+             
+        </div>
+        
+            <p itemprop="keywords" class="tags">
+                
+                    <a href="/tags/tools/"> tools </a>
+                
+                    <a href="/tags/vim/"> vim </a>
+                
+                    <a href="/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"> 编辑器 </a>
+                
+                    <a href="/tags/%E6%8F%92%E4%BB%B6/"> 插件 </a>
+                
+                    <a href="/tags/Vundle/"> Vundle </a>
+                
+            </p>
+        
+    </article>
+    <div class="post-near">
+    <div class="post-near-child post-near-child-left "> 
+        
+            <a href="/2021/10/29/blog_Hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/">Ocean 主題配置 &laquo; </a>
+        
+        <br /> 上一篇  &laquo;
     </div>
-    <footer class="article-footer">
-<!--
-      <a data-url="https://blog.lain.buzz/2021/11/27/tools_vim01/" data-id="clguuzk3e000y9sxhf7483xzn" class="article-share-link">
-        分享
-      </a>
--->
-      
-<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vundle/" rel="tag">Vundle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/" rel="tag">tools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/" rel="tag">vim</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8F%92%E4%BB%B6/" rel="tag">插件</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BC%96%E8%BE%91%E5%99%A8/" rel="tag">编辑器</a></li></ul>
-
-    </footer>
-
-  </div>
-
-  
-  
-<nav class="article-nav">
-  
-  <a href="/2021/12/24/code_PyPi/" class="article-nav-link">
-    <strong class="article-nav-caption">前一篇</strong>
-    <div class="article-nav-title">
-      
-      pip
-      
+    <div class="post-near-child post-near-child-right">
+        
+            <a href="/2021/12/24/code_PyPi/"> &raquo; pip</a>
+        
+        <br /> &raquo; 下一篇 
     </div>
-  </a>
-  
-  
-  <a href="/2021/10/29/blog_Hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" class="article-nav-link">
-    <strong class="article-nav-caption">后一篇</strong>
-    <div class="article-nav-title">Ocean 主題配置</div>
-  </a>
-  
-</nav>
-
-  
-
-  
-  
-  
-  
-
-</article>
-
-</section>
-    <footer class="footer">
-  <div class="outer">
-    <div class="float-right">
-      <ul class="list-inline">
-  
-  <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
-  
-  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
-  
-</ul>
-    </div>
-    <ul class="list-inline">
-      <li>Jum`Xiong &copy; 2023</li>
-      
-        <li>ZHWANGART</li>
-      
-      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
-      <li>theme  <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></li>
-    </ul>
-  </div>
+</div>
+</div>
+             
+<div id="comments">
+     
+</div>
+ 
+            <footer id="footer" role="contentinfo">
+    
+        &copy; 2020 - 2023
+        <br />
+    
+    
+    <br />
+    
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span id="busuanzi_value_site_pv">......</span> visits ·
+        <span id="busuanzi_value_site_uv">......</span> visitors 
+    
 </footer>
-  </main>
-  <aside class="sidebar">
-    <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="/favicon.ico" alt="Jum`Xiong"></a>
-  </div>
-  
-  <ul class="nav nav-main">
+          </div>
+        </div>
+      </main>
+      <!-- highlight support -->
+
     
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">首页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/favorites">收藏</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">时间线</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="https://web.lain.buzz" target="_blank" rel="noopener">书签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/about">关于</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link nav-item-search" title="搜索">
-        <i class="fe fe-search"></i>
-        搜索
-      </a>
-    </li>
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      <div class="totop" id="totop">
-  <i class="fe fe-rocket"></i>
-</div>
-    </li>
-    <li class="nav-item">
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-  </aside>
-  
-<script src="/js/jquery-2.0.3.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.1.0/build/styles/arta.min.css">
 
 
-<script src="/js/jquery.justifiedGallery.min.js"></script>
-
-
-<script src="/js/lazyload.min.js"></script>
-
-
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
-
-
-
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/copybtn.js"></script>
-
-
-
-
-
-<script src="/js/tocbot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.1.0/build/highlight.min.js"></script>
+ 
 
 <script>
-  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
-  tocbot.init({
-    tocSelector: '.tocbot',
-    contentSelector: '.article-entry',
-    headingSelector: 'h1, h2, h3, h4, h5, h6',
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    positionFixedSelector: '.tocbot',
-    positionFixedClass: 'is-position-fixed',
-    fixedSidebarOffset: 'auto',
-  });
+// 解决使用 highlightjs 导致代码块不换行的问题 https://highlightjs.org/usage/
+  const brPlugin = {
+    "before:highlightBlock": ({ block }) => {
+      block.innerHTML = block.innerHTML.replace(/\n/g, '').replace(/<br[ /]*>/g, '\n');
+    },
+    "after:highlightBlock": ({ result }) => {
+      result.value = result.value.replace(/\n/g, "<br>");
+    }
+  };
+        hljs.addPlugin(brPlugin);
+// 截止到这
+        hljs.highlightAll();
 </script>
+ 
+<!-- prettify support -->
+ 
+<!-- mathjax support -->
+
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src=""></script>
+
+
+<!-- fancybox support -->
+ 
+<!-- viewerjs support -->
+
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/viewerjs@1.10.0/dist/viewer.min.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/viewerjs@1.10.0/dist/viewer.min.js"></script>
+
+<script type="text/javascript">
+    Viewer.setDefaults({
+        zoomRatio: [0.5],
+        show: function () {
+            this.viewer.zoomTo(1);
+        },
+    });
+    
+    var imageList = document.querySelector('.post-content').getElementsByTagName('img');
+    
+    var imageArray = new Array();
+    Array.prototype.forEach.call(imageList, element => {
+        if (element.alt != "no-view" && element.className != "no-view") {
+            imageArray.push(element);
+        }
+    });
+    
+    Array.prototype.forEach.call(imageArray, element => {
+        var viewer1 = new Viewer(element);
+        viewer1.images = imageArray;
+        viewer1.length = imageArray.length;
+    });
+</script>
+ 
+<!-- google analytics support -->
 
 
 
-<script src="/js/ocean.js"></script>
+ 
+ 
 
-</body>
+<!-- lazyload support -->
+
+    
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
+
+<script>
+    new LazyLoad({
+        elements_selector: '.post-content img'
+    });
+</script>
+ 
+  </body>
 
 </html>

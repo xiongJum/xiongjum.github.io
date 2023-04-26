@@ -1,82 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  <meta name="keywords" content="编程">
-  
-  
-  <meta name="description" content="围城">
-  
-  <title>
-    V2ray搭建教程 |
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>
+        V2ray搭建教程 - Lain 
+    </title>
+     
     
-    Jum`Xiong
-  </title>
-  
-    <link rel="shortcut icon" href="/favicon.ico">
-    
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<script src="/js/pace.min.js"></script>
-
-<meta name="generator" content="Hexo 4.2.1"></head>
-
-<body>
-  <main class="content">
-    <section class="outer">
-  <article id="post-tools_V2ray" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-      
-
-<h1 class="article-title" itemprop="name">
-  V2ray搭建教程
-</h1>
-
-
-
-    </header>
-    
+<link rel="stylesheet" href="/css/grid.css">
 
     
-    <div class="article-meta">
-      <a href="/2020/07/05/tools_V2ray/" class="article-date">
-  <time datetime="2020-07-05T01:00:00.000Z" itemprop="datePublished">2020-07-05</time>
-</a>
-      
+<link rel="stylesheet" href="/css/custom.css">
+
+    
+<link rel="stylesheet" href="/css/ringo.css">
+
+     
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico " />
+     
+     
+     
+        <meta name=" " content="" />
+     
+        <meta name=" " content="" />
+     
+ 
+<meta name="generator" content="Hexo 7.0.0-rc1"></head>
+
+  <body>
+    <header id="header" class="clearfix" onclick="window.open('/', '_self')">
+    <div class="site-name">
+        <a href="/" id="logo" class="site-title">
+            Lain
+        </a>
+        <p class="description site-description">
+            <span style="padding-top:20px; font-size: 10px">
+                好奇 记录 进步
+            </span>
+        </p>
     </div>
-    
+</header>
+<div id="sidebar" role="complementary">
+    <section class="widget">
+        <ul class="menu widget-list">
+            
+                <li class="menu-item">
+                    <a href="/" class="menu-item-link">
+                        首页
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/tags" class="menu-item-link">
+                        标签
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/archives" class="menu-item-link">
+                        时间线
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a target="_blank" rel="noopener" href="https://web.lain.buzz" class="menu-item-link">
+                        书签
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/friends" class="menu-item-link">
+                        收藏
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/about" class="menu-item-link">
+                        关于
+                    </a>
+                </li>
+                
+        </ul>
+    </section>
+    <section class="widget sidebar-foot">
+        <ul class="widget-list">
+            <li>Theme by <a target="_blank" href="https://github.com/HeliumOI/hexo-theme-ringo"> Ringo </a></li>
+            <li>Proudly powered by  <a rel="nofollow" target="_blank" href="https://hexo.io/">Hexo</a></li>
+        </ul>
+    </section>
+</div>
 
-    
-    
-<div class="tocbot"></div>
+<div id="helpbar">
+    <div class="back-to-top">
+        <button id="back2top">↑</button>
+        <script>
+            back2top.onclick = function() {
+                var movement = document.body.scrollTop || document.documentElement.scrollTop;
+                scrollBy(0, -movement);
+            }
+        </script>
+    </div>
+</div>
+      <main class="main">
+        <div id="body">
+          <div class="container">
+            <div class="col-12" id="main" role="main">
+    <article class="post post-atpost" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-title">
+            <h1 class="post-title post-title-atpage" itemprop="name headline">
+                <a itemprop="url" href="/2020/07/05/tools_V2ray/">
+                    V2ray搭建教程
+                </a>
+            </h1>
+        </div>
+        <ul class="post-meta post-meta-atpage">
+            <li class="post-time">
+                2020-07-05
+            </li>
+            <li>
+                <div class="article-category">
+                    
+                </div>
+            </li>
+        </ul>
+        <div class="post-content" itemprop="articleBody">
+            <p>V2Ray 是一个与 Shadowsocks 类似的代理软件，可以用来科学上网等。</p>
+<span id="more"></span>
 
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-      
-      <p>V2Ray 是一个与 Shadowsocks 类似的代理软件，可以用来科学上网等。</p>
-<a id="more"></a>
-
-<h1 id="1-服务器"><a href="#1-服务器" class="headerlink" title="1. 服务器"></a>1. 服务器</h1><p>1, 可以使用<a href="https://www.linode.com/" target="_blank" rel="noopener">linode</a> 或者<a href="https://bandwagonhost.cn/" target="_blank" rel="noopener">搬瓦工</a>vps服务器</p>
+<h1 id="1-服务器"><a href="#1-服务器" class="headerlink" title="1. 服务器"></a>1. 服务器</h1><p>1, 可以使用<a target="_blank" rel="noopener" href="https://www.linode.com/">linode</a> 或者<a target="_blank" rel="noopener" href="https://bandwagonhost.cn/">搬瓦工</a>vps服务器</p>
 <p>2, 本次推荐Google Cloud(谷歌云)，搭建v2ray或者其余学习用途</p>
-<p>3, <img src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/img/scr_GoogleCloud.png" alt=""></p>
+<p>3, <img src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/img/scr_GoogleCloud.png"></p>
 <pre><code>(1). 优点
 
 +   也无需担心和AWS一样会莫名其妙的扣费，在没有升级为付费用户之前是不会扣除信用卡的金额
@@ -85,213 +139,193 @@
 
 (2). 缺点
 
-+   搭建过程中需要使用魔法上网</code></pre><p>4, 本教程暂不介绍服务器申请<br>5, 也可以使用別的國外服務器</p>
-<h1 id="2-服务端配置"><a href="#2-服务端配置" class="headerlink" title="2. 服务端配置"></a>2. 服务端配置</h1><p>1, 本次教程选择的面板为<a href="https://github.com/sprov065" target="_blank" rel="noopener">sprov065</a>@github用户的<a href="https://github.com/sprov065/v2-ui" target="_blank" rel="noopener">v2-ui</a> </p>
++   搭建过程中需要使用魔法上网
+</code></pre>
+<p>4, 本教程暂不介绍服务器申请<br>5, 也可以使用別的國外服務器</p>
+<h1 id="2-服务端配置"><a href="#2-服务端配置" class="headerlink" title="2. 服务端配置"></a>2. 服务端配置</h1><p>1, 本次教程选择的面板为<a target="_blank" rel="noopener" href="https://github.com/sprov065">sprov065</a>@github用户的<a target="_blank" rel="noopener" href="https://github.com/sprov065/v2-ui">v2-ui</a> </p>
 <pre><code>(1). 可视化操作，查看方便、学习门槛较低
 (2). 由于是网页端所以管理会比较方便
-(3). 该面板可以配置多用户</code></pre><h2 id="2-1-安装-amp-升级"><a href="#2-1-安装-amp-升级" class="headerlink" title="2.1 安装&amp;升级"></a>2.1 安装&amp;升级</h2><p>1, 安裝v2ray</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -Ls https:&#x2F;&#x2F;blog.sprov.xyz&#x2F;v2-ui.sh)</span><br></pre></td></tr></table></figure>
+(3). 该面板可以配置多用户
+</code></pre>
+<h2 id="2-1-安装-amp-升级"><a href="#2-1-安装-amp-升级" class="headerlink" title="2.1 安装&amp;升级"></a>2.1 安装&amp;升级</h2><p>1, 安裝v2ray</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">bash &lt;(curl -Ls https://blog.sprov.xyz/v2-ui.sh)<br></code></pre></td></tr></table></figure>
 
 <h2 id="2-2-設置"><a href="#2-2-設置" class="headerlink" title="2.2 設置"></a>2.2 設置</h2><p>1, 输入v2-ui，进入面板设置</p>
 <img src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/scr/03.png" style="zoom:50%;" />
 
 <p>2， 查看或者重新设置面板的端口号</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查找v2-ui的服务进程</span></span><br><span class="line">ps -ef | grep v2-ui</span><br><span class="line"><span class="meta">#</span><span class="bash"> 根据PID查找端口号</span></span><br><span class="line">netstat -nap | grep [PID]</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">查找v2-ui的服务进程</span><br>ps -ef | grep v2-ui<br><span class="hljs-meta prompt_"># </span><span class="language-bash">根据PID查找端口号</span><br>netstat -nap | grep [PID]<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/Scr/03.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/Scr/03.png"></p>
 <h2 id="2-3-通過瀏覽器設置代理"><a href="#2-3-通過瀏覽器設置代理" class="headerlink" title="2.3 通過瀏覽器設置代理"></a>2.3 通過瀏覽器設置代理</h2><p>1, 输入当前服务器IP:端口 和账号密码admin，进入设置面板</p>
-<p><img src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/Scr/04.png" alt=""></p>
-<p>1, 点击账号列表，点击左上角的+号，进入添加账号页面，备注为非填项，其余默认即可，可以按照自己的需求进行修改，本次教程选择的协议为kcp<br>2, kcp消耗流量比较多，但延迟较低，对于延迟较高的IP，选择kcp会一定程度上改善网络环境<br>3, 如果想选择其余协议，可以参考<a href="https://toutyrater.github.io/advanced/wss_and_web.html" target="_blank" rel="noopener">Blog</a><br>4, 若想使用Nginx+w2+TLS进行网络代理，本教程中协议传输配置选择w2，不要选择TLS。TLS在Nginx中配置即可，但客户端中要选择TLS，端口为Nginx中代理的端口，非在本面板中设置的端口</p>
-<p><img src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/Scr/05.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/Scr/04.png"></p>
+<p>1, 点击账号列表，点击左上角的+号，进入添加账号页面，备注为非填项，其余默认即可，可以按照自己的需求进行修改，本次教程选择的协议为kcp<br>2, kcp消耗流量比较多，但延迟较低，对于延迟较高的IP，选择kcp会一定程度上改善网络环境<br>3, 如果想选择其余协议，可以参考<a target="_blank" rel="noopener" href="https://toutyrater.github.io/advanced/wss_and_web.html">Blog</a><br>4, 若想使用Nginx+w2+TLS进行网络代理，本教程中协议传输配置选择w2，不要选择TLS。TLS在Nginx中配置即可，但客户端中要选择TLS，端口为Nginx中代理的端口，非在本面板中设置的端口</p>
+<p><img src="https://cdn.jsdelivr.net/gh/xiongJum/Picture/Scr/05.png"></p>
 <p>点击添加-二维码-复制连接，即可获得v2Ray的连接</p>
-<h1 id="3-客户端配置"><a href="#3-客户端配置" class="headerlink" title="3. 客户端配置"></a>3. 客户端配置</h1><h2 id="3-1-下载地址"><a href="#3-1-下载地址" class="headerlink" title="3.1 下载地址"></a>3.1 下载地址</h2><p>PC端：<a href="https://github.com/2dust/v2rayN/releases" target="_blank" rel="noopener">windows</a>、<a href="https://github.com/Cenmrev/V2RayX/releases" target="_blank" rel="noopener">MacOS</a><br>移动端：<a href="https://github.com/2dust/v2rayNG/releases" target="_blank" rel="noopener">Android</a></p>
-<h2 id="3-2-配置：windows"><a href="#3-2-配置：windows" class="headerlink" title="3.2 配置：windows"></a>3.2 配置：windows</h2><p>1, 下载并解压<a href="https://github.com/2dust/v2rayN/releases/download/3.19/v2rayN.zip" target="_blank" rel="noopener">v2RayN</a>和<a href="https://github.com/2dust/v2rayN/releases/download/3.19/v2rayN-Core.zip" target="_blank" rel="noopener">v2rayN-Core</a><br>2, 点击v2rayN.exe文件，右击右下角的v2rayN的图标选择{从剪贴板导入批量Url}<br>3, 双击右下角的v2ray图标进入显示面板，可以发现有刚刚导入的链接<br>4, 右击右下角的图标选择{Http代理-PAC模式}</p>
-<h1 id="4-扩展"><a href="#4-扩展" class="headerlink" title="4. 扩展"></a>4. 扩展</h1><h2 id="4-1-模式说明"><a href="#4-1-模式说明" class="headerlink" title="4.1 模式说明"></a>4.1 模式说明</h2><p>1, 全局是代理所有的网络包括局域网和国内的网络如百度，和国外的网络如Google<br>2, PAC是通过配置文件选择代理部分网络<br>3, v2ray支持GFWfilt地址和本地pac文件同时生效，若GFWList地址中没有代理你需要的网络，你可以在用户PAC设置中手动添加要代理的ip或者域名<br><img src="https://cdn.jsdelivr.net/gh/xiongJum/Picture//Scr/08.png" alt=""></p>
+<h1 id="3-客户端配置"><a href="#3-客户端配置" class="headerlink" title="3. 客户端配置"></a>3. 客户端配置</h1><h2 id="3-1-下载地址"><a href="#3-1-下载地址" class="headerlink" title="3.1 下载地址"></a>3.1 下载地址</h2><p>PC端：<a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayN/releases">windows</a>、<a target="_blank" rel="noopener" href="https://github.com/Cenmrev/V2RayX/releases">MacOS</a><br>移动端：<a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayNG/releases">Android</a></p>
+<h2 id="3-2-配置：windows"><a href="#3-2-配置：windows" class="headerlink" title="3.2 配置：windows"></a>3.2 配置：windows</h2><p>1, 下载并解压<a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayN/releases/download/3.19/v2rayN.zip">v2RayN</a>和<a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayN/releases/download/3.19/v2rayN-Core.zip">v2rayN-Core</a><br>2, 点击v2rayN.exe文件，右击右下角的v2rayN的图标选择{从剪贴板导入批量Url}<br>3, 双击右下角的v2ray图标进入显示面板，可以发现有刚刚导入的链接<br>4, 右击右下角的图标选择{Http代理-PAC模式}</p>
+<h1 id="4-扩展"><a href="#4-扩展" class="headerlink" title="4. 扩展"></a>4. 扩展</h1><h2 id="4-1-模式说明"><a href="#4-1-模式说明" class="headerlink" title="4.1 模式说明"></a>4.1 模式说明</h2><p>1, 全局是代理所有的网络包括局域网和国内的网络如百度，和国外的网络如Google<br>2, PAC是通过配置文件选择代理部分网络<br>3, v2ray支持GFWfilt地址和本地pac文件同时生效，若GFWList地址中没有代理你需要的网络，你可以在用户PAC设置中手动添加要代理的ip或者域名<br><img src="https://cdn.jsdelivr.net/gh/xiongJum/Picture//Scr/08.png"></p>
 <h2 id="4-2-設置PAC代理"><a href="#4-2-設置PAC代理" class="headerlink" title="4.2 設置PAC代理"></a>4.2 設置PAC代理</h2><p>1, pixiv的PAC代理地址</p>
 <ul>
-<li><a href="http://www.pixiv.net" target="_blank" rel="noopener">www.pixiv.net</a>,</li>
+<li><a target="_blank" rel="noopener" href="http://www.pixiv.net/">www.pixiv.net</a>,</li>
 <li>api.booth.pm,(存疑)</li>
 <li>i.pximg.net,</li>
 </ul>
-<h2 id="4-3-局域网代理配置（如switch配置）"><a href="#4-3-局域网代理配置（如switch配置）" class="headerlink" title="4.3 局域网代理配置（如switch配置）"></a>4.3 局域网代理配置（如switch配置）</h2><p>1, 双击v2ray-参数设置，进入设置页面，点击基础设置查看本地监听端口<br>2, http代理默认即可，你也可以根据自己的选择进行不同的配置<br>3, 本地会开启两个端口号（设置的端口号X和X+1）<br>4, 按下快捷键win+R，在运行输入框中输入cmd<br>5, 在cmd界面输入ipconfig<br>   <img src="https://cdn.jsdelivr.net/gh/xiongJum/Picture//Scr/09.png" alt=""></p>
+<h2 id="4-3-局域网代理配置（如switch配置）"><a href="#4-3-局域网代理配置（如switch配置）" class="headerlink" title="4.3 局域网代理配置（如switch配置）"></a>4.3 局域网代理配置（如switch配置）</h2><p>1, 双击v2ray-参数设置，进入设置页面，点击基础设置查看本地监听端口<br>2, http代理默认即可，你也可以根据自己的选择进行不同的配置<br>3, 本地会开启两个端口号（设置的端口号X和X+1）<br>4, 按下快捷键win+R，在运行输入框中输入cmd<br>5, 在cmd界面输入ipconfig<br>   <img src="https://cdn.jsdelivr.net/gh/xiongJum/Picture//Scr/09.png"></p>
 <p>6,在要代理的机器中（如switch）ip设置为上图的ipv4、端口号为设置的端口号+1</p>
 <hr>
-<h1 id="4-引申文檔"><a href="#4-引申文檔" class="headerlink" title="4. 引申文檔"></a>4. 引申文檔</h1><p><a href="https://selierlin.github.io/v2ray/" target="_blank" rel="noopener">V2Ray 配置指南</a></p>
+<h1 id="4-引申文檔"><a href="#4-引申文檔" class="headerlink" title="4. 引申文檔"></a>4. 引申文檔</h1><p><a target="_blank" rel="noopener" href="https://selierlin.github.io/v2ray/">V2Ray 配置指南</a></p>
 
-      
+             
+        </div>
+        
+            <p itemprop="keywords" class="tags">
+                
+                    <a href="/tags/%E4%BB%A3%E7%90%86/"> 代理 </a>
+                
+                    <a href="/tags/V2ray/"> V2ray </a>
+                
+                    <a href="/tags/%E6%A2%AF%E5%AD%90/"> 梯子 </a>
+                
+            </p>
+        
+    </article>
+    <div class="post-near">
+    <div class="post-near-child post-near-child-left "> 
+        
+            <a href="/2020/06/30/tools_PlantUML/">PlantUML &laquo; </a>
+        
+        <br /> 上一篇  &laquo;
     </div>
-    <footer class="article-footer">
-<!--
-      <a data-url="https://blog.lain.buzz/2020/07/05/tools_V2ray/" data-id="clguuzk3b000u9sxhbk4240n0" class="article-share-link">
-        分享
-      </a>
--->
-      
-<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/V2ray/" rel="tag">V2ray</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BB%A3%E7%90%86/" rel="tag">代理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A2%AF%E5%AD%90/" rel="tag">梯子</a></li></ul>
-
-    </footer>
-
-  </div>
-
-  
-  
-<nav class="article-nav">
-  
-  <a href="/2020/07/05/code_%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-nav-link">
-    <strong class="article-nav-caption">前一篇</strong>
-    <div class="article-nav-title">
-      
-      正则表达式
-      
+    <div class="post-near-child post-near-child-right">
+        
+            <a href="/2020/07/05/code_%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"> &raquo; 正则表达式</a>
+        
+        <br /> &raquo; 下一篇 
     </div>
-  </a>
-  
-  
-  <a href="/2020/06/30/tools_PlantUML/" class="article-nav-link">
-    <strong class="article-nav-caption">后一篇</strong>
-    <div class="article-nav-title">PlantUML</div>
-  </a>
-  
-</nav>
-
-  
-
-  
-  
-  
-  
-
-</article>
-
-</section>
-    <footer class="footer">
-  <div class="outer">
-    <div class="float-right">
-      <ul class="list-inline">
-  
-  <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
-  
-  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
-  
-</ul>
-    </div>
-    <ul class="list-inline">
-      <li>Jum`Xiong &copy; 2023</li>
-      
-        <li>ZHWANGART</li>
-      
-      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
-      <li>theme  <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></li>
-    </ul>
-  </div>
+</div>
+</div>
+             
+<div id="comments">
+     
+</div>
+ 
+            <footer id="footer" role="contentinfo">
+    
+        &copy; 2020 - 2023
+        <br />
+    
+    
+    <br />
+    
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span id="busuanzi_value_site_pv">......</span> visits ·
+        <span id="busuanzi_value_site_uv">......</span> visitors 
+    
 </footer>
-  </main>
-  <aside class="sidebar">
-    <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="/favicon.ico" alt="Jum`Xiong"></a>
-  </div>
-  
-  <ul class="nav nav-main">
+          </div>
+        </div>
+      </main>
+      <!-- highlight support -->
+
     
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">首页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/favorites">收藏</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">时间线</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="https://web.lain.buzz" target="_blank" rel="noopener">书签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/about">关于</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link nav-item-search" title="搜索">
-        <i class="fe fe-search"></i>
-        搜索
-      </a>
-    </li>
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      <div class="totop" id="totop">
-  <i class="fe fe-rocket"></i>
-</div>
-    </li>
-    <li class="nav-item">
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-  </aside>
-  
-<script src="/js/jquery-2.0.3.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.1.0/build/styles/arta.min.css">
 
 
-<script src="/js/jquery.justifiedGallery.min.js"></script>
-
-
-<script src="/js/lazyload.min.js"></script>
-
-
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
-
-
-
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/copybtn.js"></script>
-
-
-
-
-
-<script src="/js/tocbot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.1.0/build/highlight.min.js"></script>
+ 
 
 <script>
-  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
-  tocbot.init({
-    tocSelector: '.tocbot',
-    contentSelector: '.article-entry',
-    headingSelector: 'h1, h2, h3, h4, h5, h6',
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    positionFixedSelector: '.tocbot',
-    positionFixedClass: 'is-position-fixed',
-    fixedSidebarOffset: 'auto',
-  });
+// 解决使用 highlightjs 导致代码块不换行的问题 https://highlightjs.org/usage/
+  const brPlugin = {
+    "before:highlightBlock": ({ block }) => {
+      block.innerHTML = block.innerHTML.replace(/\n/g, '').replace(/<br[ /]*>/g, '\n');
+    },
+    "after:highlightBlock": ({ result }) => {
+      result.value = result.value.replace(/\n/g, "<br>");
+    }
+  };
+        hljs.addPlugin(brPlugin);
+// 截止到这
+        hljs.highlightAll();
 </script>
+ 
+<!-- prettify support -->
+ 
+<!-- mathjax support -->
+
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src=""></script>
+
+
+<!-- fancybox support -->
+ 
+<!-- viewerjs support -->
+
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/viewerjs@1.10.0/dist/viewer.min.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/viewerjs@1.10.0/dist/viewer.min.js"></script>
+
+<script type="text/javascript">
+    Viewer.setDefaults({
+        zoomRatio: [0.5],
+        show: function () {
+            this.viewer.zoomTo(1);
+        },
+    });
+    
+    var imageList = document.querySelector('.post-content').getElementsByTagName('img');
+    
+    var imageArray = new Array();
+    Array.prototype.forEach.call(imageList, element => {
+        if (element.alt != "no-view" && element.className != "no-view") {
+            imageArray.push(element);
+        }
+    });
+    
+    Array.prototype.forEach.call(imageArray, element => {
+        var viewer1 = new Viewer(element);
+        viewer1.images = imageArray;
+        viewer1.length = imageArray.length;
+    });
+</script>
+ 
+<!-- google analytics support -->
 
 
 
-<script src="/js/ocean.js"></script>
+ 
+ 
 
-</body>
+<!-- lazyload support -->
+
+    
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
+
+<script>
+    new LazyLoad({
+        elements_selector: '.post-content img'
+    });
+</script>
+ 
+  </body>
 
 </html>

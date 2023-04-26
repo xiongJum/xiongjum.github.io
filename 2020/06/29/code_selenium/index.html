@@ -1,283 +1,319 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  <meta name="keywords" content="编程">
-  
-  
-  <meta name="description" content="围城">
-  
-  <title>
-    自动化测试 for selenium |
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>
+        自动化测试 for selenium - Lain 
+    </title>
+     
     
-    Jum`Xiong
-  </title>
-  
-    <link rel="shortcut icon" href="/favicon.ico">
-    
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<script src="/js/pace.min.js"></script>
-
-<meta name="generator" content="Hexo 4.2.1"></head>
-
-<body>
-  <main class="content">
-    <section class="outer">
-  <article id="post-code_selenium" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-      
-
-<h1 class="article-title" itemprop="name">
-  自动化测试 for selenium
-</h1>
-
-
-
-    </header>
-    
+<link rel="stylesheet" href="/css/grid.css">
 
     
-    <div class="article-meta">
-      <a href="/2020/06/29/code_selenium/" class="article-date">
-  <time datetime="2020-06-29T01:00:00.000Z" itemprop="datePublished">2020-06-29</time>
-</a>
-      
+<link rel="stylesheet" href="/css/custom.css">
+
+    
+<link rel="stylesheet" href="/css/ringo.css">
+
+     
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico " />
+     
+     
+     
+        <meta name=" " content="" />
+     
+        <meta name=" " content="" />
+     
+ 
+<meta name="generator" content="Hexo 7.0.0-rc1"></head>
+
+  <body>
+    <header id="header" class="clearfix" onclick="window.open('/', '_self')">
+    <div class="site-name">
+        <a href="/" id="logo" class="site-title">
+            Lain
+        </a>
+        <p class="description site-description">
+            <span style="padding-top:20px; font-size: 10px">
+                好奇 记录 进步
+            </span>
+        </p>
     </div>
-    
+</header>
+<div id="sidebar" role="complementary">
+    <section class="widget">
+        <ul class="menu widget-list">
+            
+                <li class="menu-item">
+                    <a href="/" class="menu-item-link">
+                        首页
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/tags" class="menu-item-link">
+                        标签
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/archives" class="menu-item-link">
+                        时间线
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a target="_blank" rel="noopener" href="https://web.lain.buzz" class="menu-item-link">
+                        书签
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/friends" class="menu-item-link">
+                        收藏
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a href="/about" class="menu-item-link">
+                        关于
+                    </a>
+                </li>
+                
+        </ul>
+    </section>
+    <section class="widget sidebar-foot">
+        <ul class="widget-list">
+            <li>Theme by <a target="_blank" href="https://github.com/HeliumOI/hexo-theme-ringo"> Ringo </a></li>
+            <li>Proudly powered by  <a rel="nofollow" target="_blank" href="https://hexo.io/">Hexo</a></li>
+        </ul>
+    </section>
+</div>
 
-    
-    
-<div class="tocbot"></div>
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-      
-      <p>Selenium 是支持 web 浏览器自动化的一系列工具和库的综合性项目，它提供了扩展来模拟用户与浏览器的交互，用于扩展浏览器分配的分发服务器， 以及用于实现 <a href="https://www.w3.org/TR/webdriver/" target="_blank" rel="noopener">W3C WebDriver</a> 规范的基础结构， 该规范允许您为所有主要 Web 浏览器编写可互换的代码.</p>
+<div id="helpbar">
+    <div class="back-to-top">
+        <button id="back2top">↑</button>
+        <script>
+            back2top.onclick = function() {
+                var movement = document.body.scrollTop || document.documentElement.scrollTop;
+                scrollBy(0, -movement);
+            }
+        </script>
+    </div>
+</div>
+      <main class="main">
+        <div id="body">
+          <div class="container">
+            <div class="col-12" id="main" role="main">
+    <article class="post post-atpost" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-title">
+            <h1 class="post-title post-title-atpage" itemprop="name headline">
+                <a itemprop="url" href="/2020/06/29/code_selenium/">
+                    自动化测试 for selenium
+                </a>
+            </h1>
+        </div>
+        <ul class="post-meta post-meta-atpage">
+            <li class="post-time">
+                2020-06-29
+            </li>
+            <li>
+                <div class="article-category">
+                    
+                </div>
+            </li>
+        </ul>
+        <div class="post-content" itemprop="articleBody">
+            <p>Selenium 是支持 web 浏览器自动化的一系列工具和库的综合性项目，它提供了扩展来模拟用户与浏览器的交互，用于扩展浏览器分配的分发服务器， 以及用于实现 <a target="_blank" rel="noopener" href="https://www.w3.org/TR/webdriver/">W3C WebDriver</a> 规范的基础结构， 该规范允许您为所有主要 Web 浏览器编写可互换的代码.</p>
 <p>Selenium 汇集了浏览器供应商，工程师和爱好者，以进一步围绕 Web 平台自动化进行公开讨论。 该项目组织了一次年度会议，以教学和培养社区.</p>
-<p>Selenium 的核心是 <a href="https://www.selenium.dev/zh-cn/documentation/webdriver/" target="_blank" rel="noopener">WebDriver</a>，这是一个编写指令集的接口，可以在许多浏览器中互换运行</p>
-<a id="more"></a>
+<p>Selenium 的核心是 <a target="_blank" rel="noopener" href="https://www.selenium.dev/zh-cn/documentation/webdriver/">WebDriver</a>，这是一个编写指令集的接口，可以在许多浏览器中互换运行</p>
+<span id="more"></span>
 
 <h1 id="准备所需文件"><a href="#准备所需文件" class="headerlink" title="准备所需文件"></a>准备所需文件</h1><ol>
 <li>下载selenium库,</li>
 <li>下载浏览器驱动，并将浏览器驱动放入项目的根目录下，并在执行文件中设置路径地址；或者将其所在目录加入到环境变量中；也可以直接在脚本中安装驱动</li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install selenium</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">pip3 install selenium<br></code></pre></td></tr></table></figure>
 
-<p>chrome <a href="http://chromedriver.chromium.org/downloads" target="_blank" rel="noopener">http://chromedriver.chromium.org/downloads</a></p>
+<p>chrome <a target="_blank" rel="noopener" href="http://chromedriver.chromium.org/downloads">http://chromedriver.chromium.org/downloads</a></p>
 <h1 id="开始编写测试脚本"><a href="#开始编写测试脚本" class="headerlink" title="开始编写测试脚本"></a>开始编写测试脚本</h1><h2 id="基础的-selenium-的脚本文件"><a href="#基础的-selenium-的脚本文件" class="headerlink" title="基础的 selenium 的脚本文件"></a>基础的 selenium 的脚本文件</h2><p>编写执行脚本文件</p>
 <p>通过使用方法 driver.implicitly_wait(10) 可以设置隐式的等待时间，但是不建议；设置窗口最大化，可以调用方法 driver.maximize_window() </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line">	</span><br><span class="line"><span class="comment"># 添加浏览器驱动，并设置测试地址</span></span><br><span class="line">driver = webdriver.Chrome()</span><br><span class="line">driver.get(<span class="string">"http://blog.xcumin.top"</span>)</span><br><span class="line"><span class="comment"># 通过 id 定位测试元素控件，并在控件中输入测试文本</span></span><br><span class="line">driver.find_element_by_id(<span class="string">"username"</span>).send_keys(<span class="string">'xiongceshi'</span>)</span><br><span class="line"><span class="comment"># 退出浏览器</span></span><br><span class="line">driver.quit()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver<br>	<br><span class="hljs-comment"># 添加浏览器驱动，并设置测试地址</span><br>driver = webdriver.Chrome()<br>driver.get(<span class="hljs-string">&quot;http://blog.xcumin.top&quot;</span>)<br><span class="hljs-comment"># 通过 id 定位测试元素控件，并在控件中输入测试文本</span><br>driver.find_element_by_id(<span class="hljs-string">&quot;username&quot;</span>).send_keys(<span class="hljs-string">&#x27;xiongceshi&#x27;</span>)<br><span class="hljs-comment"># 退出浏览器</span><br>driver.quit()<br><br></code></pre></td></tr></table></figure>
 
-<p>可以通过python自带的测试库 <a href="https://docs.python.org/zh-cn/3/library/unittest.html" target="_blank" rel="noopener">unittest</a> 调整结构，并引用测试断言</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> unittest</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SeleniumTest</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">setUp</span><span class="params">(self)</span>:</span> <span class="comment"># 测试前置方法，在所有的方法之前进行运行</span></span><br><span class="line">	self.driver = webdriver.Chrome()</span><br><span class="line">	self.driver.implicitly_wait(<span class="number">10</span>)</span><br><span class="line">	self.driver.get(<span class="string">'http://test.lsgot.com:8181/#/login'</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tearDown</span><span class="params">(self)</span>:</span> <span class="comment"># 测试后置方法，在所有测试方法之后运行</span></span><br><span class="line">	self.driver.quit()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_login</span><span class="params">(self)</span>:</span></span><br><span class="line">	<span class="string">"""登录软件"""</span></span><br><span class="line">	self.driver.find_element(By=id(<span class="string">'loginUsername'</span>)).send_keys(<span class="string">'WWGS'</span>)</span><br><span class="line">	self.driver.find_element_by_id(<span class="string">'loginPassword'</span>).send_keys(<span class="string">'123456'</span>)</span><br><span class="line">	self.driver.find_element_by_id(<span class="string">'loginButton'</span>).click()</span><br><span class="line">	</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    unittest.main()</span><br></pre></td></tr></table></figure>
+<p>可以通过python自带的测试库 <a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3/library/unittest.html">unittest</a> 调整结构，并引用测试断言</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> unittest<br><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">SeleniumTest</span>(unittest.TestCase):<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">setUp</span>(<span class="hljs-params">self</span>): <span class="hljs-comment"># 测试前置方法，在所有的方法之前进行运行</span><br>	self.driver = webdriver.Chrome()<br>	self.driver.implicitly_wait(<span class="hljs-number">10</span>)<br>	self.driver.get(<span class="hljs-string">&#x27;http://test.lsgot.com:8181/#/login&#x27;</span>)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">tearDown</span>(<span class="hljs-params">self</span>): <span class="hljs-comment"># 测试后置方法，在所有测试方法之后运行</span><br>	self.driver.quit()<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">test_login</span>(<span class="hljs-params">self</span>):<br>	<span class="hljs-string">&quot;&quot;&quot;登录软件&quot;&quot;&quot;</span><br>	self.driver.find_element(By=<span class="hljs-built_in">id</span>(<span class="hljs-string">&#x27;loginUsername&#x27;</span>)).send_keys(<span class="hljs-string">&#x27;WWGS&#x27;</span>)<br>	self.driver.find_element_by_id(<span class="hljs-string">&#x27;loginPassword&#x27;</span>).send_keys(<span class="hljs-string">&#x27;123456&#x27;</span>)<br>	self.driver.find_element_by_id(<span class="hljs-string">&#x27;loginButton&#x27;</span>).click()<br>	<br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    unittest.main()<br></code></pre></td></tr></table></figure>
 
 <h2 id="增加断言，测试输出是否符合条件"><a href="#增加断言，测试输出是否符合条件" class="headerlink" title="增加断言，测试输出是否符合条件"></a>增加断言，测试输出是否符合条件</h2><p>使用 unittest.TestCase 模块，判断结果是否符合预期，并在命令行中显示测试结果</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support.ui <span class="keyword">import</span> WebDriverWait</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support <span class="keyword">import</span> expected_conditions <span class="keyword">as</span> EC</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"><span class="keyword">import</span> unittest</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">seleniumTest</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">		</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">testlogin</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""错误的账号密码进行登录，并判断提示文案是否正确"""</span>       </span><br><span class="line">		... skip</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 设置显式等待时间，强制等待2秒查找元素</span></span><br><span class="line">        errorMsg = WebDriverWait(self.driver, <span class="number">2</span>) .until \</span><br><span class="line">        	(EC.visibility_of_element_located((By.ID,<span class="string">"errorMsg"</span>))).text</span><br><span class="line">        errorText = <span class="string">'账户或密码错误，请重新输入呀！'</span></span><br><span class="line">        <span class="comment"># 断言，比较两者的的字符串是否一致，若一致则为True，不一致则为Flase并抛出错误</span></span><br><span class="line">        self.assertEqual(errorMsg, errorText, <span class="string">'提示文案错误'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    unittest.main()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver<br><span class="hljs-keyword">from</span> selenium.webdriver.support.ui <span class="hljs-keyword">import</span> WebDriverWait<br><span class="hljs-keyword">from</span> selenium.webdriver.support <span class="hljs-keyword">import</span> expected_conditions <span class="hljs-keyword">as</span> EC<br><span class="hljs-keyword">from</span> selenium.webdriver.common.by <span class="hljs-keyword">import</span> By<br><span class="hljs-keyword">import</span> unittest<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">seleniumTest</span>(unittest.TestCase):<br>		<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">testlogin</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;错误的账号密码进行登录，并判断提示文案是否正确&quot;&quot;&quot;</span>       <br>		... skip<br>        <br>        <span class="hljs-comment"># 设置显式等待时间，强制等待2秒查找元素</span><br>        errorMsg = WebDriverWait(self.driver, <span class="hljs-number">2</span>) .until \<br>        	(EC.visibility_of_element_located((By.ID,<span class="hljs-string">&quot;errorMsg&quot;</span>))).text<br>        errorText = <span class="hljs-string">&#x27;账户或密码错误，请重新输入呀！&#x27;</span><br>        <span class="hljs-comment"># 断言，比较两者的的字符串是否一致，若一致则为True，不一致则为Flase并抛出错误</span><br>        self.assertEqual(errorMsg, errorText, <span class="hljs-string">&#x27;提示文案错误&#x27;</span>)<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    unittest.main()<br></code></pre></td></tr></table></figure>
 
 <h2 id="增加功能，截取产生有bug的界面"><a href="#增加功能，截取产生有bug的界面" class="headerlink" title="增加功能，截取产生有bug的界面"></a>增加功能，截取产生有bug的界面</h2><p>使用 save_screenshot() 截取错误页面，并保存到设置的路径中</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">seleniumTest</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">		··· skip  </span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 错误代码块，当try为True时，跳过except，当try为Flase时，执行except</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            self.assertEqual(errorMsg, errorText)</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            <span class="comment"># 截取当前界面，字符串中的内容为保存路径</span></span><br><span class="line">            self.driver.save_screenshot(<span class="string">'./test.png'</span>)</span><br><span class="line">            <span class="comment"># 断言，无条件的创造失败，字符串为错误说明</span></span><br><span class="line">            self.fail(<span class="string">"登录失败时，提示文案错误"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    unittest.main()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">seleniumTest</span>(unittest.TestCase):<br>		··· skip  <br>        <br>        <span class="hljs-comment"># 错误代码块，当try为True时，跳过except，当try为Flase时，执行except</span><br>        <span class="hljs-keyword">try</span>:<br>            self.assertEqual(errorMsg, errorText)<br>        <span class="hljs-keyword">except</span>:<br>            <span class="hljs-comment"># 截取当前界面，字符串中的内容为保存路径</span><br>            self.driver.save_screenshot(<span class="hljs-string">&#x27;./test.png&#x27;</span>)<br>            <span class="hljs-comment"># 断言，无条件的创造失败，字符串为错误说明</span><br>            self.fail(<span class="hljs-string">&quot;登录失败时，提示文案错误&quot;</span>)<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    unittest.main()<br></code></pre></td></tr></table></figure>
 
-<h1 id="优化代码结构，产生测试报告"><a href="#优化代码结构，产生测试报告" class="headerlink" title="优化代码结构，产生测试报告"></a>优化代码结构，产生测试报告</h1><h2 id="储存配置以及通用方法"><a href="#储存配置以及通用方法" class="headerlink" title="储存配置以及通用方法"></a>储存配置以及通用方法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># seleniumconfig.py</span></span><br><span class="line"><span class="keyword">import</span> unittest</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support.ui <span class="keyword">import</span> WebDriverWait</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.support <span class="keyword">import</span> expected_conditions <span class="keyword">as</span> EC</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">seleniumConfig</span><span class="params">(unittest.TestCase)</span>:</span></span><br><span class="line">	<span class="string">"""储存重复的方法，以及通用配置"""</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setUp</span><span class="params">(cls)</span>:</span></span><br><span class="line">        cls.driver = webdriver.Firefox()	</span><br><span class="line">		... skip</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">find_element_try</span><span class="params">(self, real, demand, explana)</span>:</span></span><br><span class="line">        <span class="string">"""判断实际内容和需求是否一致，若不一致则截取图片，并返回错误说明"""</span></span><br><span class="line">		<span class="keyword">try</span>:</span><br><span class="line">            self.assertEqual(real, demand)</span><br><span class="line">		<span class="keyword">except</span>:</span><br><span class="line">            self.fail(explana)</span><br><span class="line">            self.driver.save_screenshot(<span class="string">'./test.png'</span>)   </span><br><span class="line">    </span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">find_element_wait</span><span class="params">(self, wait_time, type_element, element)</span>:</span></span><br><span class="line">        <span class="string">"""检查元素是否存在，若不存在则截取图片并返回错误说明"""</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="keyword">return</span> WebDriverWait(self.driver, wait_time).until \</span><br><span class="line">                (EC.visibility_of_element_located((type_element,element)))</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            self.fail(<span class="string">f"<span class="subst">&#123;element&#125;</span>查找失败，请检查元素是否正确或产品出现缺陷"</span>) <span class="comment">#格式化字符串</span></span><br></pre></td></tr></table></figure>
+<h1 id="优化代码结构，产生测试报告"><a href="#优化代码结构，产生测试报告" class="headerlink" title="优化代码结构，产生测试报告"></a>优化代码结构，产生测试报告</h1><h2 id="储存配置以及通用方法"><a href="#储存配置以及通用方法" class="headerlink" title="储存配置以及通用方法"></a>储存配置以及通用方法</h2><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># seleniumconfig.py</span><br><span class="hljs-keyword">import</span> unittest<br><span class="hljs-keyword">from</span> selenium <span class="hljs-keyword">import</span> webdriver<br><span class="hljs-keyword">from</span> selenium.webdriver.support.ui <span class="hljs-keyword">import</span> WebDriverWait<br><span class="hljs-keyword">from</span> selenium.webdriver.support <span class="hljs-keyword">import</span> expected_conditions <span class="hljs-keyword">as</span> EC<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">seleniumConfig</span>(unittest.TestCase):<br>	<span class="hljs-string">&quot;&quot;&quot;储存重复的方法，以及通用配置&quot;&quot;&quot;</span><br><span class="hljs-meta">    @classmethod</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">setUp</span>(<span class="hljs-params">cls</span>):<br>        cls.driver = webdriver.Firefox()	<br>		... skip<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">find_element_try</span>(<span class="hljs-params">self, real, demand, explana</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;判断实际内容和需求是否一致，若不一致则截取图片，并返回错误说明&quot;&quot;&quot;</span><br>		<span class="hljs-keyword">try</span>:<br>            self.assertEqual(real, demand)<br>		<span class="hljs-keyword">except</span>:<br>            self.fail(explana)<br>            self.driver.save_screenshot(<span class="hljs-string">&#x27;./test.png&#x27;</span>)   <br>    <br>	<span class="hljs-keyword">def</span> <span class="hljs-title function_">find_element_wait</span>(<span class="hljs-params">self, wait_time, type_element, element</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;检查元素是否存在，若不存在则截取图片并返回错误说明&quot;&quot;&quot;</span><br>        <span class="hljs-keyword">try</span>:<br>            <span class="hljs-keyword">return</span> WebDriverWait(self.driver, wait_time).until \<br>                (EC.visibility_of_element_located((type_element,element)))<br>        <span class="hljs-keyword">except</span>:<br>            self.fail(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;element&#125;</span>查找失败，请检查元素是否正确或产品出现缺陷&quot;</span>) <span class="hljs-comment">#格式化字符串</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="设计测试流程、设计测试用例"><a href="#设计测试流程、设计测试用例" class="headerlink" title="设计测试流程、设计测试用例"></a>设计测试流程、设计测试用例</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># seleniumtest.py</span></span><br><span class="line"><span class="keyword">from</span> seleniumconfig <span class="keyword">import</span> seleniumConfig</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">seleniumTest</span><span class="params">(seleniumConfig)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_b_login</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""错误的账号密码进行登录，并判断提示文案是否正确"""</span></span><br><span class="line">		... skip</span><br><span class="line">		</span><br><span class="line">        errorMsg = self.find_element_wait(<span class="number">2</span>,By.ID,<span class="string">"errorMsg"</span>).text</span><br><span class="line">     </span><br><span class="line">       <span class="comment"># 判断错误提示文案和需求是否一致</span></span><br><span class="line">        self.find_element_try(errorMsg, <span class="string">'账户或密码错误，请重新输入！'</span>, </span><br><span class="line">							  <span class="string">'登录失败时，提示文案错误'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="设计测试流程、设计测试用例"><a href="#设计测试流程、设计测试用例" class="headerlink" title="设计测试流程、设计测试用例"></a>设计测试流程、设计测试用例</h2><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># seleniumtest.py</span><br><span class="hljs-keyword">from</span> seleniumconfig <span class="hljs-keyword">import</span> seleniumConfig<br><span class="hljs-keyword">from</span> selenium.webdriver.common.by <span class="hljs-keyword">import</span> By<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">seleniumTest</span>(<span class="hljs-title class_ inherited__">seleniumConfig</span>):<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">test_b_login</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;错误的账号密码进行登录，并判断提示文案是否正确&quot;&quot;&quot;</span><br>		... skip<br>		<br>        errorMsg = self.find_element_wait(<span class="hljs-number">2</span>,By.ID,<span class="hljs-string">&quot;errorMsg&quot;</span>).text<br>     <br>       <span class="hljs-comment"># 判断错误提示文案和需求是否一致</span><br>        self.find_element_try(errorMsg, <span class="hljs-string">&#x27;账户或密码错误，请重新输入！&#x27;</span>, <br>							  <span class="hljs-string">&#x27;登录失败时，提示文案错误&#x27;</span>)<br>		<br></code></pre></td></tr></table></figure>
 
-<h2 id="生成测试报告"><a href="#生成测试报告" class="headerlink" title="生成测试报告"></a>生成测试报告</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># seleniumrun.py</span></span><br><span class="line"><span class="keyword">import</span> unittest</span><br><span class="line"><span class="keyword">import</span> HTMLTestRunner</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> seleniumtest <span class="keyword">import</span> seleniumTest</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取测试用例，创建测试套件(若有多份测试用例，可以创建多份测试套件)</span></span><br><span class="line">web_login = unittest.TestLoader().loadTestsFromTestCase(seleniumTest)</span><br><span class="line">kts_login = unittest.TestSuite([web_login])</span><br><span class="line"></span><br><span class="line"><span class="comment">#设置报告的写入路径和名称</span></span><br><span class="line">dir = os.getcwd()</span><br><span class="line">nowTime = time.strftime(<span class="string">'%Y%m%d%H%M%S'</span>,time.localtime(time.time()))</span><br><span class="line">outPath = <span class="string">f'./outFile/webTestReport<span class="subst">&#123;nowTime&#125;</span>.html'</span></span><br><span class="line">outFile = open(dir + outPath, <span class="string">'wb'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建测试内容，执行测试套件</span></span><br><span class="line">runner = HTMLTestRunner.HTMLTestRunner(</span><br><span class="line">    stream= outFile,</span><br><span class="line">    title= <span class="string">'测试报告'</span>,</span><br><span class="line">    description= <span class="string">'WEB支撑平台测试_UI自动化回归测试'</span>,</span><br><span class="line">    verbosity=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">runner.run(kts_login)</span><br><span class="line"><span class="comment"># 不生成测试报告</span></span><br><span class="line"><span class="comment"># unittest.TextTestRunner(verbosity=2).run(kts_login)</span></span><br></pre></td></tr></table></figure>
+<h2 id="生成测试报告"><a href="#生成测试报告" class="headerlink" title="生成测试报告"></a>生成测试报告</h2><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># seleniumrun.py</span><br><span class="hljs-keyword">import</span> unittest<br><span class="hljs-keyword">import</span> HTMLTestRunner<br><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">import</span> time<br><span class="hljs-keyword">from</span> seleniumtest <span class="hljs-keyword">import</span> seleniumTest<br><br><span class="hljs-comment"># 获取测试用例，创建测试套件(若有多份测试用例，可以创建多份测试套件)</span><br>web_login = unittest.TestLoader().loadTestsFromTestCase(seleniumTest)<br>kts_login = unittest.TestSuite([web_login])<br><br><span class="hljs-comment">#设置报告的写入路径和名称</span><br><span class="hljs-built_in">dir</span> = os.getcwd()<br>nowTime = time.strftime(<span class="hljs-string">&#x27;%Y%m%d%H%M%S&#x27;</span>,time.localtime(time.time()))<br>outPath = <span class="hljs-string">f&#x27;./outFile/webTestReport<span class="hljs-subst">&#123;nowTime&#125;</span>.html&#x27;</span><br>outFile = <span class="hljs-built_in">open</span>(<span class="hljs-built_in">dir</span> + outPath, <span class="hljs-string">&#x27;wb&#x27;</span>)<br><br><span class="hljs-comment"># 创建测试内容，执行测试套件</span><br>runner = HTMLTestRunner.HTMLTestRunner(<br>    stream= outFile,<br>    title= <span class="hljs-string">&#x27;测试报告&#x27;</span>,<br>    description= <span class="hljs-string">&#x27;WEB支撑平台测试_UI自动化回归测试&#x27;</span>,<br>    verbosity=<span class="hljs-number">2</span>)<br><br>runner.run(kts_login)<br><span class="hljs-comment"># 不生成测试报告</span><br><span class="hljs-comment"># unittest.TextTestRunner(verbosity=2).run(kts_login)</span><br></code></pre></td></tr></table></figure>
 
 <p>执行 seleniumrun.py ，获取测试报告</p>
 
-      
+             
+        </div>
+        
+            <p itemprop="keywords" class="tags">
+                
+                    <a href="/tags/Python/"> Python </a>
+                
+                    <a href="/tags/%E6%B5%8B%E8%AF%95/"> 测试 </a>
+                
+                    <a href="/tags/code/"> code </a>
+                
+                    <a href="/tags/selenium/"> selenium </a>
+                
+                    <a href="/tags/web-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"> web 自动化测试 </a>
+                
+                    <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"> 自动化测试 </a>
+                
+            </p>
+        
+    </article>
+    <div class="post-near">
+    <div class="post-near-child post-near-child-left "> 
+        
+            <a href="/2020/06/28/system_linux%E4%B9%8Bshell/">了解SHELL(其一) &laquo; </a>
+        
+        <br /> 上一篇  &laquo;
     </div>
-    <footer class="article-footer">
-<!--
-      <a data-url="https://blog.lain.buzz/2020/06/29/code_selenium/" data-id="clguuzk31000g9sxh2ctsev27" class="article-share-link">
-        分享
-      </a>
--->
-      
-<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/" rel="tag">code</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selenium/" rel="tag">selenium</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" rel="tag">web 自动化测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" rel="tag">自动化测试</a></li></ul>
-
-    </footer>
-
-  </div>
-
-  
-  
-<nav class="article-nav">
-  
-  <a href="/2020/06/30/tools_PlantUML/" class="article-nav-link">
-    <strong class="article-nav-caption">前一篇</strong>
-    <div class="article-nav-title">
-      
-      PlantUML
-      
+    <div class="post-near-child post-near-child-right">
+        
+            <a href="/2020/06/30/tools_PlantUML/"> &raquo; PlantUML</a>
+        
+        <br /> &raquo; 下一篇 
     </div>
-  </a>
-  
-  
-  <a href="/2020/06/28/system_linux%E4%B9%8Bshell/" class="article-nav-link">
-    <strong class="article-nav-caption">后一篇</strong>
-    <div class="article-nav-title">了解SHELL(其一)</div>
-  </a>
-  
-</nav>
-
-  
-
-  
-  
-  
-  
-
-</article>
-
-</section>
-    <footer class="footer">
-  <div class="outer">
-    <div class="float-right">
-      <ul class="list-inline">
-  
-  <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
-  
-  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
-  
-</ul>
-    </div>
-    <ul class="list-inline">
-      <li>Jum`Xiong &copy; 2023</li>
-      
-        <li>ZHWANGART</li>
-      
-      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
-      <li>theme  <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></li>
-    </ul>
-  </div>
+</div>
+</div>
+             
+<div id="comments">
+     
+</div>
+ 
+            <footer id="footer" role="contentinfo">
+    
+        &copy; 2020 - 2023
+        <br />
+    
+    
+    <br />
+    
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span id="busuanzi_value_site_pv">......</span> visits ·
+        <span id="busuanzi_value_site_uv">......</span> visitors 
+    
 </footer>
-  </main>
-  <aside class="sidebar">
-    <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="/favicon.ico" alt="Jum`Xiong"></a>
-  </div>
-  
-  <ul class="nav nav-main">
+          </div>
+        </div>
+      </main>
+      <!-- highlight support -->
+
     
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">首页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/favorites">收藏</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">时间线</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="https://web.lain.buzz" target="_blank" rel="noopener">书签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/about">关于</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link nav-item-search" title="搜索">
-        <i class="fe fe-search"></i>
-        搜索
-      </a>
-    </li>
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      <div class="totop" id="totop">
-  <i class="fe fe-rocket"></i>
-</div>
-    </li>
-    <li class="nav-item">
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-  </aside>
-  
-<script src="/js/jquery-2.0.3.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.1.0/build/styles/arta.min.css">
 
 
-<script src="/js/jquery.justifiedGallery.min.js"></script>
-
-
-<script src="/js/lazyload.min.js"></script>
-
-
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
-
-
-
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/copybtn.js"></script>
-
-
-
-
-
-<script src="/js/tocbot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.1.0/build/highlight.min.js"></script>
+ 
 
 <script>
-  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
-  tocbot.init({
-    tocSelector: '.tocbot',
-    contentSelector: '.article-entry',
-    headingSelector: 'h1, h2, h3, h4, h5, h6',
-    hasInnerContainers: true,
-    scrollSmooth: true,
-    positionFixedSelector: '.tocbot',
-    positionFixedClass: 'is-position-fixed',
-    fixedSidebarOffset: 'auto',
-  });
+// 解决使用 highlightjs 导致代码块不换行的问题 https://highlightjs.org/usage/
+  const brPlugin = {
+    "before:highlightBlock": ({ block }) => {
+      block.innerHTML = block.innerHTML.replace(/\n/g, '').replace(/<br[ /]*>/g, '\n');
+    },
+    "after:highlightBlock": ({ result }) => {
+      result.value = result.value.replace(/\n/g, "<br>");
+    }
+  };
+        hljs.addPlugin(brPlugin);
+// 截止到这
+        hljs.highlightAll();
 </script>
+ 
+<!-- prettify support -->
+ 
+<!-- mathjax support -->
+
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src=""></script>
+
+
+<!-- fancybox support -->
+ 
+<!-- viewerjs support -->
+
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/viewerjs@1.10.0/dist/viewer.min.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/viewerjs@1.10.0/dist/viewer.min.js"></script>
+
+<script type="text/javascript">
+    Viewer.setDefaults({
+        zoomRatio: [0.5],
+        show: function () {
+            this.viewer.zoomTo(1);
+        },
+    });
+    
+    var imageList = document.querySelector('.post-content').getElementsByTagName('img');
+    
+    var imageArray = new Array();
+    Array.prototype.forEach.call(imageList, element => {
+        if (element.alt != "no-view" && element.className != "no-view") {
+            imageArray.push(element);
+        }
+    });
+    
+    Array.prototype.forEach.call(imageArray, element => {
+        var viewer1 = new Viewer(element);
+        viewer1.images = imageArray;
+        viewer1.length = imageArray.length;
+    });
+</script>
+ 
+<!-- google analytics support -->
 
 
 
-<script src="/js/ocean.js"></script>
+ 
+ 
 
-</body>
+<!-- lazyload support -->
+
+    
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
+
+<script>
+    new LazyLoad({
+        elements_selector: '.post-content img'
+    });
+</script>
+ 
+  </body>
 
 </html>
