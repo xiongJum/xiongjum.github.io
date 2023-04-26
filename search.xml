@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>心情_20230422</title>
+    <url>/2023/04/22/dairy_20230422/</url>
+    <content><![CDATA[<p>伤心桥下春波绿，曾是惊鸿照影来。<br>                          — 陆游&lt;重过沉圆作&gt;</p>
+]]></content>
+      <tags>
+        <tag>碎碎念</tag>
+        <tag>diary</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ocean 主題配置</title>
     <url>/2021/10/29/blog_Hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<p>Ocean 是基于 Hexo 默认主题 landscape 的功能，设计的一款支持移动设备的主题，并且集成了 Gitalk 与 Valine 评论功能。</p>
@@ -420,6 +430,60 @@ num1 + num2 ? --&gt; 5
       </tags>
   </entry>
   <entry>
+    <title>Python修饰器</title>
+    <url>/2020/04/23/code_Python%E8%A7%A3%E9%87%8A%E5%99%A8/</url>
+    <content><![CDATA[<h3 id="修饰器的作用"><a href="#修饰器的作用" class="headerlink" title="修饰器的作用"></a><strong>修饰器的作用</strong></h3><ol>
+<li>修饰器本质上是一个Python函数，它可以让其他函数在不需要做任何代码变动的前提下增加额外功能</li>
+<li>python的修饰器是一种语法糖（Syntactic Sugar）</li>
+</ol>
+<span id="more"></span>
+
+<ul>
+<li><p>实例</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 示例1</span><br><span class="hljs-meta">@funA</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">funB</span>():<br>    <span class="hljs-keyword">pass</span><br><span class="hljs-comment"># 示例2， 实例1是示例2的简写，即示例1=示例2</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">funB</span>():<br>    <span class="hljs-keyword">pass</span><br>funB =funA(funB)<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="修饰函数"><a href="#修饰函数" class="headerlink" title="修饰函数"></a><strong>修饰函数</strong></h3><p>修饰器的用法之一是修饰新定义的函数，修饰器通常用于<font color="red">扩展函数的行为或属性</font></p>
+<ol>
+<li><p>示例（函数作为修饰器）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">log</span>(<span class="hljs-params">func</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">wraper</span>():<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;INFO: String &#123;&#125;&quot;</span>.<span class="hljs-built_in">format</span>(func.__name__))<br>        func()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;INFO: Finishing 	&#123;&#125;&quot;</span>.<span class="hljs-built_in">format</span>(func.__name__))<br>    <span class="hljs-keyword">return</span> wraper<br><br><span class="hljs-meta">@log</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Running run...&quot;</span>)<br>run()<br>-------------------------------------------------------------------------------------------------<br>&gt;&gt;&gt;<br>INFO: String run<br>Running run...<br>INFO: Finshing run<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="修饰类"><a href="#修饰类" class="headerlink" title="修饰类"></a><strong>修饰类</strong></h3><ol>
+<li><p>示例(函数作为修饰器)</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> time <span class="hljs-keyword">import</span> time, sleep<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">timer</span>(<span class="hljs-params">Cls</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">wraper</span>():<br>        s = time()<br>        obj = Cls()<br>        e = time()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Cost &#123;:.4f&#125;s to init.&quot;</span>.<span class="hljs-built_in">format</span>(e -s))<br>        <span class="hljs-keyword">return</span> obj<br>    <span class="hljs-keyword">return</span> wraper<br><br><span class="hljs-meta">@timer</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Obj</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello&quot;</span>)<br>        sleep(<span class="hljs-number">2</span>)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Obj&quot;</span>)<br><br>Obj()<br>--------------------------------------------------------------------------------------------------<br>&gt;&gt;&gt;<br>Hello<br>Obj<br>Cost <span class="hljs-number">2.0476</span>s to init.<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="类作为修饰器"><a href="#类作为修饰器" class="headerlink" title="类作为修饰器"></a><strong>类作为修饰器</strong></h3><p>只有函数才可以被调用，除了函数以外也可以定义被调用的类，只要添加 <font color="red">_<em>call</em>_</font> 方法即可</p>
+<ol>
+<li>示例</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">HTML</span>(<span class="hljs-title class_ inherited__">object</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">    Baking HTML Tags!</span><br><span class="hljs-string">    修饰HTML标签</span><br><span class="hljs-string"></span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, tag=<span class="hljs-string">&#x27;p&#x27;</span></span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;LOG: Baking Tag &lt;&#123;&#125;&gt;&quot;</span>.<span class="hljs-built_in">format</span>(tag))<br>        self.tag = tag<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__call__</span>(<span class="hljs-params">self, func</span>):<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">lambda</span>: <span class="hljs-string">&quot;&lt;&#123;0&#125;&gt;&#123;1&#125;&lt;/&#123;0&#125;&gt;&quot;</span>.<span class="hljs-built_in">format</span>(self.tag, func())<br><br><span class="hljs-meta">@HTML(<span class="hljs-params"><span class="hljs-string">&quot;html&quot;</span></span>)</span><br><span class="hljs-meta">@HTML(<span class="hljs-params"><span class="hljs-string">&quot;body&quot;</span></span>)</span><br><span class="hljs-meta">@HTML(<span class="hljs-params"><span class="hljs-string">&quot;div&quot;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">body</span>():<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Hello, World&quot;</span> <br>    <br><span class="hljs-built_in">print</span>(body())<br>--------------------------------------------------------------<br>&gt;&gt;&gt;<br>LOG: Baking Tag &lt;html&gt;<br>LOG: Baking Tag &lt;body&gt;<br>LOG: Baking Tag &lt;div&gt;<br>&lt;html&gt;&lt;body&gt;&lt;div&gt;Hello, World&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>函数解析</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">lambda</span>: <span class="hljs-string">&quot;&lt;&#123;0&#125;&gt;&#123;1&#125;&lt;/&#123;0&#125;&gt;&quot;</span>.<span class="hljs-built_in">format</span>(self.tag, func())<br><span class="hljs-comment"># lambda 匿名函数，“:”左边为返回值，</span><br><span class="hljs-comment"># format 格式化函数，</span><br><span class="hljs-comment"># &#123;&#125; 不指定参数位置 eg：&quot;&#123;&#125; &#123;&#125;&quot;.format(&quot;Hello&quot;, &quot;World&quot;)</span><br><span class="hljs-comment"># &#123;x&#125; 指定参数位置 eg: &quot;&#123;0&#125; &#123;1&#125;&quot;.format(&quot;Hello&quot;, &quot;World&quot;)</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="传递参数"><a href="#传递参数" class="headerlink" title="传递参数"></a><strong>传递参数</strong></h3><p>在实际的使用过程中可能需要想修饰器传递参数，可能需要想被修饰的函数（或类）传递参数，如上方示例中</p>
+<p><font color='orange'>@HTML(‘html’)</font> </p>
+<ol>
+<li><p>示例</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">RULES = &#123;&#125;<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">route</span>(<span class="hljs-params">rule</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">decorator</span>(<span class="hljs-params">hand</span>):<br>        RULES.update(&#123;rule: hand&#125;)<br>        <span class="hljs-keyword">return</span> hand<br>    <span class="hljs-keyword">return</span> decorator<br><br><span class="hljs-meta">@route(<span class="hljs-params"><span class="hljs-string">&quot;/&quot;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">index</span>():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;XIONG JUM&quot;</span>)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">home</span>():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello, World!&quot;</span>)<br>home = route(<span class="hljs-string">&quot;/home&quot;</span>)(home)<br><br>index()<br>home()<br><span class="hljs-built_in">print</span>(RULES)<br><span class="hljs-built_in">print</span>(index)<br>--------------------------------------------------------------------------------------------------<br>&gt;&gt;&gt;<br>XIONG JUM<br>Hello, World!<br>&#123;<span class="hljs-string">&#x27;/&#x27;</span>: &lt;function index at <span class="hljs-number">0x000001C605A35B80</span>&gt;, <span class="hljs-string">&#x27;/home&#x27;</span>: &lt;function home at <span class="hljs-number">0x000001C605A35AF0</span>&gt;&#125;<br>&lt;function index at <span class="hljs-number">0x000001C605A35B80</span>&gt;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>函数解析</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">RULES.update(&#123;rule: hand&#125;)<br><span class="hljs-comment"># update 字典的方法，更新字典的值，直接替换字典中相同键的值</span><br><span class="hljs-comment"># &lt;function index at 0x000001C605A35B80&gt; 为函数index的储存位置</span><br></code></pre></td></tr></table></figure>
+
+<p>向被修饰的函数传递参数，若不进行处理，则只需要将其原模原样的返回即可</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-meta">@route(<span class="hljs-params"><span class="hljs-string">&quot;/login&quot;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">login</span>(<span class="hljs-params">user=<span class="hljs-string">&#x27;user&#x27;</span>, pwd=<span class="hljs-string">&#x27;pwd&#x27;</span></span>):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;DB.findOne(&#123;&#123;&#123;&#125;, &#123;&#125;&#125;&#125;)&quot;</span>.<span class="hljs-built_in">format</span>(user, pwd))<br>login(<span class="hljs-string">&quot;hail&quot;</span>, <span class="hljs-string">&quot;python&quot;</span>)<br>--------------------------------------------------------------------------------------------------<br>&gt;&gt;&gt;<br>DB.findOne(&#123;hail, python&#125;)<br></code></pre></td></tr></table></figure>
+
+<p>如果需要在修饰器内执行，见<font color='red'>修饰函数的示例</font></p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>python</tag>
+        <tag>修饰器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>枚举类</title>
     <url>/2020/07/15/code_Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%9E%9A%E4%B8%BE%E7%B1%BB/</url>
     <content><![CDATA[<h5 id="枚举类的使用"><a href="#枚举类的使用" class="headerlink" title="枚举类的使用"></a>枚举类的使用</h5><ul>
@@ -489,60 +553,6 @@ False True
         <tag>code</tag>
         <tag>python</tag>
         <tag>枚举类</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python修饰器</title>
-    <url>/2020/04/23/code_Python%E8%A7%A3%E9%87%8A%E5%99%A8/</url>
-    <content><![CDATA[<h3 id="修饰器的作用"><a href="#修饰器的作用" class="headerlink" title="修饰器的作用"></a><strong>修饰器的作用</strong></h3><ol>
-<li>修饰器本质上是一个Python函数，它可以让其他函数在不需要做任何代码变动的前提下增加额外功能</li>
-<li>python的修饰器是一种语法糖（Syntactic Sugar）</li>
-</ol>
-<span id="more"></span>
-
-<ul>
-<li><p>实例</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 示例1</span><br><span class="hljs-meta">@funA</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">funB</span>():<br>    <span class="hljs-keyword">pass</span><br><span class="hljs-comment"># 示例2， 实例1是示例2的简写，即示例1=示例2</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">funB</span>():<br>    <span class="hljs-keyword">pass</span><br>funB =funA(funB)<br></code></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="修饰函数"><a href="#修饰函数" class="headerlink" title="修饰函数"></a><strong>修饰函数</strong></h3><p>修饰器的用法之一是修饰新定义的函数，修饰器通常用于<font color="red">扩展函数的行为或属性</font></p>
-<ol>
-<li><p>示例（函数作为修饰器）</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">log</span>(<span class="hljs-params">func</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">wraper</span>():<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;INFO: String &#123;&#125;&quot;</span>.<span class="hljs-built_in">format</span>(func.__name__))<br>        func()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;INFO: Finishing 	&#123;&#125;&quot;</span>.<span class="hljs-built_in">format</span>(func.__name__))<br>    <span class="hljs-keyword">return</span> wraper<br><br><span class="hljs-meta">@log</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Running run...&quot;</span>)<br>run()<br>-------------------------------------------------------------------------------------------------<br>&gt;&gt;&gt;<br>INFO: String run<br>Running run...<br>INFO: Finshing run<br></code></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="修饰类"><a href="#修饰类" class="headerlink" title="修饰类"></a><strong>修饰类</strong></h3><ol>
-<li><p>示例(函数作为修饰器)</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> time <span class="hljs-keyword">import</span> time, sleep<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">timer</span>(<span class="hljs-params">Cls</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">wraper</span>():<br>        s = time()<br>        obj = Cls()<br>        e = time()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Cost &#123;:.4f&#125;s to init.&quot;</span>.<span class="hljs-built_in">format</span>(e -s))<br>        <span class="hljs-keyword">return</span> obj<br>    <span class="hljs-keyword">return</span> wraper<br><br><span class="hljs-meta">@timer</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Obj</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello&quot;</span>)<br>        sleep(<span class="hljs-number">2</span>)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Obj&quot;</span>)<br><br>Obj()<br>--------------------------------------------------------------------------------------------------<br>&gt;&gt;&gt;<br>Hello<br>Obj<br>Cost <span class="hljs-number">2.0476</span>s to init.<br></code></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="类作为修饰器"><a href="#类作为修饰器" class="headerlink" title="类作为修饰器"></a><strong>类作为修饰器</strong></h3><p>只有函数才可以被调用，除了函数以外也可以定义被调用的类，只要添加 <font color="red">_<em>call</em>_</font> 方法即可</p>
-<ol>
-<li>示例</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">HTML</span>(<span class="hljs-title class_ inherited__">object</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">    Baking HTML Tags!</span><br><span class="hljs-string">    修饰HTML标签</span><br><span class="hljs-string"></span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, tag=<span class="hljs-string">&#x27;p&#x27;</span></span>):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;LOG: Baking Tag &lt;&#123;&#125;&gt;&quot;</span>.<span class="hljs-built_in">format</span>(tag))<br>        self.tag = tag<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__call__</span>(<span class="hljs-params">self, func</span>):<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">lambda</span>: <span class="hljs-string">&quot;&lt;&#123;0&#125;&gt;&#123;1&#125;&lt;/&#123;0&#125;&gt;&quot;</span>.<span class="hljs-built_in">format</span>(self.tag, func())<br><br><span class="hljs-meta">@HTML(<span class="hljs-params"><span class="hljs-string">&quot;html&quot;</span></span>)</span><br><span class="hljs-meta">@HTML(<span class="hljs-params"><span class="hljs-string">&quot;body&quot;</span></span>)</span><br><span class="hljs-meta">@HTML(<span class="hljs-params"><span class="hljs-string">&quot;div&quot;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">body</span>():<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Hello, World&quot;</span> <br>    <br><span class="hljs-built_in">print</span>(body())<br>--------------------------------------------------------------<br>&gt;&gt;&gt;<br>LOG: Baking Tag &lt;html&gt;<br>LOG: Baking Tag &lt;body&gt;<br>LOG: Baking Tag &lt;div&gt;<br>&lt;html&gt;&lt;body&gt;&lt;div&gt;Hello, World&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;<br></code></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>函数解析</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">lambda</span>: <span class="hljs-string">&quot;&lt;&#123;0&#125;&gt;&#123;1&#125;&lt;/&#123;0&#125;&gt;&quot;</span>.<span class="hljs-built_in">format</span>(self.tag, func())<br><span class="hljs-comment"># lambda 匿名函数，“:”左边为返回值，</span><br><span class="hljs-comment"># format 格式化函数，</span><br><span class="hljs-comment"># &#123;&#125; 不指定参数位置 eg：&quot;&#123;&#125; &#123;&#125;&quot;.format(&quot;Hello&quot;, &quot;World&quot;)</span><br><span class="hljs-comment"># &#123;x&#125; 指定参数位置 eg: &quot;&#123;0&#125; &#123;1&#125;&quot;.format(&quot;Hello&quot;, &quot;World&quot;)</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="传递参数"><a href="#传递参数" class="headerlink" title="传递参数"></a><strong>传递参数</strong></h3><p>在实际的使用过程中可能需要想修饰器传递参数，可能需要想被修饰的函数（或类）传递参数，如上方示例中</p>
-<p><font color='orange'>@HTML(‘html’)</font> </p>
-<ol>
-<li><p>示例</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">RULES = &#123;&#125;<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">route</span>(<span class="hljs-params">rule</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">decorator</span>(<span class="hljs-params">hand</span>):<br>        RULES.update(&#123;rule: hand&#125;)<br>        <span class="hljs-keyword">return</span> hand<br>    <span class="hljs-keyword">return</span> decorator<br><br><span class="hljs-meta">@route(<span class="hljs-params"><span class="hljs-string">&quot;/&quot;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">index</span>():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;XIONG JUM&quot;</span>)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">home</span>():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello, World!&quot;</span>)<br>home = route(<span class="hljs-string">&quot;/home&quot;</span>)(home)<br><br>index()<br>home()<br><span class="hljs-built_in">print</span>(RULES)<br><span class="hljs-built_in">print</span>(index)<br>--------------------------------------------------------------------------------------------------<br>&gt;&gt;&gt;<br>XIONG JUM<br>Hello, World!<br>&#123;<span class="hljs-string">&#x27;/&#x27;</span>: &lt;function index at <span class="hljs-number">0x000001C605A35B80</span>&gt;, <span class="hljs-string">&#x27;/home&#x27;</span>: &lt;function home at <span class="hljs-number">0x000001C605A35AF0</span>&gt;&#125;<br>&lt;function index at <span class="hljs-number">0x000001C605A35B80</span>&gt;<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>函数解析</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">RULES.update(&#123;rule: hand&#125;)<br><span class="hljs-comment"># update 字典的方法，更新字典的值，直接替换字典中相同键的值</span><br><span class="hljs-comment"># &lt;function index at 0x000001C605A35B80&gt; 为函数index的储存位置</span><br></code></pre></td></tr></table></figure>
-
-<p>向被修饰的函数传递参数，若不进行处理，则只需要将其原模原样的返回即可</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-meta">@route(<span class="hljs-params"><span class="hljs-string">&quot;/login&quot;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">login</span>(<span class="hljs-params">user=<span class="hljs-string">&#x27;user&#x27;</span>, pwd=<span class="hljs-string">&#x27;pwd&#x27;</span></span>):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;DB.findOne(&#123;&#123;&#123;&#125;, &#123;&#125;&#125;&#125;)&quot;</span>.<span class="hljs-built_in">format</span>(user, pwd))<br>login(<span class="hljs-string">&quot;hail&quot;</span>, <span class="hljs-string">&quot;python&quot;</span>)<br>--------------------------------------------------------------------------------------------------<br>&gt;&gt;&gt;<br>DB.findOne(&#123;hail, python&#125;)<br></code></pre></td></tr></table></figure>
-
-<p>如果需要在修饰器内执行，见<font color='red'>修饰函数的示例</font></p>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>python</tag>
-        <tag>修饰器</tag>
       </tags>
   </entry>
   <entry>
@@ -930,16 +940,6 @@ http://static.xiaobu.hk/cityact/application/images/20200612/2QCXwH6pej.JPG
       <tags>
         <tag>code</tag>
         <tag>正则表达式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>心情_20230422</title>
-    <url>/2023/04/22/dairy_20230422/</url>
-    <content><![CDATA[<p>伤心桥下春波绿，曾是惊鸿照影来。<br>                          — 陆游&lt;重过沉圆作&gt;</p>
-]]></content>
-      <tags>
-        <tag>碎碎念</tag>
-        <tag>diary</tag>
       </tags>
   </entry>
   <entry>
