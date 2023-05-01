@@ -2,108 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.lain.buzz/2023/04/22/dairy_20230422/</loc>
-    
-    <lastmod>2023-04-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lain.buzz/2020/07/15/code_Python-for-MagicMethod/</loc>
-    
-    <lastmod>2023-04-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lain.buzz/2020/07/10/code_Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E6%80%81/</loc>
-    
-    <lastmod>2023-04-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lain.buzz/2020/07/15/code_Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%9E%9A%E4%B8%BE%E7%B1%BB/</loc>
-    
-    <lastmod>2023-04-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lain.buzz/2020/04/23/code_Python%E8%A7%A3%E9%87%8A%E5%99%A8/</loc>
-    
-    <lastmod>2023-04-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lain.buzz/2020/07/22/code_SQL%E5%9F%BA%E7%A1%80-%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/</loc>
-    
-    <lastmod>2023-04-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lain.buzz/2020/07/05/code_%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
-    
-    <lastmod>2023-04-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lain.buzz/2020/06/28/system_linux%E4%B9%8Bshell/</loc>
-    
-    <lastmod>2023-04-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lain.buzz/2020/07/28/system_linux%E4%B9%8B%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</loc>
-    
-    <lastmod>2023-04-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lain.buzz/2020/06/30/tools_PlantUML/</loc>
-    
-    <lastmod>2023-04-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lain.buzz/2020/07/05/tools_V2ray/</loc>
-    
-    <lastmod>2023-04-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.lain.buzz/about/index.html</loc>
     
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -112,7 +13,7 @@
   <url>
     <loc>https://blog.lain.buzz/favorites/index.html</loc>
     
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -121,7 +22,7 @@
   <url>
     <loc>https://blog.lain.buzz/gallery/index.html</loc>
     
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -130,6 +31,132 @@
   <url>
     <loc>https://blog.lain.buzz/tags/index.html</loc>
     
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tech/system_linux%E4%B9%8Bshell/</loc>
+    
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tech/system_linux%E4%B9%8B%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</loc>
+    
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tech/tools-install-nodejs/</loc>
+    
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tech/tools_PlantUML/</loc>
+    
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tech/tools_V2ray/</loc>
+    
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tech/code_%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
+    
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/Kingdom_of_Torna_Original_Soundtrack/</loc>
+    
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/diary/dairy_20230422/</loc>
+    
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tech/code_Python-for-MagicMethod/</loc>
+    
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tech/code_Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%A4%9A%E6%80%81/</loc>
+    
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tech/code_Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%9E%9A%E4%B8%BE%E7%B1%BB/</loc>
+    
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tech/code_Python%E8%A7%A3%E9%87%8A%E5%99%A8/</loc>
+    
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tech/code_SQL%E5%9F%BA%E7%A1%80-%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/</loc>
+    
+    <lastmod>2023-05-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tech/tools_jupyter/</loc>
+    
     <lastmod>2023-04-26</lastmod>
     
     <changefreq>monthly</changefreq>
@@ -137,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lain.buzz/2021/12/25/code_%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://blog.lain.buzz/tech/code_%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</loc>
     
     <lastmod>2023-04-21</lastmod>
     
@@ -146,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lain.buzz/2020/06/29/code_selenium/</loc>
+    <loc>https://blog.lain.buzz/tech/code_selenium/</loc>
     
     <lastmod>2023-04-21</lastmod>
     
@@ -155,7 +182,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lain.buzz/2020/05/27/code_Locust/</loc>
+    <loc>https://blog.lain.buzz/tech/code_Locust/</loc>
     
     <lastmod>2023-04-21</lastmod>
     
@@ -164,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lain.buzz/2021/12/24/code_PyPi/</loc>
+    <loc>https://blog.lain.buzz/tech/code_PyPi/</loc>
     
     <lastmod>2022-01-21</lastmod>
     
@@ -173,16 +200,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lain.buzz/2022/01/18/tools_jupyter/</loc>
-    
-    <lastmod>2022-01-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lain.buzz/2021/11/27/tools_vim01/</loc>
+    <loc>https://blog.lain.buzz/tech/tools_vim01/</loc>
     
     <lastmod>2022-01-08</lastmod>
     
@@ -191,7 +209,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lain.buzz/2021/10/29/blog_Hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</loc>
+    <loc>https://blog.lain.buzz/tech/blog_Hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</loc>
     
     <lastmod>2021-11-01</lastmod>
     
@@ -202,323 +220,372 @@
 
   <url>
     <loc>https://blog.lain.buzz/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>https://blog.lain.buzz/tags/Xenoblade-Chronicles-2/</loc>
+    <lastmod>2023-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tags/Xenoblade/</loc>
+    <lastmod>2023-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tags/OST/</loc>
+    <lastmod>2023-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tags/music/</loc>
+    <lastmod>2023-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tags/%E5%BC%82%E5%BA%A6%E4%B9%8B%E5%88%83/</loc>
+    <lastmod>2023-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tags/%E5%BC%82%E5%BA%A6%E7%A5%9E%E5%89%91/</loc>
+    <lastmod>2023-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tags/%E9%BB%84%E9%87%91%E4%B9%8B%E5%9B%BD/</loc>
+    <lastmod>2023-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.lain.buzz/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/diary/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/Hexo/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/Ocean/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/Theme/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/blog/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/Python/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/Locust/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/pip/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/code/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/python/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/Magic-Method/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/%E6%8F%8F%E8%BF%B0%E5%99%A8/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/%E5%A4%9A%E6%80%81/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/%E6%9E%9A%E4%B8%BE%E7%B1%BB/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/%E4%BF%AE%E9%A5%B0%E5%99%A8/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/SQL/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/%E6%B5%85%E6%9E%90/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/selenium/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/web-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/%E6%8E%A5%E5%8F%A3%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2023-04-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lain.buzz/tags/requests/</loc>
-    <lastmod>2023-04-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lain.buzz/tags/unittest/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/linux/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/shell/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/system/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tags/node/</loc>
+    <lastmod>2023-05-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.lain.buzz/tags/npm/</loc>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/%E6%B5%81%E7%A8%8B%E5%9B%BE/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/PlantUML/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/vscode/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/%E4%BB%A3%E7%90%86/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/V2ray/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/%E6%A2%AF%E5%AD%90/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/ide/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/jupyter/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/tools/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/vim/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/%E6%8F%92%E4%BB%B6/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.lain.buzz/tags/Vundle/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -527,7 +594,7 @@
   
   <url>
     <loc>https://blog.lain.buzz/categories/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/</loc>
-    <lastmod>2023-04-26</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
