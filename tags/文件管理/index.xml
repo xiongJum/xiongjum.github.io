@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>文件管理 on LongLit</title>
-    <link>https://example.org/tags/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</link>
+    <link>https://xiongjum.github.io/tags/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</link>
     <description>Recent content in 文件管理 on LongLit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>© LongLit</copyright>
     <lastBuildDate>Tue, 28 Jul 2020 15:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/tags/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://xiongjum.github.io/tags/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>文件管理</title>
-      <link>https://example.org/post/play/linux%E5%AD%A6%E4%B9%A0-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</link>
+      <link>https://xiongjum.github.io/post/play/linux%E5%AD%A6%E4%B9%A0-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</link>
       <pubDate>Tue, 28 Jul 2020 15:00:00 +0000</pubDate>
-      <guid>https://example.org/post/play/linux%E5%AD%A6%E4%B9%A0-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</guid>
+      <guid>https://xiongjum.github.io/post/play/linux%E5%AD%A6%E4%B9%A0-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</guid>
       <description>&lt;h3 id=&#34;帮助命令&#34;&gt;帮助命令&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# man&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;man find &lt;span style=&#34;color:#75715e&#34;&gt;# 查询命令的说明文档&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;man -f find &lt;span style=&#34;color:#75715e&#34;&gt;# 显示更多的信息&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;find &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;             - search &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; files in a directory hierarchy&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;man -k find &lt;span style=&#34;color:#75715e&#34;&gt;# 关键词查找&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
   </channel>

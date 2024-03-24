@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jupyter on LongLit</title>
-    <link>https://example.org/tags/jupyter/</link>
+    <link>https://xiongjum.github.io/tags/jupyter/</link>
     <description>Recent content in Jupyter on LongLit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>© LongLit</copyright>
     <lastBuildDate>Wed, 19 Jan 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://xiongjum.github.io/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JupyterLab</title>
-      <link>https://example.org/post/play/jupyter/</link>
+      <link>https://xiongjum.github.io/post/play/jupyter/</link>
       <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.org/post/play/jupyter/</guid>
+      <guid>https://xiongjum.github.io/post/play/jupyter/</guid>
       <description>&lt;p&gt;JupyterLab 是 Project Jupyter 的下一代基于 Web 的用户界面。&#xA;JupyterLab 使您能够以灵活、集成和可扩展的方式处理文档和活动，例如 Jupyter 笔记本、文本编辑器、终端和自定义组件.&lt;/p&gt;&#xA;&lt;p&gt;以下适用于 jupyter3.0&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>正则表达式 on LongLit</title>
-    <link>https://example.org/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+    <link>https://xiongjum.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
     <description>Recent content in 正则表达式 on LongLit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>© LongLit</copyright>
     <lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://xiongjum.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>正则表达式</title>
-      <link>https://example.org/post/code/python%E5%AD%A6%E4%B9%A0-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <link>https://xiongjum.github.io/post/code/python%E5%AD%A6%E4%B9%A0-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
       <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.org/post/code/python%E5%AD%A6%E4%B9%A0-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <guid>https://xiongjum.github.io/post/code/python%E5%AD%A6%E4%B9%A0-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
       <description>初识正则表达式 使用python的内置函数 # 设置一个常量 name = &amp;#39;XiongJum|酒明|JumXiong|初学者&amp;#39; # 判断是否有字符串XiongJum print(&amp;#39;是否含有XiongJum这个字符串：{}&amp;#39;.format(name.index(&amp;#39;XiongJum&amp;#39;) &amp;lt; 1)) print(&amp;#39;是否含有XiongJum这个字符串：{}&amp;#39;.format(&amp;#39;XiongJum&amp;#39; in name)) 是否含有XiongJum这个字符串：True 是否含有XiongJum这个字符串：True 初识正则表达式re Python内置函数能简单解决的事情，就没有必要使用正则表达式，如下例 import re findall = re.findall(&amp;#39;Jum&amp;#39;, name) print(findall) if len(findall) &amp;gt; 0: print(&amp;#39;name含有Jum这个字符串&amp;#39;) else: print(&amp;#39;name不含有Jum这个字符串&amp;#39;) [&#39;Jum&#39;, &#39;Jum&#39;] name含有Jum这个字符串 # 选择 name 里面的所有小写英文字母 re_findall = re.findall(&amp;#39;[a-z]&amp;#39;, name) print(re_findall) [&#39;i&#39;, &#39;o&#39;, &#39;n&#39;, &#39;g&#39;, &#39;u&#39;, &#39;m&#39;, &#39;u&#39;, &#39;m&#39;, &#39;i&#39;, &#39;o&#39;, &#39;n&#39;, &#39;g&#39;] 字符集 字符集是由一对方括号&amp;quot;[]&amp;ldquo;括起来的字符集合，使用字符集合可以匹配多个字符中的一个 如 C[ET]O,匹配到为CEO或CTO [0-9a-fA-F]，匹配单个的十六进制数字 字符和范围定义的先后循序对匹配的结果是没有任何影响的 a = &amp;#39;uav,ubv,ucv,ucv,uov,uzb&amp;#39; # 取&amp;#39;u&amp;#39; 和&amp;#39;v&amp;#39;中间为‘a’或‘b’的字符 findbat = re.</description>
     </item>
   </channel>

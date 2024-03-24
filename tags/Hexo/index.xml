@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hexo on LongLit</title>
-    <link>https://example.org/tags/hexo/</link>
+    <link>https://xiongjum.github.io/tags/hexo/</link>
     <description>Recent content in Hexo on LongLit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>© LongLit</copyright>
     <lastBuildDate>Sat, 30 Oct 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://xiongjum.github.io/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ocean 主題配置</title>
-      <link>https://example.org/post/play/hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</link>
+      <link>https://xiongjum.github.io/post/play/hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Sat, 30 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>https://example.org/post/play/hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://xiongjum.github.io/post/play/hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</guid>
       <description>&lt;p&gt;Ocean 是基于 Hexo 默认主题 landscape 的功能，设计的一款支持移动设备的主题，并且集成了 Gitalk 与 Valine 评论功能。&lt;/p&gt;&#xA;&lt;p&gt;如果你喜欢 Ocean 可以从 &lt;a href=&#34;https://github.com/zhwangart/hexo-theme-ocean&#34;&gt;GitHub&lt;/a&gt; 下载，主题默认使用 Logo 是 Hexo 的 Logo，更换 Logo 路径在 ocean/source/images/hexo.svg ，注意它还有一个反色版 hexo-inverted.svg ，如果你更改了文件名，那么还需要在 ocean/_config.yml 做对应的修改。&lt;/p&gt;&#xA;&lt;p&gt;详细文档见 &lt;a href=&#34;https://zhwangart.com/2018/11/30/Ocean/&#34;&gt;Ocean 文档&lt;/a&gt;，以下是个人的需要的配置&lt;/p&gt;</description>
     </item>
   </channel>

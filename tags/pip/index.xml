@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pip on LongLit</title>
-    <link>https://example.org/tags/pip/</link>
+    <link>https://xiongjum.github.io/tags/pip/</link>
     <description>Recent content in Pip on LongLit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>© LongLit</copyright>
     <lastBuildDate>Sat, 25 Dec 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/tags/pip/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://xiongjum.github.io/tags/pip/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PyPi</title>
-      <link>https://example.org/post/code/pypi/</link>
+      <link>https://xiongjum.github.io/post/code/pypi/</link>
       <pubDate>Sat, 25 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://example.org/post/code/pypi/</guid>
+      <guid>https://xiongjum.github.io/post/code/pypi/</guid>
       <description>&lt;p&gt;由于某些发行版（如 pacman）会去除 pip 包管理器，则需要以下方法进行 pip的安装。&#xA;国内的下载速度过于缓慢，所以需要将下载源更换为国内源，来提升pip的下载速度，这里首先推荐豆瓣源。&lt;/p&gt;&#xA;&lt;p&gt;安装详情请见 &lt;a href=&#34;https://pip.pypa.io/en/stable/installation/&#34;&gt;pip 文档&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
