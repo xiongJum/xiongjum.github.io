@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>多态 - LongLit</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Ⅰ，理解
+
+指对不同类型的变量进行操作，根据对象（或类）类型的不同而表现出不同的行为
+
+Ⅱ，常用的多态
+&gt;&gt;&gt; print(1&#43;2)
+3
+&gt;&gt;&gt; print(&#39;1&#39;&#43;&#39;2&#39;)
+&#39;12&#39;
+
+不同的对象（或类）调用‘’&#43;”，“&#43;”会做出不同的响应
+" />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="多态" />
+<meta property="og:description" content="Ⅰ，理解
+
+指对不同类型的变量进行操作，根据对象（或类）类型的不同而表现出不同的行为
+
+Ⅱ，常用的多态
+&gt;&gt;&gt; print(1&#43;2)
+3
+&gt;&gt;&gt; print(&#39;1&#39;&#43;&#39;2&#39;)
+&#39;12&#39;
+
+不同的对象（或类）调用‘’&#43;”，“&#43;”会做出不同的响应
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.org/post/code/python%E5%AD%A6%E4%B9%A0-%E5%A4%9A%E6%80%81/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-07-10T16:00:00+00:00" />
+<meta property="article:modified_time" content="2020-07-10T16:00:00+00:00" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="多态"/>
+<meta name="twitter:description" content="Ⅰ，理解
+
+指对不同类型的变量进行操作，根据对象（或类）类型的不同而表现出不同的行为
+
+Ⅱ，常用的多态
+&gt;&gt;&gt; print(1&#43;2)
+3
+&gt;&gt;&gt; print(&#39;1&#39;&#43;&#39;2&#39;)
+&#39;12&#39;
+
+不同的对象（或类）调用‘’&#43;”，“&#43;”会做出不同的响应
+"/>
+<script src="https://example.org/js/feather.min.js"></script>
+	
+	
+        <link href="https://example.org/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://example.org/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://example.org/">LongLit</a>
+	</div>
+	<div>
+		<a href="/categories/编程">编程</a>
+		<a href="/categories/玩机">玩机</a>
+		<a href="/categories/笔记">笔记</a>
+	</div>
+	<nav>
+		
+		<a href="/post">文章</a>
+		
+		<a href="/tags">标签</a>
+		
+		<a href="/mark">书签</a>
+		
+		<a href="/about">关于</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">多态</h1>
+			<div class="meta">Posted on Jul 10, 2020</div>
+		</div>
+		
+
+		<section class="body">
+			<h5 id="理解">Ⅰ，理解</h5>
+<ul>
+<li>指对不同类型的变量进行操作，根据对象（或类）类型的不同而表现出不同的行为</li>
+</ul>
+<h5 id="常用的多态">Ⅱ，常用的多态</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(<span style="color:#e6db74">&#39;1&#39;</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#39;2&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;12&#39;</span>
+</span></span></code></pre></div><ul>
+<li>不同的对象（或类）调用‘’+”，“+”会做出不同的响应</li>
+</ul>
+<h5 id="对象所属的类之间有继承关系">Ⅲ，对象所属的类之间有继承关系</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span>(object):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, name):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> name
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">printUser</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;你好！&#39;</span> <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>name)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserVip</span>(User):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">printUser</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;你好！尊敬的会员用户&#39;</span> <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>name)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserGeneral</span>(User):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">printUser</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;你好！尊敬的用户&#39;</span> <span style="color:#f92672">+</span> self<span style="color:#f92672">.</span>name)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">printUserInfo</span>(user):
+</span></span><span style="display:flex;"><span>    user<span style="color:#f92672">.</span>printUser()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 实例化User类</span>
+</span></span><span style="display:flex;"><span>    user <span style="color:#f92672">=</span> User(<span style="color:#e6db74">&#39;121&#39;</span>)
+</span></span><span style="display:flex;"><span>    printUserInfo(user)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 实例化Vip类</span>
+</span></span><span style="display:flex;"><span>    userVip <span style="color:#f92672">=</span> UserVip(<span style="color:#e6db74">&#39;xiongJum&#39;</span>)
+</span></span><span style="display:flex;"><span>    printUserInfo(userVip)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 实例化General类</span>
+</span></span><span style="display:flex;"><span>    userGeneral <span style="color:#f92672">=</span> UserGeneral(<span style="color:#e6db74">&#39;酒明&#39;</span>)
+</span></span><span style="display:flex;"><span>    printUserInfo(userGeneral)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>你好<span style="color:#960050;background-color:#1e0010">！</span><span style="color:#ae81ff">121</span>
+</span></span><span style="display:flex;"><span>你好<span style="color:#960050;background-color:#1e0010">！</span>尊敬的会员用户xiongJum
+</span></span><span style="display:flex;"><span>你好<span style="color:#960050;background-color:#1e0010">！</span>尊敬的用户酒明
+</span></span></code></pre></div><h5 id="对象所属的类之间没有继承关系">Ⅳ，对象所属的类之间没有继承关系</h5>
+<ul>
+<li>调用同一个函数，传入不同的参数，以达到不同的功能</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Duck</span>(object):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fly</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;鸭子沿着地面飞起来了&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Swan</span>(object):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fly</span>(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;天鹅飞越了喜马拉雅山的最高峰&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Plane</span>(object):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fly</span>(slef):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#39;space X 回收成功&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fly</span>(vehicle):
+</span></span><span style="display:flex;"><span>    vehicle<span style="color:#f92672">.</span>fly()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>duck <span style="color:#f92672">=</span> Duck()
+</span></span><span style="display:flex;"><span>fly(duck)
+</span></span><span style="display:flex;"><span>swan <span style="color:#f92672">=</span> Swan()
+</span></span><span style="display:flex;"><span>fly(swan)
+</span></span><span style="display:flex;"><span>plane <span style="color:#f92672">=</span> Plane()
+</span></span><span style="display:flex;"><span>fly(plane)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>鸭子沿着地面飞起来了
+</span></span><span style="display:flex;"><span>天鹅飞越了喜马拉雅山的最高峰
+</span></span><span style="display:flex;"><span>space X 回收成功
+</span></span></code></pre></div>
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/python3">Python3</a></li>
+					
+					<li><a href="/tags/%E5%A4%9A%E6%80%81">多态</a></li>
+					
+					<li><a href="/tags/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80">编程基础</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/athul/archie" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © LongLit |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

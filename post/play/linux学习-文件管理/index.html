@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>文件管理 - LongLit</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="帮助命令
+# man
+man find # 查询命令的说明文档
+man -f find # 显示更多的信息
+&gt;&gt;&gt; 
+find (1)             - search for files in a directory hierarchy
+man -k find # 关键词查找
+" />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="文件管理" />
+<meta property="og:description" content="帮助命令
+# man
+man find # 查询命令的说明文档
+man -f find # 显示更多的信息
+&gt;&gt;&gt; 
+find (1)             - search for files in a directory hierarchy
+man -k find # 关键词查找
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.org/post/play/linux%E5%AD%A6%E4%B9%A0-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-07-28T15:00:00+00:00" />
+<meta property="article:modified_time" content="2020-07-28T15:00:00+00:00" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="文件管理"/>
+<meta name="twitter:description" content="帮助命令
+# man
+man find # 查询命令的说明文档
+man -f find # 显示更多的信息
+&gt;&gt;&gt; 
+find (1)             - search for files in a directory hierarchy
+man -k find # 关键词查找
+"/>
+<script src="https://example.org/js/feather.min.js"></script>
+	
+	
+        <link href="https://example.org/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://example.org/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://example.org/">LongLit</a>
+	</div>
+	<div>
+		<a href="/categories/编程">编程</a>
+		<a href="/categories/玩机">玩机</a>
+		<a href="/categories/笔记">笔记</a>
+	</div>
+	<nav>
+		
+		<a href="/post">文章</a>
+		
+		<a href="/tags">标签</a>
+		
+		<a href="/mark">书签</a>
+		
+		<a href="/about">关于</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">文件管理</h1>
+			<div class="meta">Posted on Jul 28, 2020</div>
+		</div>
+		
+
+		<section class="body">
+			<h3 id="帮助命令">帮助命令</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># man</span>
+</span></span><span style="display:flex;"><span>man find <span style="color:#75715e"># 查询命令的说明文档</span>
+</span></span><span style="display:flex;"><span>man -f find <span style="color:#75715e"># 显示更多的信息</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; 
+</span></span><span style="display:flex;"><span>find <span style="color:#f92672">(</span>1<span style="color:#f92672">)</span>             - search <span style="color:#66d9ef">for</span> files in a directory hierarchy
+</span></span><span style="display:flex;"><span>man -k find <span style="color:#75715e"># 关键词查找</span>
+</span></span></code></pre></div><h5 id="查找程序的安装路径">查找程序的安装路径</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># which</span>
+</span></span><span style="display:flex;"><span>which mysql
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt;
+</span></span><span style="display:flex;"><span>/usr/bin/mysql
+</span></span></code></pre></div><h5 id="查看程序的搜索路径">查看程序的搜索路径</h5>
+<ul>
+<li>当系统中安装了同一软件的多个版本时，不确定使用的是哪个版本时，这个命令就能派上用场</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># whereis</span>
+</span></span><span style="display:flex;"><span>$ whereis mysql
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt;
+</span></span><span style="display:flex;"><span>mysql: /usr/bin/mysql /usr/lib64/mysql /usr/share/mysql /usr/share/man/man1/mysql.1.gz
+</span></span></code></pre></div><h3 id="文件管理">文件管理</h3>
+<h5 id="创建和删除文件">创建和删除文件</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 创建文件</span>
+</span></span><span style="display:flex;"><span>mkdir <span style="color:#75715e"># 创建文件夹文件</span>
+</span></span><span style="display:flex;"><span>touch <span style="color:#75715e"># 创建普通文件</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 删除 rm</span>
+</span></span><span style="display:flex;"><span>rm <span style="color:#75715e">#删除普通文件和空目录文件</span>
+</span></span><span style="display:flex;"><span>rm -rf file <span style="color:#75715e"># 删除非空目录文件</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 复制 cp</span>
+</span></span><span style="display:flex;"><span>cp file ./path/ <span style="color:#75715e"># 复制普通文件</span>
+</span></span><span style="display:flex;"><span>cp -r file ./path <span style="color:#75715e"># 复制目录文件</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 删除和移动文件</span>
+</span></span><span style="display:flex;"><span>mv file <span style="color:#75715e"># 删除文件</span>
+</span></span><span style="display:flex;"><span>mv name newname <span style="color:#75715e"># 文件重命名</span>
+</span></span></code></pre></div><h5 id="查看当前目录文件下的文件个数">查看当前目录文件下的文件个数</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>find ./ | wc -l
+</span></span></code></pre></div><h5 id="目录切换">目录切换</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># cd</span>
+</span></span><span style="display:flex;"><span>pwd <span style="color:#75715e"># 显示当前路径</span>
+</span></span><span style="display:flex;"><span>cd <span style="color:#75715e"># 切换到home目录 或者cd ~</span>
+</span></span><span style="display:flex;"><span>cd - <span style="color:#75715e"># 切换到上一个工作目录</span>
+</span></span><span style="display:flex;"><span>cd path <span style="color:#75715e"># 切换到指定目录</span>
+</span></span></code></pre></div><h5 id="列出文件">列出文件</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># ls</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果不写路径 则表示查看当前目录</span>
+</span></span><span style="display:flex;"><span>ls path <span style="color:#75715e"># 查看path路径下的文件</span>
+</span></span><span style="display:flex;"><span>ls | cat -n path <span style="color:#75715e"># 在每项文件前面增加一个编号</span>
+</span></span><span style="display:flex;"><span>ls -a path <span style="color:#75715e"># 查看隐藏的文件</span>
+</span></span></code></pre></div><h5 id="查找文件">查找文件</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># find 实时查找</span>
+</span></span><span style="display:flex;"><span>find / -name <span style="color:#e6db74">&#39;*.o&#39;</span> <span style="color:#75715e"># 查找所有以&#34;.o&#34;结尾的文件</span>
+</span></span><span style="display:flex;"><span>find ./ -name <span style="color:#e6db74">&#34;core*&#34;</span> | xargs file <span style="color:#75715e"># 查找以&#34;core&#34;开头文件，并标注文件类型</span>
+</span></span><span style="display:flex;"><span>find ./ -name <span style="color:#e6db74">&#34;*.o&#34;</span> -exec rm <span style="color:#f92672">{}</span> <span style="color:#ae81ff">\;</span> <span style="color:#75715e"># 递归当前目录及子目录并删除所有&#34;.o&#34;文件</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># locate 需要定时更新数据库</span>
+</span></span><span style="display:flex;"><span>locate add <span style="color:#75715e"># 寻找含有add文件的路径</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># centos安装locate</span>
+</span></span><span style="display:flex;"><span>sudo yum -y install mlocate  <span style="color:#75715e"># 安装mlocate</span>
+</span></span><span style="display:flex;"><span>sudo updatedb <span style="color:#75715e"># 初始化</span>
+</span></span></code></pre></div><h5 id="查看文件内容">查看文件内容</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># cat</span>
+</span></span><span style="display:flex;"><span>cat file <span style="color:#75715e"># 显示文件内容，显示每行的行号 cat -n file</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># head</span>
+</span></span><span style="display:flex;"><span>head -2 /path/** <span style="color:#75715e"># 显示指定路径下所有文件的前两行，若不指定路径则为当前工作路径</span>
+</span></span><span style="display:flex;"><span>head -2 /path/file <span style="color:#75715e"># 显示指定文件的前两行内容</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># tail</span>
+</span></span><span style="display:flex;"><span>tail -2 /path/file  <span style="color:#75715e"># 显示文件倒数两行的内容</span>
+</span></span><span style="display:flex;"><span>tail -f file <span style="color:#75715e"># 动态显示当前文件内容</span>
+</span></span><span style="display:flex;"><span>tail -fn <span style="color:#ae81ff">200</span> file <span style="color:#75715e"># 动态显示最近200行的文件内容</span>
+</span></span></code></pre></div><h5 id="查找文件内容">查找文件内容</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># diff</span>
+</span></span><span style="display:flex;"><span>diff file1 file2 <span style="color:#75715e"># 比较两个文件的差别</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># egrep</span>
+</span></span><span style="display:flex;"><span>egrep <span style="color:#e6db74">&#39;xion&#39;</span> file <span style="color:#75715e"># 在file文件中查找&#34;xion&#34;</span>
+</span></span></code></pre></div><h5 id="文件的权限修改">文件的权限修改</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># chown 改变文件的拥有者</span>
+</span></span><span style="display:flex;"><span>chown -R mysql@group /path <span style="color:#75715e"># 将path文件修改为group组下的mysql用户</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># chmod 改变文件的读、写、执行权限</span>
+</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">777</span> file
+</span></span><span style="display:flex;"><span>chmod a+x file <span style="color:#75715e"># 增加文件的可执行权限</span>
+</span></span></code></pre></div><h5 id="增加文件别名">增加文件别名</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 软链接</span>
+</span></span><span style="display:flex;"><span>ln -s cc ccTo <span style="color:#75715e"># 删除源文件，另一个将无法使用。cc为源文件</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 硬链接</span>
+</span></span><span style="display:flex;"><span>ln cc ccAotu <span style="color:#75715e"># 删除其中一个，另一个文件不受影响</span>
+</span></span></code></pre></div><h5 id="设置命令别名">设置命令别名</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># alias</span>
+</span></span><span style="display:flex;"><span>alias lsl<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ls -lrt&#39;</span>
+</span></span><span style="display:flex;"><span>alias lm<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ls -al | more&#39;</span>
+</span></span></code></pre></div>
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/linux">Linux</a></li>
+					
+					<li><a href="/tags/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86">文件管理</a></li>
+					
+					<li><a href="/tags/%E7%B3%BB%E7%BB%9F">系统</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/athul/archie" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © LongLit |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

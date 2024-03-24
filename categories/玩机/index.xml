@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>玩机 on LongLit</title>
+    <link>https://example.org/categories/%E7%8E%A9%E6%9C%BA/</link>
+    <description>Recent content in 玩机 on LongLit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>© LongLit</copyright>
+    <lastBuildDate>Wed, 26 Apr 2023 21:16:04 +0000</lastBuildDate>
+    <atom:link href="https://example.org/categories/%E7%8E%A9%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安装 Node.js</title>
+      <link>https://example.org/post/play/%E5%AE%89%E8%A3%85nodejs/</link>
+      <pubDate>Wed, 26 Apr 2023 21:16:04 +0000</pubDate>
+      <guid>https://example.org/post/play/%E5%AE%89%E8%A3%85nodejs/</guid>
+      <description>安装 Ubuntu 下安装 nodejs 下载并执行 NodeSource 安装脚本&#xA;sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash 安装&#xA;sudo apt install nodejs Arch 下安装 nodejs 安装长期支持版&#xA;sudo pacman -S nodejs-lts-gallium 检验是否安装成功 打印他们的版本号, 验证是否安装正确&#xA;npm --version node --version 说明 Node.js® 是一个基于 Chrome V8 引擎 的 JavaScript 运行时环境。&#xA;Ubuntu 软件软件源中安装 Node.js 和 npm，但是此方法安装的 node.js 版本过低, 不建进行包管理器安装&#xA;参考 zzz.buzz</description>
+    </item>
+    <item>
+      <title>JupyterLab</title>
+      <link>https://example.org/post/play/jupyter/</link>
+      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.org/post/play/jupyter/</guid>
+      <description>&lt;p&gt;JupyterLab 是 Project Jupyter 的下一代基于 Web 的用户界面。&#xA;JupyterLab 使您能够以灵活、集成和可扩展的方式处理文档和活动，例如 Jupyter 笔记本、文本编辑器、终端和自定义组件.&lt;/p&gt;&#xA;&lt;p&gt;以下适用于 jupyter3.0&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ocean 主題配置</title>
+      <link>https://example.org/post/play/hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sat, 30 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://example.org/post/play/hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;Ocean 是基于 Hexo 默认主题 landscape 的功能，设计的一款支持移动设备的主题，并且集成了 Gitalk 与 Valine 评论功能。&lt;/p&gt;&#xA;&lt;p&gt;如果你喜欢 Ocean 可以从 &lt;a href=&#34;https://github.com/zhwangart/hexo-theme-ocean&#34;&gt;GitHub&lt;/a&gt; 下载，主题默认使用 Logo 是 Hexo 的 Logo，更换 Logo 路径在 ocean/source/images/hexo.svg ，注意它还有一个反色版 hexo-inverted.svg ，如果你更改了文件名，那么还需要在 ocean/_config.yml 做对应的修改。&lt;/p&gt;&#xA;&lt;p&gt;详细文档见 &lt;a href=&#34;https://zhwangart.com/2018/11/30/Ocean/&#34;&gt;Ocean 文档&lt;/a&gt;，以下是个人的需要的配置&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>文件管理</title>
+      <link>https://example.org/post/play/linux%E5%AD%A6%E4%B9%A0-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Tue, 28 Jul 2020 15:00:00 +0000</pubDate>
+      <guid>https://example.org/post/play/linux%E5%AD%A6%E4%B9%A0-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</guid>
+      <description>&lt;h3 id=&#34;帮助命令&#34;&gt;帮助命令&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# man&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;man find &lt;span style=&#34;color:#75715e&#34;&gt;# 查询命令的说明文档&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;man -f find &lt;span style=&#34;color:#75715e&#34;&gt;# 显示更多的信息&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;find &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;             - search &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; files in a directory hierarchy&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;man -k find &lt;span style=&#34;color:#75715e&#34;&gt;# 关键词查找&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>V2ray搭建教程</title>
+      <link>https://example.org/post/play/v2ray/</link>
+      <pubDate>Sun, 05 Jul 2020 09:00:00 +0000</pubDate>
+      <guid>https://example.org/post/play/v2ray/</guid>
+      <description>&lt;p&gt;V2Ray 是一个与 Shadowsocks 类似的代理软件，可以用来科学上网等。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SHELL(其一)</title>
+      <link>https://example.org/post/play/linux%E5%AD%A6%E4%B9%A0-shell/</link>
+      <pubDate>Sun, 28 Jun 2020 09:00:00 +0000</pubDate>
+      <guid>https://example.org/post/play/linux%E5%AD%A6%E4%B9%A0-shell/</guid>
+      <description>&lt;p&gt;linux&lt;/p&gt;&#xA;&lt;h5 id=&#34;1-bash&#34;&gt;(1). bash&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;参考/引用：&lt;a href=&#34;http://cn.linux.vbird.org/linux_basic/0320bash_1.php&#34;&gt;鸟哥的Linux私房菜-第十一章&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;命令编修能力&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看不同用户使用的shell,其记录在文件/etc/passwd中&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat /ect/passwd&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看bash的历史命令,其记录在文件~/.bash_history中&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 其只记录前一次登录系统时使用的命令，当前登录运行的命令被记录在缓存中&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat ~/.bash_history&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

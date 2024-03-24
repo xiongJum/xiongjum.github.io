@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>SQL 基础其一 - LongLit</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="查询
+基本查询语句
+-- select (列名1, 列名2 或 *) from 表名 where 条件
+select order_no, trip_no from trip_order where order_no &gt; &#39;20191009012100000013&#39;;
+" />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="SQL 基础其一" />
+<meta property="og:description" content="查询
+基本查询语句
+-- select (列名1, 列名2 或 *) from 表名 where 条件
+select order_no, trip_no from trip_order where order_no &gt; &#39;20191009012100000013&#39;;
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.org/post/code/sql-first/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-07-22T15:24:00+00:00" />
+<meta property="article:modified_time" content="2020-07-22T15:24:00+00:00" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="SQL 基础其一"/>
+<meta name="twitter:description" content="查询
+基本查询语句
+-- select (列名1, 列名2 或 *) from 表名 where 条件
+select order_no, trip_no from trip_order where order_no &gt; &#39;20191009012100000013&#39;;
+"/>
+<script src="https://example.org/js/feather.min.js"></script>
+	
+	
+        <link href="https://example.org/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://example.org/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://example.org/">LongLit</a>
+	</div>
+	<div>
+		<a href="/categories/编程">编程</a>
+		<a href="/categories/玩机">玩机</a>
+		<a href="/categories/笔记">笔记</a>
+	</div>
+	<nav>
+		
+		<a href="/post">文章</a>
+		
+		<a href="/tags">标签</a>
+		
+		<a href="/mark">书签</a>
+		
+		<a href="/about">关于</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">SQL 基础其一</h1>
+			<div class="meta">Posted on Jul 22, 2020</div>
+		</div>
+		
+
+		<section class="body">
+			<h3 id="查询">查询</h3>
+<h5 id="基本查询语句">基本查询语句</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- select (列名1, 列名2 或 *) from 表名 where 条件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> order_no, trip_no <span style="color:#66d9ef">from</span> trip_order <span style="color:#66d9ef">where</span> order_no <span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;20191009012100000013&#39;</span>;
+</span></span></code></pre></div><ul>
+<li>逻辑运算符 如 and、in 等</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- select 列名1, 列名2 from 表名 where 条件 (and 或 or 或 in) 条件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> order_no, trip_no, trade_amount <span style="color:#66d9ef">from</span> trip_order <span style="color:#66d9ef">where</span> order_no <span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;20191009012100000013&#39;</span> <span style="color:#66d9ef">and</span> trade_amount <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">select</span> order_no, trip_no, trade_amount, <span style="color:#66d9ef">state</span> <span style="color:#66d9ef">from</span> trip_order <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">state</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">or</span> trade_amount <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">select</span> order_no, trip_no, trade_amount, <span style="color:#66d9ef">state</span> <span style="color:#66d9ef">from</span> trip_order <span style="color:#66d9ef">where</span> order_no <span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;2019100901&#39;</span> <span style="color:#66d9ef">and</span> (<span style="color:#66d9ef">state</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">or</span> trade_amount <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- in
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> order_no, trip_no, trade_amount, <span style="color:#66d9ef">state</span> <span style="color:#66d9ef">from</span> trip_order <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">state</span> <span style="color:#66d9ef">in</span> (<span style="color:#ae81ff">2</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">select</span> order_no, trip_no, trade_amount, <span style="color:#66d9ef">state</span> <span style="color:#66d9ef">from</span> trip_order <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">state</span> <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">in</span> (<span style="color:#ae81ff">2</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>); <span style="color:#75715e">-- 查找不包含 2,3的数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- like
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> order_no, trip_no, trade_amount, <span style="color:#66d9ef">state</span> <span style="color:#66d9ef">from</span> trip_order <span style="color:#66d9ef">where</span> order_no <span style="color:#66d9ef">like</span> <span style="color:#e6db74">&#39;201906%&#39;</span> <span style="color:#75715e">-- 匹配以201906开头的数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> order_no, trip_no, trade_amount, <span style="color:#66d9ef">state</span> <span style="color:#66d9ef">from</span> trip_order <span style="color:#66d9ef">where</span> order_no <span style="color:#66d9ef">like</span> <span style="color:#e6db74">&#39;%201906%&#39;</span> <span style="color:#75715e">-- 匹配中间包含201906的数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> order_no, trip_no, trade_amount, <span style="color:#66d9ef">state</span> <span style="color:#66d9ef">from</span> trip_order <span style="color:#66d9ef">where</span> order_no <span style="color:#66d9ef">like</span> <span style="color:#e6db74">&#39;%201906&#39;</span> <span style="color:#75715e">-- 匹配以201906结尾的数据
+</span></span></span></code></pre></div><ul>
+<li>基本分组语句</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- select 列名1 或 from 表名 group by 列名1;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">state</span> <span style="color:#66d9ef">from</span> trip_order <span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> <span style="color:#66d9ef">state</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 就结果而言和去重所查询的结果一致 distinct
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">distinct</span> <span style="color:#66d9ef">state</span> <span style="color:#66d9ef">from</span> trip_order;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 统计每个分组的数据数量, count()
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">state</span>, <span style="color:#66d9ef">count</span>(<span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">from</span> trip_order <span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> <span style="color:#66d9ef">state</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 查看数量为某个区间的分组, having
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">state</span>, <span style="color:#66d9ef">count</span>(<span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">from</span> trip_order <span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> <span style="color:#66d9ef">state</span> <span style="color:#66d9ef">having</span> <span style="color:#66d9ef">count</span>(<span style="color:#ae81ff">1</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">200</span>;
+</span></span></code></pre></div><h5 id="子查询">子查询</h5>
+<ul>
+<li>嵌套在另一个查询中的查询
+<ul>
+<li>放在括号内的查询成为子查询，也被称为内部查询或内部选择</li>
+<li>包含子查询的查询称为外部查询或外部选择</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- select 列名3 from (select 列名2, 列名3 from 表名 where 条件) 别名 where 条件;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- 一般子查询是跨表查询 本次示例展示的是相同表之间使用子查询
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">state</span>, out_order_no <span style="color:#66d9ef">from</span> (<span style="color:#66d9ef">select</span> order_no, <span style="color:#66d9ef">state</span>, out_order_no <span style="color:#66d9ef">from</span> trip_order <span style="color:#66d9ef">where</span> order_no <span style="color:#f92672">&gt;</span> <span style="color:#e6db74">&#39;20191009012100000013&#39;</span>) t <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">state</span> <span style="color:#66d9ef">in</span> (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">state</span>, trip_no <span style="color:#66d9ef">from</span> trip_order <span style="color:#66d9ef">state</span> <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">in</span> (<span style="color:#66d9ef">select</span> <span style="color:#66d9ef">state</span> <span style="color:#66d9ef">from</span> trip_order <span style="color:#66d9ef">where</span> <span style="color:#66d9ef">state</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>);
+</span></span></code></pre></div><h5 id="表连接">表连接</h5>
+<ul>
+<li>内连接
+<ul>
+<li>关键词 inner join &hellip; on</li>
+<li>只会关联并展示两张表中都存在的数据</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> tr.id, tr.merchant_no, trq.pos_transaction_bill_no 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> ticket_user_driving_record <span style="color:#66d9ef">as</span> tr
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">inner</span> <span style="color:#66d9ef">join</span> ticket_user_driving_record_detail_qrcode <span style="color:#66d9ef">as</span> trq 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">on</span> tr.id <span style="color:#f92672">=</span> trq.record_id;
+</span></span></code></pre></div><ul>
+<li>左连接
+<ul>
+<li>关键词 left join &hellip; on</li>
+<li>以主表为主，展示所有主表的行数据，若关联的表没有匹配则展示null</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> tr.id, tr.merchant_no, trq.pos_transaction_bill_no 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> ticket_user_driving_record <span style="color:#66d9ef">as</span> tr
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">left</span> <span style="color:#66d9ef">join</span> ticket_user_driving_record_detail_qrcode <span style="color:#66d9ef">as</span> trq 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">on</span> tr.id <span style="color:#f92672">=</span> trq.record_id;
+</span></span></code></pre></div><ul>
+<li>右连接
+<ul>
+<li>关键词 right join &hellip; on</li>
+<li>和左连接相反，以关联的表为主，会展示所有关联表中的行数据</li>
+</ul>
+</li>
+<li>全外连接
+<ul>
+<li>关键词 full join &hellip;on</li>
+<li>展示全部的行数</li>
+</ul>
+</li>
+<li>多表连接
+<ul>
+<li>超过两张表的表连接</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> tr.id, tr.merchant_no, trq.pos_transaction_bill_no 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> ticket_user_driving_record <span style="color:#66d9ef">as</span> tr
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">inner</span> <span style="color:#66d9ef">join</span> ticket_user_driving_record_detail_qrcode <span style="color:#66d9ef">as</span> trq 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">on</span> tr.id <span style="color:#f92672">=</span> trq.record_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">inner</span> <span style="color:#66d9ef">join</span> ticket_user_driving_original_record_qrcode <span style="color:#66d9ef">as</span> toq
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">on</span> tr.id <span style="color:#f92672">=</span> toq.record_id
+</span></span></code></pre></div><h3 id="插入数据">插入数据</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- insert into 表名 (列名1, 列名2) values (插入的数据1, 插入的数据2)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">insert</span> <span style="color:#66d9ef">into</span> trip_order (<span style="color:#66d9ef">state</span> trip_no) <span style="color:#66d9ef">values</span> (<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;20191009012100000013&#39;</span>);
+</span></span></code></pre></div><h3 id="更新数据">更新数据</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- update 表名 set 更新的数据 where 条件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">update</span> trip_order <span style="color:#66d9ef">set</span> <span style="color:#66d9ef">state</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">where</span> trip_no <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;20191009012100000013&#39;</span>;
+</span></span></code></pre></div><h3 id="删除数据">删除数据</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- delete from 表名 where 条件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">delete</span> <span style="color:#66d9ef">from</span> trip_order <span style="color:#66d9ef">where</span> trip_no <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;20191009012100000013&#39;</span>;
+</span></span></code></pre></div>
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/sql">SQL</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/athul/archie" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © LongLit |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

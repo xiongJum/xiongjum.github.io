@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on LongLit</title>
+    <link>https://example.org/post/</link>
+    <description>Recent content in Posts on LongLit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>© LongLit</copyright>
+    <lastBuildDate>Wed, 26 Apr 2023 21:16:04 +0000</lastBuildDate>
+    <atom:link href="https://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安装 Node.js</title>
+      <link>https://example.org/post/play/%E5%AE%89%E8%A3%85nodejs/</link>
+      <pubDate>Wed, 26 Apr 2023 21:16:04 +0000</pubDate>
+      <guid>https://example.org/post/play/%E5%AE%89%E8%A3%85nodejs/</guid>
+      <description>安装 Ubuntu 下安装 nodejs 下载并执行 NodeSource 安装脚本&#xA;sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash 安装&#xA;sudo apt install nodejs Arch 下安装 nodejs 安装长期支持版&#xA;sudo pacman -S nodejs-lts-gallium 检验是否安装成功 打印他们的版本号, 验证是否安装正确&#xA;npm --version node --version 说明 Node.js® 是一个基于 Chrome V8 引擎 的 JavaScript 运行时环境。&#xA;Ubuntu 软件软件源中安装 Node.js 和 npm，但是此方法安装的 node.js 版本过低, 不建进行包管理器安装&#xA;参考 zzz.buzz</description>
+    </item>
+    <item>
+      <title>记录</title>
+      <link>https://example.org/post/note/20230422/</link>
+      <pubDate>Sat, 22 Apr 2023 21:00:50 +0000</pubDate>
+      <guid>https://example.org/post/note/20230422/</guid>
+      <description>伤心桥下春波绿，曾是惊鸿照影来。 &amp;mdash; 陆游&amp;lt;重过沉圆作&amp;gt;</description>
+    </item>
+    <item>
+      <title>JupyterLab</title>
+      <link>https://example.org/post/play/jupyter/</link>
+      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.org/post/play/jupyter/</guid>
+      <description>&lt;p&gt;JupyterLab 是 Project Jupyter 的下一代基于 Web 的用户界面。&#xA;JupyterLab 使您能够以灵活、集成和可扩展的方式处理文档和活动，例如 Jupyter 笔记本、文本编辑器、终端和自定义组件.&lt;/p&gt;&#xA;&lt;p&gt;以下适用于 jupyter3.0&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>接口自动化测试</title>
+      <link>https://example.org/post/code/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E6%8E%A5%E5%8F%A3/</link>
+      <pubDate>Sun, 26 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://example.org/post/code/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E6%8E%A5%E5%8F%A3/</guid>
+      <description>准备 准备库 requests 和 unittest&#xA;pip install requests 编写测试脚本 封装公共参数 封装公共参数，重复调取结果，减少代码的编写量，降低理解难度。&#xA;设置接口的必填参数，并使用 *args 传入接口的非必填参数；使用 **kwargs 设置一些条件。 可以将一些公共参数写入到单独的文件中，使用时引用即可；一些隐私的数据可以写入到#环境变量中中，如测试 api 或者测试账号。&#xA;import requests import unittest class RequestTest(unittest.TestCase): # 封装公共参数 def common(self, name, password, *args, **kwargs): url = f&amp;#34;{config.ENVIRONMENT}/auth/login&amp;#34; param = {&amp;#34;name&amp;#34;:name, &amp;#34;password&amp;#34;:password,} if args: # 如果 args 不为空 则将参数传入添加到请求参数中 for arg in args: param.update(**arg) self.response = requests.post(url, headers=self.headers, json=param, verify=False,) # 如果 kwargs 不为 False 则进行相应的操作 if kwargs: for key, value in kwargs.</description>
+    </item>
+    <item>
+      <title>PyPi</title>
+      <link>https://example.org/post/code/pypi/</link>
+      <pubDate>Sat, 25 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://example.org/post/code/pypi/</guid>
+      <description>&lt;p&gt;由于某些发行版（如 pacman）会去除 pip 包管理器，则需要以下方法进行 pip的安装。&#xA;国内的下载速度过于缓慢，所以需要将下载源更换为国内源，来提升pip的下载速度，这里首先推荐豆瓣源。&lt;/p&gt;&#xA;&lt;p&gt;安装详情请见 &lt;a href=&#34;https://pip.pypa.io/en/stable/installation/&#34;&gt;pip 文档&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ocean 主題配置</title>
+      <link>https://example.org/post/play/hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sat, 30 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://example.org/post/play/hexo%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;Ocean 是基于 Hexo 默认主题 landscape 的功能，设计的一款支持移动设备的主题，并且集成了 Gitalk 与 Valine 评论功能。&lt;/p&gt;&#xA;&lt;p&gt;如果你喜欢 Ocean 可以从 &lt;a href=&#34;https://github.com/zhwangart/hexo-theme-ocean&#34;&gt;GitHub&lt;/a&gt; 下载，主题默认使用 Logo 是 Hexo 的 Logo，更换 Logo 路径在 ocean/source/images/hexo.svg ，注意它还有一个反色版 hexo-inverted.svg ，如果你更改了文件名，那么还需要在 ocean/_config.yml 做对应的修改。&lt;/p&gt;&#xA;&lt;p&gt;详细文档见 &lt;a href=&#34;https://zhwangart.com/2018/11/30/Ocean/&#34;&gt;Ocean 文档&lt;/a&gt;，以下是个人的需要的配置&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>文件管理</title>
+      <link>https://example.org/post/play/linux%E5%AD%A6%E4%B9%A0-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Tue, 28 Jul 2020 15:00:00 +0000</pubDate>
+      <guid>https://example.org/post/play/linux%E5%AD%A6%E4%B9%A0-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</guid>
+      <description>&lt;h3 id=&#34;帮助命令&#34;&gt;帮助命令&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# man&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;man find &lt;span style=&#34;color:#75715e&#34;&gt;# 查询命令的说明文档&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;man -f find &lt;span style=&#34;color:#75715e&#34;&gt;# 显示更多的信息&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;gt;&amp;gt;&amp;gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;find &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;             - search &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; files in a directory hierarchy&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;man -k find &lt;span style=&#34;color:#75715e&#34;&gt;# 关键词查找&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>SQL 基础其一</title>
+      <link>https://example.org/post/code/sql-first/</link>
+      <pubDate>Wed, 22 Jul 2020 15:24:00 +0000</pubDate>
+      <guid>https://example.org/post/code/sql-first/</guid>
+      <description>&lt;h3 id=&#34;查询&#34;&gt;查询&lt;/h3&gt;&#xA;&lt;h5 id=&#34;基本查询语句&#34;&gt;基本查询语句&lt;/h5&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- select (列名1, 列名2 或 *) from 表名 where 条件&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt; order_no, trip_no &lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt; trip_order &lt;span style=&#34;color:#66d9ef&#34;&gt;where&lt;/span&gt; order_no &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;20191009012100000013&amp;#39;&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>枚举类</title>
+      <link>https://example.org/post/code/python%E5%AD%A6%E4%B9%A0-%E6%9E%9A%E4%B8%BE%E7%B1%BB/</link>
+      <pubDate>Wed, 15 Jul 2020 21:00:00 +0000</pubDate>
+      <guid>https://example.org/post/code/python%E5%AD%A6%E4%B9%A0-%E6%9E%9A%E4%B8%BE%E7%B1%BB/</guid>
+      <description>&lt;h5 id=&#34;枚举类的使用&#34;&gt;枚举类的使用&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;当需要大量定于变量时，可以使用枚举类(Enum)来实现这个功能&#xA;&lt;ul&gt;&#xA;&lt;li&gt;当我们定义一个Class类型时，每个常量都是class里面的唯一实例&lt;/li&gt;&#xA;&lt;li&gt;方式： Enum(类名, (tuple参数))&lt;/li&gt;&#xA;&lt;li&gt;枚举类通过 __ members __ 方法遍历所有的成员&lt;/li&gt;&#xA;&lt;li&gt;&lt;!-- raw HTML omitted --&gt;而且 Enum 的成员均为单例（Singleton），并且不可实例化，不可更改&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>魔术方法 (Magic Method)</title>
+      <link>https://example.org/post/code/python%E5%AD%A6%E4%B9%A0-%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Wed, 15 Jul 2020 11:00:00 +0000</pubDate>
+      <guid>https://example.org/post/code/python%E5%AD%A6%E4%B9%A0-%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95/</guid>
+      <description>&lt;h5 id=&#34;前言&#34;&gt;前言&lt;/h5&gt;&#xA;&lt;p&gt;本文基本摘自 两点水 的&lt;a href=&#34;&#34;&gt;草根学Python&lt;/a&gt;,本文仅作记录备份或者本人查阅方便，&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>多态</title>
+      <link>https://example.org/post/code/python%E5%AD%A6%E4%B9%A0-%E5%A4%9A%E6%80%81/</link>
+      <pubDate>Fri, 10 Jul 2020 16:00:00 +0000</pubDate>
+      <guid>https://example.org/post/code/python%E5%AD%A6%E4%B9%A0-%E5%A4%9A%E6%80%81/</guid>
+      <description>&lt;h5 id=&#34;理解&#34;&gt;Ⅰ，理解&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;指对不同类型的变量进行操作，根据对象（或类）类型的不同而表现出不同的行为&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;常用的多态&#34;&gt;Ⅱ，常用的多态&lt;/h5&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; print(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;1&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;2&amp;#39;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;12&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;不同的对象（或类）调用‘’+”，“+”会做出不同的响应&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>正则表达式</title>
+      <link>https://example.org/post/code/python%E5%AD%A6%E4%B9%A0-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.org/post/code/python%E5%AD%A6%E4%B9%A0-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <description>初识正则表达式 使用python的内置函数 # 设置一个常量 name = &amp;#39;XiongJum|酒明|JumXiong|初学者&amp;#39; # 判断是否有字符串XiongJum print(&amp;#39;是否含有XiongJum这个字符串：{}&amp;#39;.format(name.index(&amp;#39;XiongJum&amp;#39;) &amp;lt; 1)) print(&amp;#39;是否含有XiongJum这个字符串：{}&amp;#39;.format(&amp;#39;XiongJum&amp;#39; in name)) 是否含有XiongJum这个字符串：True 是否含有XiongJum这个字符串：True 初识正则表达式re Python内置函数能简单解决的事情，就没有必要使用正则表达式，如下例 import re findall = re.findall(&amp;#39;Jum&amp;#39;, name) print(findall) if len(findall) &amp;gt; 0: print(&amp;#39;name含有Jum这个字符串&amp;#39;) else: print(&amp;#39;name不含有Jum这个字符串&amp;#39;) [&#39;Jum&#39;, &#39;Jum&#39;] name含有Jum这个字符串 # 选择 name 里面的所有小写英文字母 re_findall = re.findall(&amp;#39;[a-z]&amp;#39;, name) print(re_findall) [&#39;i&#39;, &#39;o&#39;, &#39;n&#39;, &#39;g&#39;, &#39;u&#39;, &#39;m&#39;, &#39;u&#39;, &#39;m&#39;, &#39;i&#39;, &#39;o&#39;, &#39;n&#39;, &#39;g&#39;] 字符集 字符集是由一对方括号&amp;quot;[]&amp;ldquo;括起来的字符集合，使用字符集合可以匹配多个字符中的一个 如 C[ET]O,匹配到为CEO或CTO [0-9a-fA-F]，匹配单个的十六进制数字 字符和范围定义的先后循序对匹配的结果是没有任何影响的 a = &amp;#39;uav,ubv,ucv,ucv,uov,uzb&amp;#39; # 取&amp;#39;u&amp;#39; 和&amp;#39;v&amp;#39;中间为‘a’或‘b’的字符 findbat = re.</description>
+    </item>
+    <item>
+      <title>V2ray搭建教程</title>
+      <link>https://example.org/post/play/v2ray/</link>
+      <pubDate>Sun, 05 Jul 2020 09:00:00 +0000</pubDate>
+      <guid>https://example.org/post/play/v2ray/</guid>
+      <description>&lt;p&gt;V2Ray 是一个与 Shadowsocks 类似的代理软件，可以用来科学上网等。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Selenium</title>
+      <link>https://example.org/post/code/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-selenium/</link>
+      <pubDate>Mon, 29 Jun 2020 09:00:00 +0000</pubDate>
+      <guid>https://example.org/post/code/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-selenium/</guid>
+      <description>&lt;p&gt;Selenium 是支持 web 浏览器自动化的一系列工具和库的综合性项目，它提供了扩展来模拟用户与浏览器的交互，用于扩展浏览器分配的分发服务器， 以及用于实现 &lt;a href=&#34;https://www.w3.org/TR/webdriver/&#34;&gt;W3C WebDriver&lt;/a&gt; 规范的基础结构， 该规范允许您为所有主要 Web 浏览器编写可互换的代码.&lt;/p&gt;&#xA;&lt;p&gt;Selenium 汇集了浏览器供应商，工程师和爱好者，以进一步围绕 Web 平台自动化进行公开讨论。 该项目组织了一次年度会议，以教学和培养社区.&lt;/p&gt;&#xA;&lt;p&gt;Selenium 的核心是 &lt;a href=&#34;https://www.selenium.dev/zh-cn/documentation/webdriver/&#34;&gt;WebDriver&lt;/a&gt;，这是一个编写指令集的接口，可以在许多浏览器中互换运行&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SHELL(其一)</title>
+      <link>https://example.org/post/play/linux%E5%AD%A6%E4%B9%A0-shell/</link>
+      <pubDate>Sun, 28 Jun 2020 09:00:00 +0000</pubDate>
+      <guid>https://example.org/post/play/linux%E5%AD%A6%E4%B9%A0-shell/</guid>
+      <description>&lt;p&gt;linux&lt;/p&gt;&#xA;&lt;h5 id=&#34;1-bash&#34;&gt;(1). bash&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;参考/引用：&lt;a href=&#34;http://cn.linux.vbird.org/linux_basic/0320bash_1.php&#34;&gt;鸟哥的Linux私房菜-第十一章&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;命令编修能力&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看不同用户使用的shell,其记录在文件/etc/passwd中&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat /ect/passwd&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看bash的历史命令,其记录在文件~/.bash_history中&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 其只记录前一次登录系统时使用的命令，当前登录运行的命令被记录在缓存中&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat ~/.bash_history&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Locust</title>
+      <link>https://example.org/post/code/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-locust/</link>
+      <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.org/post/code/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-locust/</guid>
+      <description>&lt;p&gt;locast 是一種易於使用、可編寫脚本且可擴展的性能測試工具。&lt;/p&gt;&#xA;&lt;p&gt;在常規 Python 代碼中定義用戶的行爲。&lt;/p&gt;&#xA;&lt;p&gt;開始使用 &lt;a href=&#34;https://locust.io/&#34;&gt;Local&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>装饰器</title>
+      <link>https://example.org/post/code/python%E5%AD%A6%E4%B9%A0-%E8%A3%85%E9%A5%B0%E5%99%A8/</link>
+      <pubDate>Thu, 23 Apr 2020 08:00:05 +0000</pubDate>
+      <guid>https://example.org/post/code/python%E5%AD%A6%E4%B9%A0-%E8%A3%85%E9%A5%B0%E5%99%A8/</guid>
+      <description>&lt;h3 id=&#34;修饰器的作用&#34;&gt;&lt;strong&gt;修饰器的作用&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;修饰器本质上是一个Python函数，它可以让其他函数在不需要做任何代码变动的前提下增加额外功能&lt;/li&gt;&#xA;&lt;li&gt;python的修饰器是一种语法糖（Syntactic Sugar）&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
+  </channel>
+</rss>

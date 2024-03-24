@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>JupyterLab - LongLit</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="JupyterLab 是 Project Jupyter 的下一代基于 Web 的用户界面。
+JupyterLab 使您能够以灵活、集成和可扩展的方式处理文档和活动，例如 Jupyter 笔记本、文本编辑器、终端和自定义组件.
+以下适用于 jupyter3.0" />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="JupyterLab" />
+<meta property="og:description" content="JupyterLab 是 Project Jupyter 的下一代基于 Web 的用户界面。
+JupyterLab 使您能够以灵活、集成和可扩展的方式处理文档和活动，例如 Jupyter 笔记本、文本编辑器、终端和自定义组件.
+以下适用于 jupyter3.0" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.org/post/play/jupyter/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-01-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-01-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="JupyterLab"/>
+<meta name="twitter:description" content="JupyterLab 是 Project Jupyter 的下一代基于 Web 的用户界面。
+JupyterLab 使您能够以灵活、集成和可扩展的方式处理文档和活动，例如 Jupyter 笔记本、文本编辑器、终端和自定义组件.
+以下适用于 jupyter3.0"/>
+<script src="https://example.org/js/feather.min.js"></script>
+	
+	
+        <link href="https://example.org/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://example.org/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://example.org/">LongLit</a>
+	</div>
+	<div>
+		<a href="/categories/编程">编程</a>
+		<a href="/categories/玩机">玩机</a>
+		<a href="/categories/笔记">笔记</a>
+	</div>
+	<nav>
+		
+		<a href="/post">文章</a>
+		
+		<a href="/tags">标签</a>
+		
+		<a href="/mark">书签</a>
+		
+		<a href="/about">关于</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">JupyterLab</h1>
+			<div class="meta">Posted on Jan 19, 2022</div>
+		</div>
+		
+
+		<section class="body">
+			<p>JupyterLab 是 Project Jupyter 的下一代基于 Web 的用户界面。
+JupyterLab 使您能够以灵活、集成和可扩展的方式处理文档和活动，例如 Jupyter 笔记本、文本编辑器、终端和自定义组件.</p>
+<p>以下适用于 jupyter3.0</p>
+<h1 id="centerinstall-jupyter-lab"><!-- raw HTML omitted -->Install Jupyter Lab</h1>
+<h2 id="install">Install</h2>
+<p>准备隔离的环境(可选)
+使用 pip 进行安装</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 创建虚拟环境</span>
+</span></span><span style="display:flex;"><span>python3 -m venv jupyter
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 进入虚拟环境</span>
+</span></span><span style="display:flex;"><span>source jupyter/bin/activate
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 使用 pip 安装 JupyterLab</span>
+</span></span><span style="display:flex;"><span>pip install jupyterlab
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 为当前用户安装</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 需要将jupyter 添加至环境变量中去</span>
+</span></span><span style="display:flex;"><span>pip install --user jupyterlab
+</span></span><span style="display:flex;"><span>export PATH<span style="color:#f92672">=</span>~/.local/bin/jupyterlab:PATH
+</span></span></code></pre></div><h2 id="localization">Localization</h2>
+<blockquote>
+<p>从 3.0 版本开始，JupyterLab 提供了设置用户界面显示语言的能力。</p>
+</blockquote>
+<h3 id="安装语言包">安装语言包</h3>
+<p>显示新的语言，您需要安装语言包，访问<a href="https://github.com/jupyterlab/language-packs/tree/master/language-packs">语言包列表</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install jupyterlab-language-pack-zh-CN
+</span></span></code></pre></div><p>点击 Settings &raquo; Language 更改显示语言, 并点击 Ok 确认更改语言，重新载入或者刷新页面即可显示此示例中的简体中文。</p>
+<h1 id="centerinstall-jupyterlab-extend"><!-- raw HTML omitted -->Install jupyterLab extend</h1>
+<h2 id="1-install-nodejs-and-npmtools-install-nodejs">1. <a href="../tools-install-nodejs">install nodejs and npm</a></h2>
+<h2 id="2-安装-jupyterlab-扩展">2. 安装 jupyterlab 扩展</h2>
+<h3 id="jupyterlab-lsphttpsgithubcomjupyter-lspjupyterlab-lsp"><a href="https://github.com/jupyter-lsp/jupyterlab-lsp">jupyterlab-lsp</a></h3>
+<blockquote>
+<p>提供语言的自动补全功能</p>
+</blockquote>
+<p>功能</p>
+<ol>
+<li>将鼠标悬停在任何一段代码上， 如果出现下滑线，您可以按下 Ctrl 以获取带有函数/类签名、模块文档或语言服务器（或其他信息工具）的提示信息</li>
+<li>严重错误带有红色下滑线，警告为橙色。将鼠标悬停在带有下滑线上可以查看更加详细的信息</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 安装</span>
+</span></span><span style="display:flex;"><span>pip install <span style="color:#e6db74">&#39;jupyterlab&gt;=3.0.0,&lt;4.0.0a0&#39;</span> jupyterlab-lsp
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 为选择的语言安装 LSP 服务器</span>
+</span></span><span style="display:flex;"><span>pip install <span style="color:#e6db74">&#39;python-lsp-server[all]&#39;</span>
+</span></span></code></pre></div><h3 id="jupyterlab-kitehttpsgithubcomkitecojupyterlab-kite"><a href="https://github.com/kiteco/jupyterlab-kite">jupyterlab-kite</a></h3>
+<blockquote>
+<p>Kite 是一个 AI 驱动的编程助手，可帮助您在 JupyterLab 中编写 Python 代码。Kite 通过节省击键并在正确的时间向您显示正确的信息来帮助您更快地编写代码。在https://kite.com/integrations/jupyter/了解更多关于 Kite 如何增强 JupyterLab 编辑器功能的信息。</p>
+</blockquote>
+<p><strong>安装 Kite 需要 CPU 支持 AVX</strong>， 详情请参考 <a href="https://help.kite.com/article/101-kite-requires-avx-support">https://help.kite.com/article/101-kite-requires-avx-support</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 安装</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># linux</span>
+</span></span><span style="display:flex;"><span>bash -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>wget -q -O - https://linux.kite.com/dls/linux/current<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>pip install <span style="color:#e6db74">&#34;jupyterlab-kite&gt;=2.0.2&#34;</span>
+</span></span></code></pre></div><h1 id="参考">参考</h1>
+<p>[1] <a href="https://developer.aliyun.com/article/760687">阿里云社区</a></p>
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/%E7%BC%96%E8%BE%91%E5%99%A8">编辑器</a></li>
+					
+					<li><a href="/tags/jupyter">Jupyter</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/athul/archie" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © LongLit |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

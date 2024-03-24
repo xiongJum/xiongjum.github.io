@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>装饰器 - LongLit</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="修饰器的作用
+
+修饰器本质上是一个Python函数，它可以让其他函数在不需要做任何代码变动的前提下增加额外功能
+python的修饰器是一种语法糖（Syntactic Sugar）
+" />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="装饰器" />
+<meta property="og:description" content="修饰器的作用
+
+修饰器本质上是一个Python函数，它可以让其他函数在不需要做任何代码变动的前提下增加额外功能
+python的修饰器是一种语法糖（Syntactic Sugar）
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.org/post/code/python%E5%AD%A6%E4%B9%A0-%E8%A3%85%E9%A5%B0%E5%99%A8/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-04-23T08:00:05+00:00" />
+<meta property="article:modified_time" content="2020-04-23T08:00:05+00:00" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="装饰器"/>
+<meta name="twitter:description" content="修饰器的作用
+
+修饰器本质上是一个Python函数，它可以让其他函数在不需要做任何代码变动的前提下增加额外功能
+python的修饰器是一种语法糖（Syntactic Sugar）
+"/>
+<script src="https://example.org/js/feather.min.js"></script>
+	
+	
+        <link href="https://example.org/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://example.org/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://example.org/">LongLit</a>
+	</div>
+	<div>
+		<a href="/categories/编程">编程</a>
+		<a href="/categories/玩机">玩机</a>
+		<a href="/categories/笔记">笔记</a>
+	</div>
+	<nav>
+		
+		<a href="/post">文章</a>
+		
+		<a href="/tags">标签</a>
+		
+		<a href="/mark">书签</a>
+		
+		<a href="/about">关于</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">装饰器</h1>
+			<div class="meta">Posted on Apr 23, 2020</div>
+		</div>
+		
+
+		<section class="body">
+			<h3 id="修饰器的作用"><strong>修饰器的作用</strong></h3>
+<ol>
+<li>修饰器本质上是一个Python函数，它可以让其他函数在不需要做任何代码变动的前提下增加额外功能</li>
+<li>python的修饰器是一种语法糖（Syntactic Sugar）</li>
+</ol>
+<ul>
+<li>
+<p>实例</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 示例1</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@funA</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">funB</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 示例2， 实例1是示例2的简写，即示例1=示例2</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">funB</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>funB <span style="color:#f92672">=</span>funA(funB)
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="修饰函数"><strong>修饰函数</strong></h3>
+<p>修饰器的用法之一是修饰新定义的函数，修饰器通常用于<!-- raw HTML omitted -->扩展函数的行为或属性<!-- raw HTML omitted --></p>
+<ol>
+<li>
+<p>示例（函数作为修饰器）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">log</span>(func):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wraper</span>():
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;INFO: String </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(func<span style="color:#f92672">.</span>__name__))
+</span></span><span style="display:flex;"><span>        func()
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;INFO: Finishing 	</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(func<span style="color:#f92672">.</span>__name__))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> wraper
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@log</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Running run...&#34;</span>)
+</span></span><span style="display:flex;"><span>run()
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-------------------------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span>
+</span></span><span style="display:flex;"><span>INFO: String run
+</span></span><span style="display:flex;"><span>Running run<span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>INFO: Finshing run
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="修饰类"><strong>修饰类</strong></h3>
+<ol>
+<li>
+<p>示例(函数作为修饰器)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> time <span style="color:#f92672">import</span> time, sleep
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">timer</span>(Cls):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wraper</span>():
+</span></span><span style="display:flex;"><span>        s <span style="color:#f92672">=</span> time()
+</span></span><span style="display:flex;"><span>        obj <span style="color:#f92672">=</span> Cls()
+</span></span><span style="display:flex;"><span>        e <span style="color:#f92672">=</span> time()
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Cost </span><span style="color:#e6db74">{:.4f}</span><span style="color:#e6db74">s to init.&#34;</span><span style="color:#f92672">.</span>format(e <span style="color:#f92672">-</span>s))
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> obj
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> wraper
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@timer</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Obj</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Hello&#34;</span>)
+</span></span><span style="display:flex;"><span>        sleep(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Obj&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Obj()
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--------------------------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span>
+</span></span><span style="display:flex;"><span>Hello
+</span></span><span style="display:flex;"><span>Obj
+</span></span><span style="display:flex;"><span>Cost <span style="color:#ae81ff">2.0476</span>s to init<span style="color:#f92672">.</span>
+</span></span></code></pre></div></li>
+</ol>
+<h3 id="类作为修饰器"><strong>类作为修饰器</strong></h3>
+<p>只有函数才可以被调用，除了函数以外也可以定义被调用的类，只要添加 <!-- raw HTML omitted -->_<em>call</em>_<!-- raw HTML omitted --> 方法即可</p>
+<ol>
+<li>示例</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HTML</span>(object):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Baking HTML Tags!
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    修饰HTML标签
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, tag<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;p&#39;</span>):
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;LOG: Baking Tag &lt;</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&gt;&#34;</span><span style="color:#f92672">.</span>format(tag))
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>tag <span style="color:#f92672">=</span> tag
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __call__(self, func):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">lambda</span>: <span style="color:#e6db74">&#34;&lt;</span><span style="color:#e6db74">{0}</span><span style="color:#e6db74">&gt;</span><span style="color:#e6db74">{1}</span><span style="color:#e6db74">&lt;/</span><span style="color:#e6db74">{0}</span><span style="color:#e6db74">&gt;&#34;</span><span style="color:#f92672">.</span>format(self<span style="color:#f92672">.</span>tag, func())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@HTML</span>(<span style="color:#e6db74">&#34;html&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@HTML</span>(<span style="color:#e6db74">&#34;body&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@HTML</span>(<span style="color:#e6db74">&#34;div&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">body</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Hello, World&#34;</span> 
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>print(body())
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span>
+</span></span><span style="display:flex;"><span>LOG: Baking Tag <span style="color:#f92672">&lt;</span>html<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>LOG: Baking Tag <span style="color:#f92672">&lt;</span>body<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>LOG: Baking Tag <span style="color:#f92672">&lt;</span>div<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>html<span style="color:#f92672">&gt;&lt;</span>body<span style="color:#f92672">&gt;&lt;</span>div<span style="color:#f92672">&gt;</span>Hello, World<span style="color:#f92672">&lt;/</span>div<span style="color:#f92672">&gt;&lt;/</span>body<span style="color:#f92672">&gt;&lt;/</span>html<span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><ol start="2">
+<li>函数解析</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">lambda</span>: <span style="color:#e6db74">&#34;&lt;</span><span style="color:#e6db74">{0}</span><span style="color:#e6db74">&gt;</span><span style="color:#e6db74">{1}</span><span style="color:#e6db74">&lt;/</span><span style="color:#e6db74">{0}</span><span style="color:#e6db74">&gt;&#34;</span><span style="color:#f92672">.</span>format(self<span style="color:#f92672">.</span>tag, func())
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># lambda 匿名函数，“:”左边为返回值，</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># format 格式化函数，</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># {} 不指定参数位置 eg：&#34;{} {}&#34;.format(&#34;Hello&#34;, &#34;World&#34;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># {x} 指定参数位置 eg: &#34;{0} {1}&#34;.format(&#34;Hello&#34;, &#34;World&#34;)</span>
+</span></span></code></pre></div><h3 id="传递参数"><strong>传递参数</strong></h3>
+<p>在实际的使用过程中可能需要想修饰器传递参数，可能需要想被修饰的函数（或类）传递参数，如上方示例中</p>
+<p><!-- raw HTML omitted -->@HTML(&lsquo;html&rsquo;)<!-- raw HTML omitted --></p>
+<ol>
+<li>
+<p>示例</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>RULES <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">route</span>(rule):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">decorator</span>(hand):
+</span></span><span style="display:flex;"><span>        RULES<span style="color:#f92672">.</span>update({rule: hand})
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> hand
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> decorator
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@route</span>(<span style="color:#e6db74">&#34;/&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;XIONG JUM&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">home</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Hello, World!&#34;</span>)
+</span></span><span style="display:flex;"><span>home <span style="color:#f92672">=</span> route(<span style="color:#e6db74">&#34;/home&#34;</span>)(home)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>index()
+</span></span><span style="display:flex;"><span>home()
+</span></span><span style="display:flex;"><span>print(RULES)
+</span></span><span style="display:flex;"><span>print(index)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--------------------------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span>
+</span></span><span style="display:flex;"><span>XIONG JUM
+</span></span><span style="display:flex;"><span>Hello, World<span style="color:#960050;background-color:#1e0010">!</span>
+</span></span><span style="display:flex;"><span>{<span style="color:#e6db74">&#39;/&#39;</span>: <span style="color:#f92672">&lt;</span>function index at <span style="color:#ae81ff">0x000001C605A35B80</span><span style="color:#f92672">&gt;</span>, <span style="color:#e6db74">&#39;/home&#39;</span>: <span style="color:#f92672">&lt;</span>function home at <span style="color:#ae81ff">0x000001C605A35AF0</span><span style="color:#f92672">&gt;</span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>function index at <span style="color:#ae81ff">0x000001C605A35B80</span><span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>函数解析</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>RULES<span style="color:#f92672">.</span>update({rule: hand})
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># update 字典的方法，更新字典的值，直接替换字典中相同键的值</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &lt;function index at 0x000001C605A35B80&gt; 为函数index的储存位置</span>
+</span></span></code></pre></div><p>向被修饰的函数传递参数，若不进行处理，则只需要将其原模原样的返回即可</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#a6e22e">@route</span>(<span style="color:#e6db74">&#34;/login&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">login</span>(user<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;user&#39;</span>, pwd<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pwd&#39;</span>):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;DB.findOne({{</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">}})&#34;</span><span style="color:#f92672">.</span>format(user, pwd))
+</span></span><span style="display:flex;"><span>login(<span style="color:#e6db74">&#34;hail&#34;</span>, <span style="color:#e6db74">&#34;python&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">--------------------------------------------------------------------------------------------------</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span>
+</span></span><span style="display:flex;"><span>DB<span style="color:#f92672">.</span>findOne({hail, python})
+</span></span></code></pre></div><p>如果需要在修饰器内执行，见<!-- raw HTML omitted -->修饰函数的示例<!-- raw HTML omitted --></p>
+</li>
+</ol>
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/python3">Python3</a></li>
+					
+					<li><a href="/tags/%E8%A3%85%E9%A5%B0%E5%99%A8">装饰器</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/athul/archie" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © LongLit |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

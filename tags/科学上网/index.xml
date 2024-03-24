@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>科学上网 on LongLit</title>
+    <link>https://example.org/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</link>
+    <description>Recent content in 科学上网 on LongLit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>© LongLit</copyright>
+    <lastBuildDate>Sun, 05 Jul 2020 09:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>V2ray搭建教程</title>
+      <link>https://example.org/post/play/v2ray/</link>
+      <pubDate>Sun, 05 Jul 2020 09:00:00 +0000</pubDate>
+      <guid>https://example.org/post/play/v2ray/</guid>
+      <description>&lt;p&gt;V2Ray 是一个与 Shadowsocks 类似的代理软件，可以用来科学上网等。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
